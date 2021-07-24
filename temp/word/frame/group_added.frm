@@ -1,0 +1,2108 @@
+VERSION 5.00
+Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} UserForm1 
+   Caption         =   "ַַֹּׂ"
+   ClientHeight    =   7635
+   ClientLeft      =   105
+   ClientTop       =   450
+   ClientWidth     =   15915
+   OleObjectBlob   =   "group_added.frx":0000
+   StartUpPosition =   1  'CenterOwner
+End
+Attribute VB_Name = "UserForm1"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+
+Private Sub select_obydi(x)
+        
+        If x = 1 Then
+            
+            iPage = 11
+            With ActiveDocument
+              Set Rng = .GoTo(What:=wdGoToPage, Name:=iPage)
+              Set Rng = Rng.GoTo(What:=wdGoToBookmark, Name:="\page")
+              Rng.Delete
+            End With
+    
+            iPage = 10
+            With ActiveDocument
+              Set Rng = .GoTo(What:=wdGoToPage, Name:=iPage)
+              Set Rng = Rng.GoTo(What:=wdGoToBookmark, Name:="\page")
+              Rng.Delete
+            End With
+            
+            iPage = 9
+            With ActiveDocument
+              Set Rng = .GoTo(What:=wdGoToPage, Name:=iPage)
+              Set Rng = Rng.GoTo(What:=wdGoToBookmark, Name:="\page")
+              Rng.Delete
+            End With
+                       
+        ElseIf x = 2 Then
+            
+            iPage = 11
+            With ActiveDocument
+              Set Rng = .GoTo(What:=wdGoToPage, Name:=iPage)
+              Set Rng = Rng.GoTo(What:=wdGoToBookmark, Name:="\page")
+              Rng.Delete
+            End With
+            
+            iPage = 6
+            With ActiveDocument
+              Set Rng = .GoTo(What:=wdGoToPage, Name:=iPage)
+              Set Rng = Rng.GoTo(What:=wdGoToBookmark, Name:="\page")
+              Rng.Delete
+            End With
+            
+            iPage = 6
+            With ActiveDocument
+              Set Rng = .GoTo(What:=wdGoToPage, Name:=iPage)
+              Set Rng = Rng.GoTo(What:=wdGoToBookmark, Name:="\page")
+              Rng.Delete
+            End With
+            
+            iPage = 6
+            With ActiveDocument
+              Set Rng = .GoTo(What:=wdGoToPage, Name:=iPage)
+              Set Rng = Rng.GoTo(What:=wdGoToBookmark, Name:="\page")
+              Rng.Delete
+            End With
+        
+        ElseIf x = 3 Then
+            
+            iPage = 6
+            With ActiveDocument
+              Set Rng = .GoTo(What:=wdGoToPage, Name:=iPage)
+              Set Rng = Rng.GoTo(What:=wdGoToBookmark, Name:="\page")
+              Rng.Delete
+            End With
+            
+            iPage = 6
+            With ActiveDocument
+              Set Rng = .GoTo(What:=wdGoToPage, Name:=iPage)
+              Set Rng = Rng.GoTo(What:=wdGoToBookmark, Name:="\page")
+              Rng.Delete
+            End With
+            
+            iPage = 6
+            With ActiveDocument
+              Set Rng = .GoTo(What:=wdGoToPage, Name:=iPage)
+              Set Rng = Rng.GoTo(What:=wdGoToBookmark, Name:="\page")
+              Rng.Delete
+            End With
+            
+            iPage = 6
+            With ActiveDocument
+              Set Rng = .GoTo(What:=wdGoToPage, Name:=iPage)
+              Set Rng = Rng.GoTo(What:=wdGoToBookmark, Name:="\page")
+              Rng.Delete
+            End With
+            
+            iPage = 6
+            With ActiveDocument
+              Set Rng = .GoTo(What:=wdGoToPage, Name:=iPage)
+              Set Rng = Rng.GoTo(What:=wdGoToBookmark, Name:="\page")
+              Rng.Delete
+            End With
+        End If
+End Sub
+Private Sub set_sheikh_and_student(sheikh_name, sheikh_info, student_name, student_info)
+    
+    ' change sheikh name
+    Selection.Find.ClearFormatting
+    Selection.Find.Replacement.ClearFormatting
+    With Selection.Find
+        .Text = "sheikh_name"
+        .Replacement.Text = sheikh_name
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = False
+        .MatchCase = False
+        .MatchWholeWord = False
+        .MatchKashida = False
+        .MatchDiacritics = False
+        .MatchAlefHamza = False
+        .MatchControl = False
+        .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
+    End With
+    Selection.Find.Execute Replace:=wdReplaceAll
+
+    ' change student name
+    Selection.Find.ClearFormatting
+    Selection.Find.Replacement.ClearFormatting
+    With Selection.Find
+        .Text = "student_name"
+        .Replacement.Text = student_name
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = False
+        .MatchCase = False
+        .MatchWholeWord = False
+        .MatchKashida = False
+        .MatchDiacritics = False
+        .MatchAlefHamza = False
+        .MatchControl = False
+        .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
+    End With
+    Selection.Find.Execute Replace:=wdReplaceAll
+
+    ' set student info
+    Selection.Find.ClearFormatting
+    Selection.Find.Replacement.ClearFormatting
+    With Selection.Find
+        .Text = "student_info"
+        .Replacement.Text = student_info
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = False
+        .MatchCase = False
+        .MatchWholeWord = False
+        .MatchKashida = False
+        .MatchDiacritics = False
+        .MatchAlefHamza = False
+        .MatchControl = False
+        .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
+    End With
+    Selection.Find.Execute Replace:=wdReplaceAll
+
+    ' set sheikh info
+    Selection.Find.ClearFormatting
+    Selection.Find.Replacement.ClearFormatting
+    With Selection.Find
+        .Text = "sheikh_info"
+        .Replacement.Text = sheikh_info
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = False
+        .MatchCase = False
+        .MatchWholeWord = False
+        .MatchKashida = False
+        .MatchDiacritics = False
+        .MatchAlefHamza = False
+        .MatchControl = False
+        .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
+    End With
+    Selection.Find.Execute Replace:=wdReplaceAll
+End Sub
+Private Sub set_types(sheikh_type, student_type)
+    ' set sheikh type
+    If sheikh_type = 1 Then
+    
+        Selection.Find.ClearFormatting
+        Selection.Find.Replacement.ClearFormatting
+        With Selection.Find
+            .Text = "mogez"
+            .Replacement.Text = "ַבװם־ֹ"
+            .Forward = True
+            .Wrap = wdFindContinue
+            .Format = False
+            .MatchCase = False
+            .MatchWholeWord = False
+            .MatchKashida = False
+            .MatchDiacritics = False
+            .MatchAlefHamza = False
+            .MatchControl = False
+            .MatchWildcards = False
+            .MatchSoundsLike = False
+            .MatchAllWordForms = False
+        End With
+        Selection.Find.Execute Replace:=wdReplaceAll
+        
+        Selection.Find.ClearFormatting
+        Selection.Find.Replacement.ClearFormatting
+        With Selection.Find
+            .Text = "ÝםÞזב ַבװם־ֹ"
+            .Replacement.Text = "ÝÊÞזב ַבװם־ֹ"
+            .Forward = True
+            .Wrap = wdFindContinue
+            .Format = False
+            .MatchCase = False
+            .MatchWholeWord = False
+            .MatchKashida = False
+            .MatchDiacritics = False
+            .MatchAlefHamza = False
+            .MatchControl = False
+            .MatchWildcards = False
+            .MatchSoundsLike = False
+            .MatchAllWordForms = False
+        End With
+        Selection.Find.Execute Replace:=wdReplaceAll
+    Else
+        
+        Selection.Find.ClearFormatting
+        Selection.Find.Replacement.ClearFormatting
+        With Selection.Find
+            .Text = "mogez"
+            .Replacement.Text = "ַבװם־"
+            .Forward = True
+            .Wrap = wdFindContinue
+            .Format = False
+            .MatchCase = False
+            .MatchWholeWord = False
+            .MatchKashida = False
+            .MatchDiacritics = False
+            .MatchAlefHamza = False
+            .MatchControl = False
+            .MatchWildcards = False
+            .MatchSoundsLike = False
+            .MatchAllWordForms = False
+        End With
+        Selection.Find.Execute Replace:=wdReplaceAll
+
+    End If
+    
+
+' set student type
+    If student_type = 1 Then
+            
+            Selection.Find.ClearFormatting
+            Selection.Find.Replacement.ClearFormatting
+            With Selection.Find
+                .Text = "בצדץ׃תÊףֽףÞרצוףַ ַבדץּףַׂ"
+                .Replacement.Text = "בצדץ׃תÊףֽףÞÊוףַ ַבדץּףַֹׂ"
+                .Forward = True
+                .Wrap = wdFindContinue
+                .Format = False
+                .MatchCase = False
+                .MatchWholeWord = False
+                .MatchKashida = False
+                .MatchDiacritics = False
+                .MatchAlefHamza = False
+                .MatchControl = False
+                .MatchWildcards = False
+                .MatchSoundsLike = False
+                .MatchAllWordForms = False
+            End With
+            Selection.Find.Execute Replace:=wdReplaceAll
+            Application.Keyboard (3073)
+            Selection.Find.ClearFormatting
+            Selection.Find.Replacement.ClearFormatting
+            With Selection.Find
+                .Text = "בצדץ׃תÊףֽףÞרצוףַ ַבדץּףַׂ"
+                .Replacement.Text = "בצדץ׃תÊףֽףÞÊוףַ ַבדץּףַֹׂ"
+                .Forward = True
+                .Wrap = wdFindContinue
+                .Format = False
+                .MatchCase = False
+                .MatchWholeWord = False
+                .MatchKashida = False
+                .MatchDiacritics = False
+                .MatchAlefHamza = False
+                .MatchControl = False
+                .MatchWildcards = False
+                .MatchSoundsLike = False
+                .MatchAllWordForms = False
+            End With
+            Selection.Find.ClearFormatting
+            Selection.Find.Replacement.ClearFormatting
+            With Selection.Find
+                .Text = "ַ׃ד ַב״ַבָ והַ"
+                .Replacement.Text = "ַ׃ד ַב״ַבָֹ והַ"
+                .Forward = True
+                .Wrap = wdFindContinue
+                .Format = False
+                .MatchCase = False
+                .MatchWholeWord = False
+                .MatchKashida = False
+                .MatchDiacritics = False
+                .MatchAlefHamza = False
+                .MatchControl = False
+                .MatchWildcards = False
+                .MatchSoundsLike = False
+                .MatchAllWordForms = False
+            End With
+            Selection.Find.Execute Replace:=wdReplaceAll
+            Selection.Find.ClearFormatting
+            Selection.Find.Replacement.ClearFormatting
+            With Selection.Find
+                .Text = _
+                    "הÝÚ ַבבו ָו זÚףÝףַ Úףהתוץ זףÚףהת זףַבצֿףםתוצ זףװץםץז־צו זףַבתדץ׃תבצדצםהף"
+                .Replacement.Text = _
+                    "הÝÚ ַבבו ָוַ זÚףÝףַ Úףהתוַ זףÚףהת זףַבצֿףםתוַ זףװץםץז־צוַ זףַבתדץ׃תבצדצםהף"
+                .Forward = True
+                .Wrap = wdFindContinue
+                .Format = False
+                .MatchCase = False
+                .MatchWholeWord = False
+                .MatchKashida = False
+                .MatchDiacritics = False
+                .MatchAlefHamza = False
+                .MatchControl = False
+                .MatchWildcards = False
+                .MatchSoundsLike = False
+                .MatchAllWordForms = False
+            End With
+            Selection.Find.Execute Replace:=wdReplaceAll
+            Selection.Find.ClearFormatting
+            Selection.Find.Replacement.ClearFormatting
+            With Selection.Find
+                .Text = "ַבÚףדצםÞצ ַב״ַבצָץ ַבדץּףַׂץ /"
+                .Replacement.Text = "ַבÚףדצםÞצ ַב״ַבצָֹ ַבדץּףַֹׂ /"
+                .Forward = True
+                .Wrap = wdFindContinue
+                .Format = False
+                .MatchCase = False
+                .MatchWholeWord = False
+                .MatchKashida = False
+                .MatchDiacritics = False
+                .MatchAlefHamza = False
+                .MatchControl = False
+                .MatchWildcards = False
+                .MatchSoundsLike = False
+                .MatchAllWordForms = False
+            End With
+            Selection.Find.Execute Replace:=wdReplaceAll
+            Selection.Find.ClearFormatting
+            Selection.Find.Replacement.ClearFormatting
+            With Selection.Find
+                .Text = "בףÞףֿת Þףׁףֳף Úףבףםרף ַבÞץׁתֲהף ַבßףׁצםדף"
+                .Replacement.Text = "בףÞףֿת ÞףׁףֳףÊ Úףבףםרף ַבÞץׁתֲהף ַבßףׁצםדף"
+                .Forward = True
+                .Wrap = wdFindContinue
+                .Format = False
+                .MatchCase = False
+                .MatchWholeWord = False
+                .MatchKashida = False
+                .MatchDiacritics = False
+                .MatchAlefHamza = False
+                .MatchControl = False
+                .MatchWildcards = False
+                .MatchSoundsLike = False
+                .MatchAllWordForms = False
+            End With
+            Selection.Find.Execute Replace:=wdReplaceAll
+            Selection.Find.ClearFormatting
+            Selection.Find.Replacement.ClearFormatting
+            With Selection.Find
+                .Text = _
+                    "זףָףÚתֿ ֳףהת ÚףבצדףÊץ דצהתוץ ַבֿרצׁףַםףֹצ זףַבֵצÊתÞףַהצ זף ֳ״תדףֳתהףהתÊץ ֵצבףל ÞצׁףֱַףÊצוצ ßץברף ַבֵ״תדצֶתהףַהצ"
+                .Replacement.Text = _
+                    "זףָףÚתֿ ֳףהת ÚףבצדףÊץ דצהתוַ ַבֿרצׁףַםףֹצ זףַבֵצÊתÞףַהצ זף ֳ״תדףֳתהףהתÊץ ֵצבףל ÞצׁףֱַףÊצוַ ßץברף ַבֵ״תדצֶתהףַהצ"
+                .Forward = True
+                .Wrap = wdFindContinue
+                .Format = False
+                .MatchCase = False
+                .MatchWholeWord = False
+                .MatchKashida = False
+                .MatchDiacritics = False
+                .MatchAlefHamza = False
+                .MatchControl = False
+                .MatchWildcards = False
+                .MatchSoundsLike = False
+                .MatchAllWordForms = False
+            End With
+            Selection.Find.Execute Replace:=wdReplaceAll
+            Selection.Find.ClearFormatting
+            Selection.Find.Replacement.ClearFormatting
+            With Selection.Find
+                .Text = _
+                    "זףָףÚתֿ ֳףהת ÚףבצדףÊץ דצהתוץ ַבֿרצׁףַםףֹצ זףַבֵצÊתÞףַהצ זף ֳ״תדףֳתהףהתÊץ ֵצבףל ÞצׁףֱַףÊצוצ ßץברף ַבֵ״תדצֶתהףַהצ"
+                .Replacement.Text = _
+                    "זףָףÚתֿ ֳףהת ÚףבצדףÊץ דצהתוַ ַבֿרצׁףַםףֹצ זףַבֵצÊתÞףַהצ זף ֳ״תדףֳתהףהתÊץ ֵצבףל ÞצׁףֱַףÊצוַ ßץברף ַבֵ״תדצֶתהףַהצ"
+                .Forward = True
+                .Wrap = wdFindContinue
+                .Format = False
+                .MatchCase = False
+                .MatchWholeWord = False
+                .MatchKashida = False
+                .MatchDiacritics = False
+                .MatchAlefHamza = False
+                .MatchControl = False
+                .MatchWildcards = False
+                .MatchSoundsLike = False
+                .MatchAllWordForms = False
+            End With
+            Selection.Find.ClearFormatting
+            Selection.Find.Replacement.ClearFormatting
+            With Selection.Find
+                .Text = _
+                    "זף Þֿ ״ףבףָף דצהףל ַבֵצּףַׂףֹף זף ßצÊףַָףֹף ַב׃רףהףֿצ ÝףֳףּףׂתÊץוץ ָצַבÞצׁףֱַףֹצ"
+                .Replacement.Text = _
+                    "זף Þֿ ״ףבףָÊ דצהףל ַבֵצּףַׂףֹף זף ßצÊףַָףֹף ַב׃רףהףֿצ ÝףֳףּףׂתÊץוַ ָצַבÞצׁףֱַףֹצ"
+                .Forward = True
+                .Wrap = wdFindContinue
+                .Format = False
+                .MatchCase = False
+                .MatchWholeWord = False
+                .MatchKashida = False
+                .MatchDiacritics = False
+                .MatchAlefHamza = False
+                .MatchControl = False
+                .MatchWildcards = False
+                .MatchSoundsLike = False
+                .MatchAllWordForms = False
+            End With
+            Selection.Find.Execute Replace:=wdReplaceAll
+            Selection.Find.ClearFormatting
+            Selection.Find.Replacement.ClearFormatting
+            With Selection.Find
+                .Text = _
+                    "בצßףזתהצוצ ֳףותבַנ ב׀ףבצßף זףֳף׀צהתÊץ בףוץ ֳףהת םףÞתׁףֳף זםץÞתׁצֶ זףםץÚףברצדץ זףםץּצםׂץ Ûףםתׁףוץ ָצדףַ Þףׁףֳף Úףבףםרף Ýצם ֳףםרצ דףßףַה"
+                .Replacement.Text = _
+                    "בצßףזתהצוַ ֳףותבַנ ב׀ףבצßף זףֳף׀צהתÊץ בףוַ ֳףהת ÊÞתׁףֳף זÊÞתׁצֶ זף ÊÚףברצדץ זף Êּצםׂץ Ûףםתׁףוַ ָצדףַ ÞףׁףֳףÊ Úףבףםרף Ýצם ֳףםרצ דףßףַה"
+                .Forward = True
+                .Wrap = wdFindContinue
+                .Format = False
+                .MatchCase = False
+                .MatchWholeWord = False
+                .MatchKashida = False
+                .MatchDiacritics = False
+                .MatchAlefHamza = False
+                .MatchControl = False
+                .MatchWildcards = False
+                .MatchSoundsLike = False
+                .MatchAllWordForms = False
+            End With
+            Selection.Find.Execute Replace:=wdReplaceAll
+            Selection.Find.ClearFormatting
+            Selection.Find.Replacement.ClearFormatting
+            With Selection.Find
+                .Text = _
+                    " ֽףברע זף Ýרףל ֳףםרצ Þץ״תׁ הףׂףבף ָצװףׁת״צ ַבתֳףדףַהףֹצ זף ַבױרצםףַהףֹצ זףַבתדץ״ףַבףÚףֹצ זףֳףבףַ םףÞץזבף ֵצבףַ ָצדףַ םףÚתבףדץ Ýףֵצהת ָףֿרףבף ֳףזתÛףםרףׁף ֳזף ײףםרףÚף ַבÞץׁתֲהף"
+                .Replacement.Text = _
+                    " ֽףברעÊ זף Ýרףל ֳףםרצ Þץ״תׁ הףׂףבףÊ ָצװףׁת״צ ַבתֳףדףַהףֹצ זף ַבױרצםףַהףֹצ זףַבתדץ״ףַבףÚףֹצ זףֳףבףַ ÊÞץזבף ֵצבףַ ָצדףַ ÊÚתבףדץ Ýףֵצהת ָףֿרףבףÊ ֳףזת ÛףםרףׁףÊ ֳזף ײףםרףÚףÊ ַבÞץׁתֲהף"
+                .Forward = True
+                .Wrap = wdFindContinue
+                .Format = False
+                .MatchCase = False
+                .MatchWholeWord = False
+                .MatchKashida = False
+                .MatchDiacritics = False
+                .MatchAlefHamza = False
+                .MatchControl = False
+                .MatchWildcards = False
+                .MatchSoundsLike = False
+                .MatchAllWordForms = False
+            End With
+            Selection.Find.Execute Replace:=wdReplaceAll
+            Selection.Find.ClearFormatting
+            Selection.Find.Replacement.ClearFormatting
+            With Selection.Find
+                .Text = _
+                   "זףÞףÚף Ýצם ַבברףֽתהצ"
+                .Replacement.Text = _
+                   "זÞÚÊ Ýל ַבבֽה"
+                .Forward = True
+                .Wrap = wdFindContinue
+                .Format = False
+                .MatchCase = False
+                .MatchWholeWord = False
+                .MatchKashida = False
+                .MatchDiacritics = False
+                .MatchAlefHamza = False
+                .MatchControl = False
+                .MatchWildcards = False
+                .MatchSoundsLike = False
+                .MatchAllWordForms = False
+            End With
+            Selection.Find.Execute Replace:=wdReplaceAll
+            Selection.Find.ClearFormatting
+            Selection.Find.Replacement.ClearFormatting
+            With Selection.Find
+                .Text = _
+                    "זףÞףֿת ״ףבףָף דצהרצל דףÚתׁצÝףֹף ֵצ׃תהףַֿצל Ýצם ַבÞץׁתֲהצ ַבßףׁצםדצ ÝףֳףּףָתÊץוץ זףֳף־תָףׁתÊץוץ"
+                .Replacement.Text = _
+                    "זףÞףֿת ״ףבףָףÊ דצהרצל דףÚתׁצÝףֹף ֵצ׃תהףַֿצל Ýצם ַבÞץׁתֲהצ ַבßףׁצםדצ ÝףֳףּףָתÊץוַ זףֳף־תָףׁתÊץוַ"
+                .Forward = True
+                .Wrap = wdFindContinue
+                .Format = False
+                .MatchCase = False
+                .MatchWholeWord = False
+                .MatchKashida = False
+                .MatchDiacritics = False
+                .MatchAlefHamza = False
+                .MatchControl = False
+                .MatchWildcards = False
+                .MatchSoundsLike = False
+                .MatchAllWordForms = False
+            End With
+            Selection.Find.Execute Replace:=wdReplaceAll
+            Selection.Find.ClearFormatting
+            Selection.Find.Replacement.ClearFormatting
+            With Selection.Find
+                .Text = "ַבװם־ ַבדַּׂ / "
+                .Replacement.Text = "ַבװם־ֹ ַבדַֹּׂ / "
+                .Forward = True
+                .Wrap = wdFindContinue
+                .Format = False
+                .MatchCase = False
+                .MatchWholeWord = False
+                .MatchKashida = False
+                .MatchDiacritics = False
+                .MatchAlefHamza = False
+                .MatchControl = False
+                .MatchWildcards = False
+                .MatchSoundsLike = False
+                .MatchAllWordForms = False
+            End With
+            Selection.Find.Execute Replace:=wdReplaceAll
+            Selection.LtrPara
+            Selection.Find.ClearFormatting
+            Selection.Find.Replacement.ClearFormatting
+            With Selection.Find
+                .Text = "ַבװם־ ַבדַּׂ / "
+                .Replacement.Text = "ַבװם־ֹ ַבדַֹּׂ / "
+                .Forward = True
+                .Wrap = wdFindContinue
+                .Format = False
+                .MatchCase = False
+                .MatchWholeWord = False
+                .MatchKashida = False
+                .MatchDiacritics = False
+                .MatchAlefHamza = False
+                .MatchControl = False
+                .MatchWildcards = False
+                .MatchSoundsLike = False
+                .MatchAllWordForms = False
+            End With
+            Selection.Find.ClearFormatting
+            Selection.Find.Replacement.ClearFormatting
+            With Selection.Find
+                .Text = "וף׀ףַ זףֳץזױצם הףÝת׃צם זף ַבדץּףַׂף "
+                .Replacement.Text = "וף׀ףַ זףֳץזױצם הףÝת׃צם זף ַבדץּףַֹׂ"
+                .Forward = True
+                .Wrap = wdFindContinue
+                .Format = False
+                .MatchCase = False
+                .MatchWholeWord = False
+                .MatchKashida = False
+                .MatchDiacritics = False
+                .MatchAlefHamza = False
+                .MatchControl = False
+                .MatchWildcards = False
+                .MatchSoundsLike = False
+                .MatchAllWordForms = False
+            End With
+            Selection.Find.Execute Replace:=wdReplaceAll
+            With Selection.Find
+                .Text = "וף׀ףַ זףֳץזױצם הףÝת׃צם זף ַבדץּףַֹׂ"
+                .Replacement.Text = "וף׀ףַ זףֳץזױצם הףÝת׃צם זף ַבדץּףַֹׂ "
+                .Forward = True
+                .Wrap = wdFindContinue
+                .Format = False
+                .MatchCase = False
+                .MatchWholeWord = False
+                .MatchKashida = False
+                .MatchDiacritics = False
+                .MatchAlefHamza = False
+                .MatchControl = False
+                .MatchWildcards = False
+                .MatchSoundsLike = False
+                .MatchAllWordForms = False
+            End With
+            Selection.Find.Execute Replace:=wdReplaceAll
+            Selection.Find.ClearFormatting
+            Selection.Find.Replacement.ClearFormatting
+            With Selection.Find
+                .Text = _
+                    "בצםףÚתׁצÝף Þףֿתׁף דףַ זףױףבף ֵצבףםתוצ זף ֳץÛתֿצÞף Úףבףםתוצ דףהת וף׀צוצ ַבהרצÚתדףֹצ ַבÚףÙצםדףֹצ זף ַבדצהרףֹצ ַבּף׃צםדףֹצ זף בצםץÚףברצד"
+                .Replacement.Text = _
+                    "בצÊÚתׁצÝף Þףֿתׁף דףַ זףױףבףÊ ֵצבףםתוצ זף ֳץÛתֿצÞ Úףבףםתוַ דףהת וף׀צוצ ַבהרצÚתדףֹצ ַבÚףÙצםדףֹצ זף ַבדצהרףֹצ ַבּף׃צםדףֹצ זף בצÊÚףברצד"
+                .Forward = True
+                .Wrap = wdFindContinue
+                .Format = False
+                .MatchCase = False
+                .MatchWholeWord = False
+                .MatchKashida = False
+                .MatchDiacritics = False
+                .MatchAlefHamza = False
+                .MatchControl = False
+                .MatchWildcards = False
+                .MatchSoundsLike = False
+                .MatchAllWordForms = False
+            End With
+            Selection.Find.Execute Replace:=wdReplaceAll
+            Selection.Find.ClearFormatting
+            Selection.Find.Replacement.ClearFormatting
+            With Selection.Find
+                .Text = _
+                    "־ףַÝצײנַ ּףהףַֽףוץ בצßץברצ דףהת ֳץÊףַוץ זףבףַ םףÞתÊףױףׁ Úףבףל דףַ Úצהתֿףוץ זףםףÊתׁץß ַבּצֿרף"
+                .Replacement.Text = _
+                    "־ףַÝצײֹ ּףהףַֽףוַ בצßץברצ דףהת ֳץÊףַוַ זףבףַ ÊÞתÊףױףׁ Úףבףל דףַ Úצהתֿףוַ זףÊÊתׁץß ַבּצֿרף"
+                .Forward = True
+                .Wrap = wdFindContinue
+                .Format = False
+                .MatchCase = False
+                .MatchWholeWord = False
+                .MatchKashida = False
+                .MatchDiacritics = False
+                .MatchAlefHamza = False
+                .MatchControl = False
+                .MatchWildcards = False
+                .MatchSoundsLike = False
+                .MatchAllWordForms = False
+            End With
+            Selection.Find.Execute Replace:=wdReplaceAll
+            Selection.Find.ClearFormatting
+            Selection.Find.Replacement.ClearFormatting
+            With Selection.Find
+                .Text = _
+                    "־ףַÝצײנַ ּףהףַֽףוץ בצßץברצ דףהת ֳץÊףַוץ זףבףַ םףÞתÊףױףׁ Úףבףל דףַ Úצהתֿףוץ זףםףÊתׁץß ַבּצֿרף"
+                .Replacement.Text = _
+                    "־ףַÝצײֹ ּףהףַֽףוַ בצßץברצ דףהת ֳץÊףַוַ זףבףַ ÊÞתÊףױףׁ Úףבףל דףַ Úצהתֿףוַ זףÊÊתׁץß ַבּצֿרף"
+                .Forward = True
+                .Wrap = wdFindContinue
+                .Format = False
+                .MatchCase = False
+                .MatchWholeWord = False
+                .MatchKashida = False
+                .MatchDiacritics = False
+                .MatchAlefHamza = False
+                .MatchControl = False
+                .MatchWildcards = False
+                .MatchSoundsLike = False
+                .MatchAllWordForms = False
+            End With
+            Selection.Find.ClearFormatting
+            Selection.Find.Replacement.ClearFormatting
+            With Selection.Find
+                .Text = "זבםףׂצֿו ַבÚצבתדף דףֽףַ׃צהף"
+                .Replacement.Text = "זבםףׂצֿוַ ַבÚצבתדף דףֽףַ׃צהף"
+                .Forward = True
+                .Wrap = wdFindContinue
+                .Format = False
+                .MatchCase = False
+                .MatchWholeWord = False
+                .MatchKashida = False
+                .MatchDiacritics = False
+                .MatchAlefHamza = False
+                .MatchControl = False
+                .MatchWildcards = False
+                .MatchSoundsLike = False
+                .MatchAllWordForms = False
+            End With
+            Selection.Find.Execute Replace:=wdReplaceAll
+            Selection.Find.ClearFormatting
+            Selection.Find.Replacement.ClearFormatting
+            With Selection.Find
+                .Text = "זף ֵצהרצל Þףֿת ֳףּףׂתÊץßף ֳףםוַ ַב״רףַבצָץ"
+                .Replacement.Text = "זף ֵצהרצל Þףֿת ֳףּףׂתÊץßצ ֳףםÊוַ ַב״רףַבצָֹ"
+                .Forward = True
+                .Wrap = wdFindContinue
+                .Format = False
+                .MatchCase = False
+                .MatchWholeWord = False
+                .MatchKashida = False
+                .MatchDiacritics = False
+                .MatchAlefHamza = False
+                .MatchControl = False
+                .MatchWildcards = False
+                .MatchSoundsLike = False
+                .MatchAllWordForms = False
+            End With
+            Selection.Find.Execute Replace:=wdReplaceAll
+            Selection.Find.ClearFormatting
+            Selection.Find.Replacement.ClearFormatting
+            With Selection.Find
+                .Text = _
+                    "ÝףֽףַÝצÙץ ֳצםו ַבדץּףַׂץ Úףבףל דףַ ֳףֿרףםתÊץוץ בףßף ּףÚףבףßף"
+                .Replacement.Text = _
+                    "ÝףֽףַÝצÙצ ֳצםÊוַ ַבדץּףַֹׂ Úףבףל דףַ ֳףֿרףםתÊץוץ בףßף ּףÚףבףßצ"
+                .Forward = True
+                .Wrap = wdFindContinue
+                .Format = False
+                .MatchCase = False
+                .MatchWholeWord = False
+                .MatchKashida = False
+                .MatchDiacritics = False
+                .MatchAlefHamza = False
+                .MatchControl = False
+                .MatchWildcards = False
+                .MatchSoundsLike = False
+                .MatchAllWordForms = False
+            End With
+            Selection.Find.Execute Replace:=wdReplaceAll
+            Selection.Find.ClearFormatting
+            Selection.Find.Replacement.ClearFormatting
+            With Selection.Find
+                .Text = _
+                    " זףֳץזױצםוצ ֳףבףַ םףהת׃ףַהצם זףֳףותבצם זף׀ףׁרצםרףÊצם דצהת ױףַבצֽצ ֿףÚףזףַÊצוצ Ýצם ־ףבףזףַÊצוצ זּףבףזףַÊצוצ זףֳףהת םף׀תßץׁףהצם Úצהתֿף ׁףָרצו."
+                .Replacement.Text = _
+                    " זףֳץזױצםוַ ֳףבףַ Êהת׃ףַהצם זףֳףותבצם זף׀ףׁרצםרףÊצם דצהת ױףַבצֽצ ֿףÚףזףַÊצוַ Ýצם ־ףבףזףַÊצוַ זּףבףזףַÊצוַ זףֳףהת Ê׀תßץׁףהצם Úצהתֿף ׁףָרצוַ."
+                .Forward = True
+                .Wrap = wdFindContinue
+                .Format = False
+                .MatchCase = False
+                .MatchWholeWord = False
+                .MatchKashida = False
+                .MatchDiacritics = False
+                .MatchAlefHamza = False
+                .MatchControl = False
+                .MatchWildcards = False
+                .MatchSoundsLike = False
+                .MatchAllWordForms = False
+            End With
+            Selection.Find.Execute Replace:=wdReplaceAll
+            Selection.Find.ClearFormatting
+            Selection.Find.Replacement.ClearFormatting
+            With Selection.Find
+                 .Text = _
+                    "זÞֿ Þֳׁ ַב״ַבָ ֳםײַ Úבל"
+                .Replacement.Text = _
+                    "זÞֿ ÞֳׁÊ ַב״ַבָֹ ֳםײַ Úבל"
+                .Forward = True
+                .Wrap = wdFindContinue
+                .Format = False
+                .MatchCase = False
+                .MatchWholeWord = False
+                .MatchKashida = False
+                .MatchDiacritics = False
+                .MatchAlefHamza = False
+                .MatchControl = False
+                .MatchWildcards = False
+                .MatchSoundsLike = False
+                .MatchAllWordForms = False
+            End With
+            Selection.Find.Execute Replace:=wdReplaceAll
+    End If
+
+End Sub
+Private Sub set_qeraat(state, qeraat, rawy)
+    Selection.Find.ClearFormatting
+    Selection.Find.Replacement.ClearFormatting
+    With Selection.Find
+        .Text = "egaza_content"
+        .Replacement.Text = qeraat
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = False
+        .MatchCase = False
+        .MatchWholeWord = False
+        .MatchKashida = False
+        .MatchDiacritics = False
+        .MatchAlefHamza = False
+        .MatchControl = False
+        .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
+    End With
+    Selection.Find.Execute Replace:=wdReplaceAll
+    
+    Selection.Find.ClearFormatting
+    Selection.Find.Replacement.ClearFormatting
+    With Selection.Find
+        .Text = "rawy"
+        .Replacement.Text = rawy
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = False
+        .MatchCase = False
+        .MatchWholeWord = False
+        .MatchKashida = False
+        .MatchDiacritics = False
+        .MatchAlefHamza = False
+        .MatchControl = False
+        .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
+    End With
+    Selection.Find.Execute Replace:=wdReplaceAll
+    
+    Selection.Find.ClearFormatting
+    Selection.Find.Replacement.ClearFormatting
+    With Selection.Find
+        .Text = "egaza_state"
+        .Replacement.Text = state
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = False
+        .MatchCase = False
+        .MatchWholeWord = False
+        .MatchKashida = False
+        .MatchDiacritics = False
+        .MatchAlefHamza = False
+        .MatchControl = False
+        .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
+    End With
+    Selection.Find.Execute Replace:=wdReplaceAll
+   
+End Sub
+Private Sub set_snada(sanada)
+ 
+    Dim clipboard As MSForms.DataObject
+    Set clipboard = New MSForms.DataObject
+    clipboard.SetText sanada
+    clipboard.PutInClipboard
+    Dim strContents As String
+
+    Dim target As String
+    Dim rngtarget As Range
+    target = "sanada"
+    Selection.HomeKey wdStory
+    Selection.Find.ClearFormatting
+    With Selection.Find
+    Do While .Execute(FindText:=target, Forward:=True, _
+    MatchWildcards:=False, Wrap:=wdFindStop, MatchCase:=False) = True
+    Selection.Paste
+    Selection.Collapse wdCollapseEnd
+    Selection.MoveRight wdCharacter, 1
+    Loop
+    
+    End With
+  
+End Sub
+Function sanadan(index As Integer) As String
+     
+     'adding sanad
+     If index = -1 Then
+         'ַָה Úַדׁ
+         sanadan = "Þַב ֳָז Úדׁז ַבַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+         sanadan = sanadan & "Ýֳדַ ׁזַםֹ וװַד : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ Þַב: ֻֽֿהַ ַָה דַּוֿ ¡ Þַב : ֻֽֿהַ ַבֽ׃םה ָה דוַׁה ַבּדַב ¡ Þַב :ֻֽֿהַ ֳֽדֿ ָה םׂםֿ ַבֽבזַהם ¡ Þַב : ֻֽֿהַ וװַד ָה Úדַׁ ¡ Þַב: ֻֽֿהַ Úַׁß ָה ־ַבֿ ַבדׁם ¡ Þַב :ÞֳׁÊ Úבל םֽםם ָה ַבַֻֽׁ ַב׀דַׁם ¡ זÞַב: ÞֳׁÊ Úבל Úָֿ ַבבו ָה Úַדׁ ¡ Þַב : ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם ַבÝÊֽ װם־הַ ¡ זÞַב: ÞֳׁÊ ָוַ Úבל Úָֿ ַבבו ָה ַבֽ׃םה ַבדÞׁםֱ ¡ ז Þַב : ÞֳׁÊ ָוַ Úבל דֽדֿ ָה ֳֽדֿ ָה Úַָֿה ¡ זÞַב : ÞֳׁÊ Úבל ַבֽבזַהם ¡ זÞַב : ÞֳׁÊ Úבל וװַד " & vbNewLine
+         sanadan = sanadan & "זֳדַ ׁזַםֹ ַָה ׀ßזַה : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ¡ Þַב:ֻֽֿהַ ֳֽדֿ ָה דז׃ל ָה דַּוֿ ¡ Þַב : ֻֽֿהַ ֳֽדֿ ָה םז׃Ý ַבÊÛבָם ¡ Þַב : ֻֽֿהַ Úָֿ ַבבו ָה ׀ßזַה ¡ Þַב : ֻֽֿהַ ֳםזָ ָה Êדםד ַבÊדםדם ¡ Þַב :ֻֽֿהַ םֽםם ָה ַבַֻֽׁ ַב׀דַׁם ¡ Þַב : ÞֳׁÊ Úבל ַָה Úַדׁ ¡ זÞַב ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֲׁה ßבו Úבל Úָֿ ַבÚׂםׂ ָה ּÚÝׁ ַבÝַׁ׃ם ַבדÞׁםֱ זÞַב בם : ÞֳׁÊ ָוַ Úבל ֳָל ָßׁ דֽדֿ ָה ַבֽ׃ה ַבהÞַװ ¡ זÞַב : ÞֳׁÊ ָוַ Úבל ֳָם Úָֿ ַבבו וַׁזה ָה דז׃ל ָה װׁםß ַבֳ־Ýװ זׁזַוַ ַבֳ־Ýװ Úה Úָֿ ַבבו ָה ׀ßזַה " & vbNewLine
+         sanadan = sanadan & "זּׁÜÜַב ַָה Úַדׁ ַבÜ׀םÜה ׃ÜÜדַוד : ֳָז ַבֱַֿֿׁ Úזםדׁ ָה Úַדׁ ױַָֽ ׁ׃זב ַבבו ¡ זַבדÛםֹׁ ָה ֳָם װוַָ ַבד־ׂזדם ¡ זֳ־Ü׀ ֳָז ַבֱַֿֿׁ ÚÜÜה ַבהָם . זֳ־׀ ַבדÛםֹׁ Úה Úֻדַה ָה ÚÝַה Úה ַבהָם Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -" & vbNewLine
+         snandan = sanadan & vbNewLine
+         'Úַױד
+         sanadan = sanadan & "Þַב ֳָÜÜז ÚÜדÜׁז ַבÜַֿהÜÜם ÝÜÜÜם ַבÜÊם׃םׁ:" & vbNewLine
+         sanadan = sanadan & "Ýֳדַ ׁזַםֹ ֳָם ָßׁ װÚָֹ: Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ָה Úבם ַבßַÊָ Þַב: ֻֽֿהַ ָה דַּוֿ Þַב: ֻֽֿהַ ֵַָׁוםד ָה ֳֽדֿ ָה Úדׁ ַבזßםÚם ¡ Þַב:ֻֽֿהַ ֳָם Þַב:ֻֽֿהַ םֽםם ָה ֳֿד ¡ Þַב: ֻֽֿהַ ֳָז ָßׁ Úה Úַױד ¡ Þַב ֳָז Úדׁז: זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל Ýַׁ׃ ָה ֳֽדֿ ַבדÞׁםֱ ¡ ז Þַב בם: ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃ה Úָֿ ַבַָÞם ָה ַבֽ׃ה ַבדÞׁםֱ ¡ זÞַב: ÞֳׁÊ Úבל ֵַָׁוםד ָה Úָֿ ַבֽׁדה ָה ֳֽדֿ ַבדÞׁםֱ ַבָÛַֿֿם זÞַב: ÞֳׁÊ Úבל םז׃Ý ָה םÚÞזָ ַבזַ׃״ם ¡ זÞַב: ÞֳׁÊ Úבל װÚםָ ָה ֳםזָ ַבױׁםÝםהם ¡ זÞַב: ÞֳׁÊ ָוַ Úבל םֽםם ָה ֳֿד Úה ֳָל ָßׁ Úה Úַױד." & vbNewLine
+         sanadan = sanadan & "זֳדַ ׁזַםֹ ֽÝױ : Ýֻֽֿהַ ָוַ ֳָז ַבֽ׃ה ״ַוÜׁ ָה Ûבָזה ַבדÞֶׁ ¡ Þַב : ֻֽֿהַ ֳָז ַבֽ׃ה Úבם ָה דֽדֿ ָה ױַבֽ ַבוַװדם ַבײׁםׁ ַבדÞֶׁ ַָבָױֹׁ ¡ Þַב: ֻֽֿהַ ֳָז ַבÚַָ׃ ֳֽדֿ ָה ׃וב ַבֳװהַהם ¡ זÞַב: ÞֳׁÊ Úבל ֳָם דֽדֿ Úָםֿ ָה ַבױַָֽ ¡ זÞַב: ÞֳׁÊ Úבל ֽÝױ ¡ זÞַב: ÞֳׁÊ Úבל ÚַױÜד ¡ זÞַב ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֲׁה ßבו Úבל װם־הַ ֳָם ַבֽ׃ה זÞַב בם: ÞֳׁÊ ָוַ Úבל ַבוַװדם זÞַב: ÞֳׁÊ Úבל ַבֳװהַהם Úה Úָםֿ Úה ֽÝױ Úה ÚַױÜד . " & vbNewLine
+         sanadan = sanadan & "זַּׁב Úַױד ַבÜ׀םÜה ׃דַוד ַֻהַה : ֳָז Úָֿ ַבֽׁדה Úָֿ ַבבו ָה ָֽםָ ַב׃בדם ¡ זֳָז דׁםד ׁׂ ָה ָֽםװ ¡ זֳ־Ü׀ ֳָז Úָֿ ַבֽׁדה Úה Úֻדַה ָה ÚÝַה ¡ זÚבם ָה ֳָם ״ַבָ  ¡ זֳָם ָה ßÚָ  ¡ זׂםֿ ָה ַָֻÊ  ¡ זÚָֿ ַבבו ָה ד׃Úזֿ ¡ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל - ¡ ֳ־׀ ׁׂ ָה ָֽםװ Úה Úֻדַה ָה ÚÜÝÜÜַה  ¡ זַָה ד׃Úזֿ  ¡ Úה ׁ׃זב ַבבו - ױבל ַבבו Úבםו ז ׃בד - ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+         snandan = sanadan & vbNewLine
+        
+         'ַבß׃ֶַל
+         sanadan = sanadan & "Þַב ֳָז Úדׁז ַבÜַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+         sanadan = sanadan & "Ýֳדַ ׁזַםֹ ֳָם Úדׁז ַבֿזׁם : Ýֻֽֿהַ ָוַ ֳָז דֽדֿ Úָֿ ַבֽׁדה ָה Úדׁ ָה דֽדֿ ַבדÚֿב ¡ Þַב : ֻֽֿהַ ֳָז Úדׁ Úָֿ ַבבו ָה ֳֽדֿ ָה ֿםׂזםו ַבֿדװÞם ¡ Þַב : ֻֽֿהַ ּÚÝׁ ָה דֽדֿ ָה ֳ׃ֿ ַבהױםָם ¡ Þַב : ֻֽֿהַ ֳָז Úדׁ ַבֿזׁם ¡ Úה ַבß׃ֶַם ¡ ז Þַב ֳָז ÚÜדׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם ַבÝÊֽ ¡ זÞַב בם : ÞֳׁÊ ָוַ Úבל Úָֿ ַבַָÞם ָה ַבֽ׃ה ¡ זÞַב : ÞֳׁÊ Úבל ֳָם ָßׁ דֽדֿ ָה Úבם ָה ַבּבהֿם ַבדזױבם ¡ ז Þַב :ÞֳׁÊ Úבל ּÚÝׁ ָה דֽדֿ ¡ זÞַב : ÞֳׁÊ Úבל ֳָם Úדׁ ַבֿזׁם ¡ זÞַב : ÞֳׁÊ Úבל ַבß׃ֶַם ." & vbNewLine
+         sanadan = sanadan & "זֳדַ ׁזַםֹ ֳָם ַבַֻֽׁ : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ¡ Þַב : ֻֽֿהַ ָוַ ַָה דַּוֿ ¡ Þַב : ֻֽֿהַ דֽדֿ ָה םֽםל ( ַבß׃ֶַם ַבױÛםׁ) ¡ Úה ֳָם ַבַֻֽׁ ¡ Úה ַבß׃ֶַם ¡ ז Þַב ֳָÜÜז ÚÜדÜׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל Ýַׁ׃ ָה ֳֽדֿ ¡ ז Þַב בם : ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃ה Úָֿ ַבַָÞם ָה ַבֽ׃ה ַבדÞׁםֱ ¡ זÞַב : ÞֳׁÊ ָוַ Úבל ֳָם ַבÞַ׃ד ׂםֿ ָה Úבם ¡ זÞַב : ÞֳׁÊ Úבל ֳֽדֿ ָה ַבֽ׃ה ַבדÚׁזÝ ַָבָ״ם ¡ זÞַב :ÞֳׁÊ Úבל דֽדֿ ָה םֽםל ( ַבß׃ֶַם ַבױÛםׁ) ¡ זÞַב : ÞֳׁÊ Úבל ֳָם ַבַֻֽׁ ¡ זÞַב : ÞֳׁÊ Úבל ַבß׃ֶַם ." & vbNewLine
+         sanadan = sanadan & "זַּׁב ַבß׃ֶַם : ֽדֹׂ ָה ָֽםָ ַבׂםַÊ ¡ זÚם׃ל ָה Úדׁ ַבוד׀ַהם ¡ זדֽדֿ ָה ֳָם בםבל ַבÞַײם ¡ זÛםׁוד דה דװם־ֹ ַבßזÝםםה Ûםׁ ֳה דַֹֿ ÞֱַׁÊו זַÚÊדַֿו Ýם ַ־Êםַׁו Úה ֽדֹׂ ¡ זÞֿ ׀ßׁהַ ַÊױַב ÞֱַׁÊו ." & vbNewLine
+         sanadan = sanadan & "זַּׁב ֽדֹׂ : זַּׁב ֽדֹׂ ּדַÚֹ דהוד ֳָז דֽדֿ ׃בםדַה ָה דוַׁה ַבֳÚדװ ¡ זדֽדֿ ָה Úָֿ ַבֽׁדה ָה ֳָם בםבל ַבÞַײם ¡ זֽדַׁה ָה ֳÚםה ¡ זֳָז ֵ׃ַֽÞ ַב׃ָםÚם ¡ זדהױזׁ ַָה ַבדÚÊדׁ ¡ זדÛםֹׁ ָה דÞ׃ד ¡ זּÚÝׁ ָה דֽדֿ ַבױַֿÞ ¡ זÛםׁוד ." & vbNewLine
+         sanadan = sanadan & "זֳ־׀ ַבֳÚדװ Úה םֽםל ָה זַָֻ ¡ זֳ־׀ םֽםל Úה ּדַÚֹ דה ֳױַָֽ ַָה ד׃Úזֿ : ÚבÞדֹ ¡ זַבֳ׃זֿ זÚָםֿ ָה הײבֹ ַב־ַׂÚם ¡ זׁׂ ָה ָֽםװ ¡ זֳָם Úָֿ ַבֽׁדה ַב׃בדם ¡ זÛםׁוד ¡ Úה ַָה ד׃Úזֿ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+         snandan = sanadan & vbNewLine
+        
+         '־בÝ
+         sanadan = sanadan & "Þַב ַבֵדַד ֳָז ַב־םׁ דֽדֿ ָה ַבּׁׂם Ýל Êָֽםׁ ַבÊם׃םׁ : " & vbNewLine
+         sanadan = sanadan & "ֳדַ ׁזַםֹ ֵֿׁם׃ ַבזַׁÞ : Ýֻֽֿהַ ָוַ ֳָז ֽÝױ Úדׁ ָה ַבֽ׃ה ָÞֱַׁÊם Úבםו Ùַוׁ ֿדװÞ ¡ Úה װם־ו ַבֵדַד ַב־״םָ ֳָם ַבÚַָ׃ ֳֽדֿ ָה ֵַָׁוםד ָה Úדׁ ַבÝַׁזֶם ַבװַÝÚם ¡ Þַב : ֳ־ָׁהַ זַבֿם ¡ Þַב : ֳ־ָׁהַ ֳָז ַב׃ÚַַֿÊ ַבֳ׃Úֿ ָה ׃ב״ַה ַבזַ׃״ם ¡ ֳ־ָׁהַ ֳָז ַבÚׂ דֽדֿ ָה ַבֽ׃םה ַבזַ׃״ם ¡ ֳ־ָׁהַ ֳָז ַבֽ׃םה ֳֽדֿ ָה Úָֿ ַבבו ָה ַב־ײׁ ַב׃ז׃הּֿׁם ¡ ֳ־ָׁהַ ֳָז ַבֽ׃ה דֽדֿ ָה Úָֿ ַבבו ָה דֽדֿ ָה דֹׁ ַב״ז׃ם ַבדÚׁזÝ ַָָה ֳָם Úדׁ ַבהÞַװ ¡ ֳ־ָׁהַ ֳָז םÚÞזָ ֵ׃ַֽÞ ָה ֵַָׁוםד ַבזַׁÞ ." & vbNewLine
+         sanadan = sanadan & "Þַב ַָה ַבּׁׂם : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ßב דה ַבװם־םה ֳָם Úָֿ ַבבו ַבֽהÝם ¡ זֳָם דֽדֿ ַבװַÝÚם ַבדױׁםםה ¡ זÞֳׁ ßב דהודַ Úבל ֳָם Úָֿ ַבבו דֽדֿ ָה ֳֽדֿ ָה Úָֿ ַב־ַבÞ ַבדױׁם ¡ זÞֳׁ ָוַ Úבל ַבßדַב ָה Ýַׁ׃ ¡ זÞֳׁ ָוַ Úבל ׂםֿ ָה ַבֽ׃ה ¡ זÞֳׁ ָוַ Úבל ֳָם ַבÞַ׃ד וָֹ ַבבו ָה ֳֽדֿ ָה ַב״ָׁ ַבָÛַֿֿם ¡ זÞֳׁ ָוַ Úבל ֳָם ָßׁ דֽדֿ ָה Úבם ָה דז׃ל ַב־םַ״ ¡ זÞֳׁ ָוַ Úבל ֳָם ַבֽ׃םה ַב׃ז׃הּֿׁם ¡ זÞֳׁ ָוַ Úבל ַָה ֳָם Úדׁ ַב״ז׃ם ¡ זÞֳׁ ָוַ Úבל ֵ׃ַֽÞ ַבזַׁÞ ¡ זÞֳׁ ָוַ Úבל ־בÝ ." & vbNewLine
+         sanadan = sanadan & "זֳדַ ׁזַםֹ ֵֿׁם׃ : Ýֻֽֿהַ ָוַ ֳֽדֿ ָה דֽדֿ ָה ַבֽ׃םה ַבÝַׁ׃ם ָÞֱַׁÊם Úבםו ¡ ֳ־ָׁהַ Úבם ָה ֳֽדֿ Ýםדַ װַÝוהם ָו ¡Úה ׂםֿ ָה ַבֽ׃ה ַבָÛַֿֿם ¡ ֳ־ָׁהַ ֳָז ַבÞַ׃ד ָה ֳֽדֿ ַבֽׁםׁם ¡ ֳ־ָׁהַ ֳָז ָßׁדֽדֿ ָה Úָם ָה דֽדֿ ַב־םַ״ ¡ ֳ־ָׁהַ ֳָז ַבֽ׃ה Úבם ָה דֽדֿ ָה Úָֿ ַבבו ַבֽ׀ֱַ ¡ ֳ־ָׁהַ ֳָז ֵ׃ַֽÞ ֵַָׁוםד ָה ַבֽ׃םה ָה Úָֿ ַבבו ַבה׃ַּ ַבדÚׁזÝ ַָבװ״ם ¡ ֳ־ָׁהַ ֵֿׁם׃ ָה Úָֿ ַבßׁםד ַבַֽֿֿ." & vbNewLine
+         sanadan = sanadan & "Þַב ַָה ַבּׁׂם : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ַבװם־ ֳָם דֽדֿ Úָֿ ַבֽׁדה ָה ֳֽדֿ ַבזַ׃״ם ¡ זֳ־ָׁהם ֳהו Þֳׁ ָוַ Úבל דֽדֿ ָה ֳֽדֿ ָה Úָֿ ַב־ַבÞ ַבדÚֿב ¡ זÞֳׁ ָוַ Úבל ֵַָׁוםד ָה ֳֽדֿ ¡ זÞֳׁ ָוַ Úבל ֳָם ַבםדה ¡ זÞֳׁ ָוַ Úבל ֳָם דֽדֿ ׃ָ״ ַב־םַ״ ¡ Þַב : זÞֳׁÊ ָוַ ַבÞֲׁה דה ֳזבו ֵבל ֲ־ׁו Úבל ַבֵדַדםה ַבװׁםÝ ֳָם ַבÝײב Úָֿ ַבÞַוׁ ָה Úָֿ ַב׃בַד ַבÚַָ׃ם ¡ זֳָם ַבדÚַבם ַָֻÊ ָה ָהַֿׁ ָה ֵַָׁוםד ַבָÞַב ¡ Ýֳדַ ַבװׁםÝ Ýֳ־ָׁהם ֳהו Þֳׁ ָוַ Úבל ַבֵדַד ֳָם Úָֿ ַבבו דֽדֿ ָה ַבֽ׃םה ַבßַׁׂםהם ¡ זֳ־ָׁו ֳהו Þֳׁ ָוַ Úבל ַבֵדַד ֳָם ַבÚַָ׃ ַבֽ׃ה ָה ׃Úםֿ ָה ּÚÝׁ ַבד״זÚם ¡ זֳדַ ֳָז ַבדÚַבם Ýֳ־ָׁהם ֳהו Þֳׁ ָוַ Úבל ַבֵדַד ַבÞַײם ֳָם ַבÚבֱַ דֽדֿ ָה Úבם ָה םÚÞזָ ַבזַ׃״ם ¡ זÞֳׁ ַבזַ׃״ם ָוַ דה ַבßÊַָ Úבל ַבֵדַד ֳָם ָßׁ ֳֽדֿ ָה ּÚÝׁ ָה ֽדַֿה ָה דַבß ַבÞ״םÚם ¡ זÞֳׁ ַבÞ״םÚם זַבד״זÚם ּדםÚַ Úבל ֵֿׁם׃ ¡ זÞֳׁ ֵֿׁם׃ Úבל ־בÝ ¡ זַבבו ַבדזÝÞ . " & vbNewLine
+         sanadan = sanadan & "זַּׁב ־בÝ : זַּׁב ־בÝ ׃בםד ױַָֽ ֽדֹׂ ¡ זםÚÞזָ ָה ־בםÝֹ ַבֳÚװל ױַָֽ ֳָם ָßׁ ¡ זֳָז ׂםֿ ׃Úםֿ ׃Úםֿ ָה ֳז׃ ַבֳהױַׁם ױַָֽ ַבדÝײב ַבײָם זֳַָה ַבÚ״ַׁ ¡ זÞֳׁ ֳָז ָßׁ ¡ זַבדÝײב ¡ זֳַָה Úבל Úַױד . זׁזל ַבÞֱַֹׁ ֳםײַ Úה ַבß׃ֶַם זÚה םֽםל ָה ֲֿד Úה ֳָם ָßׁ ¡ זַבבו ַבדזÝÞ . ÞבÊ : זֳ־׀ Úַױד Úה ֳָם Úָֿ ַבֽׁדה Úָֿ ַבבו ָה ָֽםָ ַב׃בדם ¡ זֳָם דׁםד ׁׂ ָה ָֽםװ ¡ זֳ־Ü׀ ֳָז Úָֿ ַבֽׁדה Úה Úֻדַה ָה ÚÝַה ¡ זÚבם ָה ֳָם ״ַבָ ¡ זֳָם ָה ßÚָ ¡ זׂםֿ ָה ַָֻÊ ¡ זÚָֿ ַבבו ָה ד׃Úזֿ ¡ Úה ַבהָם ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+         sanadan = sanadan & "זֳ־׀ ׁׂ ָה ָֽםװ Úה Úֻדַה ָה ÚÜÝÜÜַה ¡ זַָה ד׃Úזֿ ¡ Úה ׁ׃זב ַבבו ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -. זַּׁב ֽדֹׂ : זַּׁב ֽדֹׂ ּדַÚֹ דהוד ֳָז דֽדֿ ׃בםדַה ָה דוַׁה ַבֳÚדװ ¡ זדֽדֿ ָה Úָֿ ַבֽׁדה ָה ֳָם בםבל ַבÞַײם ¡ זֽדַׁה ָה ֳÚםה ¡ זֳָז ֵ׃ַֽÞ ַב׃ָםÚם ¡ זדהױזׁ ַָה ַבדÚÊדׁ ¡ זדÛםֹׁ ָה דÞ׃ד ¡ זּÚÝׁ ָה דֽדֿ ַבױַֿÞ ¡ זÛםׁוד . זֳ־׀ ַבֳÚדװ Úה םֽםל ָה זַָֻ ¡ זֳ־׀ םֽםל Úה ּדַÚֹ דה ֳױַָֽ ַָה ד׃Úזֿ : ÚבÞדֹ ¡ זַבֳ׃זֿ זÚָםֿ ָה הײבֹ ַב־ַׂÚם ¡ זׁׂ ָה ָֽםװ ¡ זֳָם Úָֿ ַבֽׁדה ַב׃בדם ¡ זÛםׁוד ¡ Úה ַָה ד׃Úזֿ Úה ַבהָם Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+         snandan = sanadan & vbNewLine
+         
+        
+        ElseIf index = -2 Then
+        
+        ' ֳָז Úדׁז
+        sanadan = "׃הֿ Þֱַֹׁ ַבֵדַד / ֳָז Úדׁז ַבָױׁל" & vbNewLine
+        sanadan = sanadan & "Þַב ֳָז Úדׁז ַבַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ ֳָם Úדׁ ַבֿזׁם : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ָה Úבם ¡ Þַב: ֳ־ָׁהַ ֳָז Úם׃ל דֽדֿ ָה ֳֽדֿ ָה Þ״ה ׃הֹ ֻדַה Úװֹׁ זֻבַֻדֶַֹ¡ Þַב: ֳ־ָׁהַ ֳָז ־בַֿ ׃בםדַה ָה ־בַֿ Þַב:ֻֽֿהַ ַבםׂםֿם Úה ֳָם Úדׁז ¡ Þַב ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו דה ״ׁםÞ ֳָם Úדׁ ַבֿזׁם Úבל װם־הַ Úָֿ ַבÚׂ םׂ ָה ּÚÝׁ ָה דֽדֿ ָה ֵ׃ַֽÞ ַבָÛַֿֿם ַבÝַׁ׃ם ַבדÞׁםֱ ¡ ז Þַב בם : ÞֳׁÊ ָוַ Úבל ֳָם ״ַוׁ Úָֿ ַבזַֽֿ ָה Úדׁ ָה ֳָם וַװד ַבדÞׁםֱ ¡ דַ בַ ֳֽױםו ßֹֻׁ ¡ זÞַב בם : ÞֳׁÊ ָוַ Úבל ֳָם ָßׁ ָה דַּוֿ ¡ זÞַב : ÞֳׁÊ ָוַ Úבל ֳָם ַבׂÚֱַׁ Úָֿ ַבֽׁדה ָה Úָֿז׃ זÞַב :ÞֳׁÊ Úבל ֳָם Úדׁ ¡ זÞַב : ÞֳׁÊ ָוַ Úבל ַבםׂםֿם ¡ זÞַב ÞֳׁÊ ָוַ Úבל : ֳָם Úדׁז. " & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ ֳָם װÚםָ ַב׃ז׃ם : Ýֻֽֿהַ ָוַ ־בÝ ָה ֵַָׁוםד ָה דֽדֿ ַבדÞֶׁ ¡ Þַב : ֻֽֿהַ ֳָז דֽדֿ ַבֽ׃ה ָה ׁװםÞ ַבדÚֿב ¡ Þַב : ֻֽֿהַ ֳָז Úָֿ ַבֽׁדה ֳֽדֿ ָה װÚםָ ַבה׃ֶַם ¡ Þַב : ֳ־ָׁהַ ֳָז װÚםָ ¡ Þַב : ֳ־ָׁהַ ַבםׂםֿם ¡ Úה ֳָם Úדׁז ¡ זÞַב ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֲׁה ßבו ֵָÙוַׁ ַבֳזב דה ַבדֻבםה זַבדÊÞַָׁםה זֵָֿÛַדו Úבל Ýַׁ׃ ָה ֳֽדֿ ַבדÞׁםֱ ¡ זÞַב בם : ÞֳׁÊ ָוַ ß׀בß Úבל Úָֿ ַבבו ָה ַבֽ׃םה ַבדÞׁםֱ ¡ זÞַב בם : ÞֳׁÊ ָוַ ַבÞַׁה ßבו ß׀בß Úבל ֳָם Úדַׁה דז׃ל ָה ּׁםׁ ַבהֽזם ¡ זÞַב : ÞֳׁÊ ָוַ Úבל ֳָם װÚםָ ¡ זÞַב : ÞֳׁÊ Úבל ַבםׂםֿם ¡ זÞַב : ÞֳׁÊ Úבל ֳָם Úדׁז" & vbNewLine
+        sanadan = sanadan & "Þַב ֳָז Úדׁז: זֻֽֿהַ ֳָױזב ַבֵֿÛַד דֽדֿ ָה ֳֽדֿ Úה ַָה דַּוֿ Úה Úָֿ ַבֽׁדה ָה Úָֿז׃ Úה ַבֿזׁם Úה ַבםׂםֿם Úה ֳָל Úדׁז¡ זֻֽֿהַ ָוַ ֳםײַ ֳָז ַבֽ׃ה װם־הַ ¡ Þַב : ֻֽֿהַ Úָֿ ַבבו ָה ַבדַָׁß Úה ּÚÝׁ ָה ׃בםדַה Úה ֳָם װÚםָ Úה ַבםׂםֿם Úה ֳָם Úדׁז . " & vbNewLine
+        sanadan = sanadan & "זַּׁב ֳָם Úדׁז : ּדַÚֹ דה ֳוב ַבַּֽׂ זדה ֳוב ַבָױֹׁ ¡ Ýדה ֳוב דßֹ : דַּוֿ ¡ ז׃Úםֿ ָה ָּםׁ ¡ זÚßׁדֹ ָה ־ַבֿ ¡ זÚ״ֱַ ָה ֳָם ַָֽׁ ¡ זÚָֿ ַבבו ָה ßֻםׁ ¡ זדֽדֿ ָה Úָֿ ַבֽׁדה ָה דֽםױה ¡ זֽדםֿ ָה Þם׃ ַבֳÚּׁ ַבÞֶַׁ ¡ זדה ֳוב ַבדֿםהֹ : םׂםֿ ָה ַבÞÚÞַÚ ַבÞַׁםֱ זםׂםֿ ָה ׁזדַה ¡ זװםָֹ ָה הױַֽ ¡ זדה ֳוב ַבָױֹׁ : ַבֽ׃ה ָה ֳָם ַבֽ׃ה ַבָױׁם ¡ זםֽם ָה םÚדׁ ¡ זÛםׁודַ ¡ זֳ־׀ וִבֱַ ַבÞֱַֹׁ Úדה ÊÞֿד דה ַבױַָֹֽ זÛםׁוד . " & vbNewLine
+        sanadan = sanadan & "ÞבÊ : זֳ־׀ ׃Úםֿ ָה ָּםׁ ¡ זÚßׁדֹ¡ זםֽםל ָה םÚדׁ ¡ Úה ַָה Úַָ׃ זֳ־׀ ַָה Úַָ׃ Úה ֳָם ָה ßÚָ זׂםֿ ָה ַָֻÊ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+         
+        'םÚÞזָ
+        sanadan = sanadan & "׃הֿ Þֱַֹׁ ַבֵדַד / םÚÞזָ ַבָױׁל" & vbNewLine
+        sanadan = sanadan & "Þַב ַבֵדַד ֳָז ַב־םׁ דֽדֿ ָה ַבּׁׂם Ýל Êָֽםׁ ַבÊם׃םׁ : " & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ ׁזם׃ : Ýֻֽֿהַ ָוַ ַבװם־ ַבֵדַד ֳָז ַבÚַָ׃ ֳֽדֿ ָה דֽדֿ ָה ַב־ײׁ ַבֽהÝם ָÞֱַׁÊם Úבםו Þַב: ֳ־ָׁהַ : ֳָז ַבÚַָ׃ ֳֽדֿ ָה ֳָם ״ַבָ ָה ֳָם ַבהÚד ַבױַבֽם Þֱַֹׁ Úבםו ¡ ֳ־ָׁהַ ֳָז ״ַבָ Úָֿ ַבב״םÝ ָה דֽדֿ ָה ַבÞָם״ם ¡ Ýם ßÊַָו ֳ־ָׁהַ ָוַ ֳָז ָßׁ ֳֽדֿ ָה ַבדÞָׁ ַבßׁ־ם Þֱַֹׁ Úבםו ¡ ֳ־ָׁהַ ֳָז ״ַוׁ ֳֽדֿ ָה Úבם ַבדÞׁםֱ ַבֳ׃Êַ׀ ֳ־ָׁהַ ֳָז ַבֽ׃ה Úבם ָה דֽדֿ ָה Úבם ַב־םַ״ ¡ ֳ־ָׁהַ ַבֳ׃Êַ׀ ַבֵדַד ֳָז ַבֽ׃ה Úבם ָה ֳֽדֿ ָה Úדׁ ַבֽדַדם ¡ ֳ־ָׁהַ ֳָז ַבÞַ׃ד Úָֿ ַבבו ָה ַבֽ׃ה ָה ׃בםדַה ַבה־ַ׃ ¡ ֳ־ָׁהַ ֳָז ָßׁ דֽדֿ ָה וַׁזה ָה הַÝÚ ַבÊדַׁ ַבָÛַֿֿם ¡ ֳ־ָׁהַ ֳָז Úָֿ ַבבו דֽדֿ ָה ַבדÊזßב ַבדÚׁזÝ ָׁזם׃ ." & vbNewLine
+        sanadan = sanadan & "Þַב ַָה ַבּׁׂם : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ַבֵדַד ֳָם דֽדֿ Úָֿ ַבֽׁדה ָה ֳֽדֿ ָה Úבם ַבָÛַֿֿם ¡ זֳ־ָׁהם ֳהו Þֳׁ ָוַ ַבÞֲׁה ßבו Úבל ַבֵדַד ַבÊÞם דֽדֿ ָה ֳֽדֿ ַבדױׁם ¡ זÞֳׁ ָוַ Úבל ֵַָׁוםד ָה ֳֽדֿ ַבֵ׃ßהֿׁם ¡ זÞֳׁ ָוַ Úבל ׂםֿ ָה ַבֽ׃ה ¡ זÞֳׁ ָוַ Úבל Úָֿ ַבבו ָה Úבם ַבָÛַֿֿם ¡ זÞֳׁ ָוַ Úבל ַבֳ׃Êַ׀ ֳָם ַבÚׂ ַבÞבַה׃ם ¡ זÞֳׁ ָוַ Úבל ֳָם Úבם ַבֽ׃ה ָה ַבÞַ׃ד ַבזַ׃״ם ¡ זÞֳׁ ָוַ Úבל : ַבֽדַדם ¡ זÞֳׁ ָוַ Úבל ַבה־ַ ׃ ¡ זÞֳׁ ָוַ Úבל ַבÊדַׁ ¡ זÞֳׁ Úבל ׁזם׃ ¡ זÞֳׁ ָוַ Úבל םÚÞזָ . " & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ ׁףזֽ : Ýֻֽֿהַ ָוַ ַבװם־ ֳָז ַבÚַָ׃ ֳֽדֿ ָה דֽדֿ ָה ַבֽ׃םה ַבװםַׁׂם ָÞֱַׁÊם Úבםו Úה ַבֵדַד ֳָם ַבֽ׃ה Úבם ָה ֳֽדֿ ַבדÞֿ׃ם ¡ ֳ־ָׁהַ ֳָז ַבםדה ַבßהֿם װÝַוַ ¡ ֳ־ָׁהַ ֳָז דֽדֿ ַבָÛַֿֿם ¡ ֳ־ָׁהַ ֳָז ַבÝײב ַבװׁםÝ ַבדßם ¡ ֳ־ָׁהַ דֽדֿ ָה ַבֽ׃םה ַבÝַׁ׃ם ¡ ֳ־ָׁהַ ֳָז ַבֽ׃ה Úבם ָה דֽדֿ ָה ֵַָׁוםד ָה ־װהַד ַבדַבßם ַבָױׁם ֳ־ָׁהַ ֳָז ַבÚַָ׃ דֽדֿ ָה םÚÞזָ ָה ַבַּּֽ ָה דÚַזםֹ ַבÊםדם ¡ ֳ־ָׁהַ ֳָז ָßׁ דֽדֿ ָה זוָ ָה םֽםל ָה ַבÚבֱַ ַבֻÞÝם ַבÞַׂׂ ¡ ֳ־ָׁהַ ׁזֽ ָה Úָֿ ַבדִדה ַבָױׁם ." & vbNewLine
+        sanadan = sanadan & "Þַב ַָה ַבּׁׂם : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל דֽדֿ ָה ֳֽדֿ ַָבÞַוֹׁ ַבדֽׁז׃ֹ ¡ זֳ־ָׁהם ֳהו Þֳׁ ָוַ ַבÞַׁה ßבו Úבל ַבֵדַד ֳָם Úָֿ ַבבו ַבױֶַÛ ¡ זÞֳׁ ָוַ Úבל ֳָם ֵ׃ַֽÞ ַבֿדװÞם זÞֳׁ ָוַ Úבל ׂםֿ ָה ַבֽ׃ה ¡ זÞֳׁ ָוַ Úבל Úָֿ ַבבו ָה Úבם ¡ זÞֳׁ ָוַ Úבל ַבֳ׃Êַ׀ ֳָם ״ַוׁ ָה ׃זַׁ ¡ זÞֳׁ ָוַ Úבל ֳָם ַבÞַ׃ד ַבד׃ַÝׁ ָה ַב״םָ ָה Úַָֿ ַבָױׁם ¡ זÞֳׁ ָוַ Úבל ַָה ־װהַד ¡ זÞֳׁ ָוַ Úבל ַָה Úַָ ׃ ַבÊםדם ¡ זÞֳׁ ָוַ Úבל ַָה זוָ ¡ זÞֳׁ ָוַ Úבל ׁזֽ ¡ זÞֳׁ ָוַ Úבל םÚÞזָ ." & vbNewLine
+        sanadan = sanadan & "זּׁÜÜַב םÚÞזָ ַב׀םה ׃דַוד ֳָׁÚֹ : ֳָז ַבדה׀ׁ ׃בַד ָה ׃בםדַה ַב״זםב ¡ זװוַָ ָה װׁהÝֹ ¡ זדוֿם ָה דםדזה ¡ זֳָז ַבֳװוָ ּÚÝׁ ָה ֽםַה ַבÚ״ַֿׁם .זÞםב ֵה םÚÞזָ Þֳׁ Úבל ֳָם Úדׁז ָה ַבÚבֱַ זÞֳׁ ׃בַד Úבל Úַױד זֳָם Úדׁז ¡ זÞÜÜÜֳׁ װוַָ ַבּֽֿׁם זÞֳׁ Úַױד Úבל ַבֽ׃ה ַבָױׁם זÚבל ׃בםדַה ָה ÞÊֹ זÞֳׁ ׃בםדַה Úבל ַָÜה Úַָ ׃ זÞֳׁ דוֿם Úבל װÚםָ ָה ַבַָָֽֽ זÞֳׁ Úבל ֳָם ַבÚַבםֹ ַבׁםַֽם זÞֳׁ Úבל ֳָם זׂםֿ זÞֳׁ ֳָז ַבֳװוָ Úבל ֳָם ֱַּׁ Úדַׁה ָה דבַֽה ַבÚ״ַֿׁם זÞֳׁ Úבל ֳָם דז׃ÜÜÜל ַבֳװÚׁם זÞֳׁ Úבל ׁ׃זב ַבבו Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+  
+         ElseIf index = -3 Then
+        
+         ' הַÝÚ
+        sanadan = "׃הֿ Þֱַֹׁ ַבֵדַד / הַÝÚ" & vbNewLine
+        sanadan = sanadan & "Þַב ֳָז Úדׁז ַבַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+        sanadan = sanadan & "ֳדַ ׁזַםֹ Þַבזה : Ýֻֽֿהַ ָוַ ֳֽדֿ ָה Úדׁ ָה דֽדֿ ַבּםׂם ¡ Þַב: ֻֽֿהַ דֽדֿ ָה ֳֽדֿ ָה דהםׁ ¡ Þַב: ֻֽֿהַ Úָֿ ַבבו ָה Úם׃ל ַבדֿהם ¡ Þַב:ֻֽֿהַ Þַבזה Úה הַÝÚ¡ ז Þַב ֳָÜÜז ÚÜדÜׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל װם־ם ֳָם ַבÝÊֽ Ýַׁ׃ ָה ֳֽדֿ ָה דז׃ל ָה Úדַׁה ¡ ַבדÞׁםֱ ַבײׁםׁ ¡ ז Þַב בם: ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃ה Úָֿ ַבַָÞם ָה ַבֽ׃ה ַבדÞֶׁ ¡ זÞַב: ÞֳׁÊ Úבל ֵַָׁוםד ָה Úדׁ ַבדÞֶׁ ¡ זÞַב: ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃םה ֳֽדֿ ָה Úֻדַה ָה ּÚÝׁ ָה ָזםַה ¡ זÞַב:ÞֳׁÊ Úבל ֳָם ָßׁ ֳֽדֿ ָה דֽדֿ ָה ַבֳװÚֻ זÞַב: ÞֳׁÊ Úבל ֳָם הװם״ דֽדֿ ָה וַׁזה ¡ זÞַב: ÞֳׁÊ Úבל Þַבזה ¡ זÞַב: ÞֳׁÊ Úבל הַÝÚ ." & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ זׁװ : Ýֻֽֿהַ ָוַ ֳָז Úָֿ ַבבו ֳֽדֿ ָה דֽÝזÙ ַבÞַײם ָדױׁ ¡ Þַב: ֻֽֿהַ ֳֽדֿ ָה ֵַָׁוםד ָה ַּדÚ ¡ Þַב : ֻֽֿהַ ֳָז דֽדֿ ָßׁ ָה ׃וב ¡ Þַב: ֻֽֿהַ ֳָז דֽדֿ Úָֿ ַבױדֿ ָה Úָֿ ַבֽׁדה ¡ Þַב : ֻֽֿהַ זׁװ Úה הַÝÚ ¡ ז Þַב ֳָÜÜז ÚÜדÜׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל װם־ם ֳָם ַבÞַ׃ד ־בÝ ָה ֵַָׁוםד ָה דֽדֿ ָה ־ַÞַה ַבדÞׁםֱ ָדױׁ ¡ ז Þַב בם : ÞֳׁÊ ָוַ ַבÞַׁה Úבל ֳָם ּÚÝׁ ֳֽדֿ ָה ֳ׃ַדֹ ַבÊּםָם ¡ זÞַב בם : ÞֳׁÊ ָוַ ַבÞַׁה Úבל ֵ׃דַÚםב ָה Úָֿ ַבבו ַבהַֽ׃ ¡ זÞַב : ÞֳׁÊ Úבל ֳָם םÚÞזָ םז׃Ý ָה Úדׁז ָה ם׃ַׁ ַבֳׁׂÞ ¡ זÞַב :ÞֳׁÊ Úבל זׁװ זÞַב : ÞֳׁÊ Úבל הַÝÚ ." & vbNewLine
+        sanadan = sanadan & "זַּׁב הַÝÚ ַב׀םה ׃דַוד ־ד׃ֹ : ֳָז ּÚÝׁ םׂ םֿ ָה ַבÞÚÞַÚ ַבÞֶַׁ ¡ זֳָז ַֿזֿ Úָֿ ַבֽׁדה ָה וׁדׂ ַבֳÚּׁ ¡ זװםָֹ ָה הױַֽ ַבÞַײם ¡ זֳָז Úָֿ ַבבו ד׃בד ָה ּהָֿ ַבו׀בם ַבÞַױ ¡ זֳָז ׁזֽ םׂםֿ ָה ׁזדַה ¡ זֳ־׀ וִבֱַ ַבÞֱַֹׁ Úה ֳָם וׁםֹׁ ¡ זַָה Úַָ׃ ¡ זÚָֿ ַבבו ָה Úםַװ ָה ֳָם ָׁםÚֹ ¡ Úה ֳָם ָה ßÚָ ¡ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+      
+         ' ַָה ßֻםׁ
+        sanadan = sanadan & "׃הֿ Þֱַֹׁ ַבֵדַד / ַָה ßֻםׁ" & vbNewLine
+        sanadan = sanadan & "Þַב ֳָÜז Úדׁז ַבÜַֿהם Ýם ַבÊם׃םׁ  " & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ ַבָׂם : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ָה ַבßַÊָ ¡ Þַב:ֻֽֿהַ ֳֽדֿ ָה דז׃ל ¡ Þַב: ֻֽֿהַ דײׁ ָה דֽדֿ ַבײָם ¡ Þַב:ֻֽֿהַ ֳֽדֿ ָה ֳָם ָֹׂ ¡ Þַב: ÞֳׁÊ Úבל Úßׁדֹ ָה ׃בםדַה ָה Úַדׁ ¡ זÞַב: ÞֳׁÊ Úבל ֵ׃דַÚםב ָה Úָֿ ַבבו ַבÞ׃״ ¡ זÞַב : ÞֳׁÊ Úבל ַָה ßֻםׁ הÝ׃ו ¡ Þַב ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם ַבÞַ׃ד Úָֿ ַבÚׂםׂ ָה ּÚÝׁ ָה דֽדֿ ַבדÞׁםֱ ַבÝַׁ׃ם ¡ זÞַב בם: ÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם ָßׁ דֽדֿ ָה ַבֽ׃ה ַבהÞַװ ¡ זÞַב: ÞֳׁÊ ָוַ Úבל ֳָם ָׁםÚֹ דֽדֿ ָה ֵ׃ַֽÞ ַבׁ ָÚם ¡ זÞַב: ÞֳׁÊ Úבל ַבָׂם ." & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ Þהָב : Ýֻֽֿהַ ָוַ ֳָז ד׃בד דֽדֿ ָה ֳֽדֿ ַבָÛַֿֿם ¡ Þַב: ֻֽֿהַ ַָה דַּוֿ ¡ Þַב: ÞֳׁÊ Úבל Þהָב ¡ זÞַב: ÞֳׁÊ Úבל ֳָם ַבֽ׃ה ֳֽדֿ ָה Úזה ַבÞזַ׃ זÞַב: ÞֳׁÊ Úבל ֳָם ַבַ־ׁ ם״ זוָ ָה זַײֽ ¡ זÞַב: ÞֳׁÊ Úבל ֵ׃דַÚםב ָה Úָֿ ַבבו ַבÞ׃״ ¡ זÞַב: ÞֳׁÊ Úבל װָב ָה Úַָֿ ז דÚׁזÝ ָה דװßַה ¡ זÞַבַ Þֳׁהַ Úבל ַָה ßֻÜםÜׁ ¡ ז Þַב ֳָÜÜÜÜז ÚÜÜדÜÜׁז : זÞֳׁÊ ָוַ ַבÞֲׁה ßבו Úבל Ýַׁ׃ ָה ֳֽדֿ ַבֽדױם ַבדÞׁםֱ ַבײׁםׁ זÞַב: ÞֳׁÊ ָוַ Úבל Úָֿ ַבבו ָה ַבֽ׃םה ַבָÛַֿֿם ¡ זÞַב: ÞֳׁÊ ָוַ Úבל ַָה דַּוֿ זÞַב: ÞֳׁÊ Úבל Þהָב ." & vbNewLine
+        sanadan = sanadan & " זּׁÜÜַב ַָה ßֻםׁ ַבÜ׀םÜה ׃דַוד ֻבַֹֻ : Úָֿ ַבבו ָה ַב׃ֶַָ ַבד־ׂזדם ױַָֽ ׁ׃זב ַבבו  זדַּוֿ ָה ָּׁ ֳָז ַבַּּֽ דזבל Þם׃ ָה ַב׃ֶַָ ¡ זַָֿׁ׃ דזבל ַָה Úַָ׃ . זֳ־׀ Úָֿ ַבבו Úה ֳָם ָה ßÚָ הÝ׃ו. זֳ־׀ דַּוֿ זַָֿׁ׃¡ Úה ַָה Úַָ׃¡ Úה ֳָם ¡ זׂםֿ ָה ַָֻÊ ¡ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - ¡ Úה ָּׁםב - Úבםו ַב׃בַד -  ¡Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+      
+       ' ֳָז Úדׁז
+        sanadan = sanadan & "׃הֿ Þֱַֹׁ ַבֵדַד / ֳָז Úדׁז ַבָױׁל" & vbNewLine
+        sanadan = sanadan & "Þַב ֳָז Úדׁז ַבַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ ֳָם Úדׁ ַבֿזׁם : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ָה Úבם ¡ Þַב: ֳ־ָׁהַ ֳָז Úם׃ל דֽדֿ ָה ֳֽדֿ ָה Þ״ה ׃הֹ ֻדַה Úװֹׁ זֻבַֻדֶַֹ¡ Þַב: ֳ־ָׁהַ ֳָז ־בַֿ ׃בםדַה ָה ־בַֿ Þַב:ֻֽֿהַ ַבםׂםֿם Úה ֳָם Úדׁז ¡ Þַב ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו דה ״ׁםÞ ֳָם Úדׁ ַבֿזׁם Úבל װם־הַ Úָֿ ַבÚׂ םׂ ָה ּÚÝׁ ָה דֽדֿ ָה ֵ׃ַֽÞ ַבָÛַֿֿם ַבÝַׁ׃ם ַבדÞׁםֱ ¡ ז Þַב בם : ÞֳׁÊ ָוַ Úבל ֳָם ״ַוׁ Úָֿ ַבזַֽֿ ָה Úדׁ ָה ֳָם וַװד ַבדÞׁםֱ ¡ דַ בַ ֳֽױםו ßֹֻׁ ¡ זÞַב בם : ÞֳׁÊ ָוַ Úבל ֳָם ָßׁ ָה דַּוֿ ¡ זÞַב : ÞֳׁÊ ָוַ Úבל ֳָם ַבׂÚֱַׁ Úָֿ ַבֽׁדה ָה Úָֿז׃ זÞַב :ÞֳׁÊ Úבל ֳָם Úדׁ ¡ זÞַב : ÞֳׁÊ ָוַ Úבל ַבםׂםֿם ¡ זÞַב ÞֳׁÊ ָוַ Úבל : ֳָם Úדׁז. " & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ ֳָם װÚםָ ַב׃ז׃ם : Ýֻֽֿהַ ָוַ ־בÝ ָה ֵַָׁוםד ָה דֽדֿ ַבדÞֶׁ ¡ Þַב : ֻֽֿהַ ֳָז דֽדֿ ַבֽ׃ה ָה ׁװםÞ ַבדÚֿב ¡ Þַב : ֻֽֿהַ ֳָז Úָֿ ַבֽׁדה ֳֽדֿ ָה װÚםָ ַבה׃ֶַם ¡ Þַב : ֳ־ָׁהַ ֳָז װÚםָ ¡ Þַב : ֳ־ָׁהַ ַבםׂםֿם ¡ Úה ֳָם Úדׁז ¡ זÞַב ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֲׁה ßבו ֵָÙוַׁ ַבֳזב דה ַבדֻבםה זַבדÊÞַָׁםה זֵָֿÛַדו Úבל Ýַׁ׃ ָה ֳֽדֿ ַבדÞׁםֱ ¡ זÞַב בם : ÞֳׁÊ ָוַ ß׀בß Úבל Úָֿ ַבבו ָה ַבֽ׃םה ַבדÞׁםֱ ¡ זÞַב בם : ÞֳׁÊ ָוַ ַבÞַׁה ßבו ß׀בß Úבל ֳָם Úדַׁה דז׃ל ָה ּׁםׁ ַבהֽזם ¡ זÞַב : ÞֳׁÊ ָוַ Úבל ֳָם װÚםָ ¡ זÞַב : ÞֳׁÊ Úבל ַבםׂםֿם ¡ זÞַב : ÞֳׁÊ Úבל ֳָם Úדׁז" & vbNewLine
+        sanadan = sanadan & "Þַב ֳָז Úדׁז: זֻֽֿהַ ֳָױזב ַבֵֿÛַד דֽדֿ ָה ֳֽדֿ Úה ַָה דַּוֿ Úה Úָֿ ַבֽׁדה ָה Úָֿז׃ Úה ַבֿזׁם Úה ַבםׂםֿם Úה ֳָל Úדׁז¡ זֻֽֿהַ ָוַ ֳםײַ ֳָז ַבֽ׃ה װם־הַ ¡ Þַב : ֻֽֿהַ Úָֿ ַבבו ָה ַבדַָׁß Úה ּÚÝׁ ָה ׃בםדַה Úה ֳָם װÚםָ Úה ַבםׂםֿם Úה ֳָם Úדׁז . " & vbNewLine
+        sanadan = sanadan & "זַּׁב ֳָם Úדׁז : ּדַÚֹ דה ֳוב ַבַּֽׂ זדה ֳוב ַבָױֹׁ ¡ Ýדה ֳוב דßֹ : דַּוֿ ¡ ז׃Úםֿ ָה ָּםׁ ¡ זÚßׁדֹ ָה ־ַבֿ ¡ זÚ״ֱַ ָה ֳָם ַָֽׁ ¡ זÚָֿ ַבבו ָה ßֻםׁ ¡ זדֽדֿ ָה Úָֿ ַבֽׁדה ָה דֽםױה ¡ זֽדםֿ ָה Þם׃ ַבֳÚּׁ ַבÞֶַׁ ¡ זדה ֳוב ַבדֿםהֹ : םׂםֿ ָה ַבÞÚÞַÚ ַבÞַׁםֱ זםׂםֿ ָה ׁזדַה ¡ זװםָֹ ָה הױַֽ ¡ זדה ֳוב ַבָױֹׁ : ַבֽ׃ה ָה ֳָם ַבֽ׃ה ַבָױׁם ¡ זםֽם ָה םÚדׁ ¡ זÛםׁודַ ¡ זֳ־׀ וִבֱַ ַבÞֱַֹׁ Úדה ÊÞֿד דה ַבױַָֹֽ זÛםׁוד . " & vbNewLine
+        sanadan = sanadan & "ÞבÊ : זֳ־׀ ׃Úםֿ ָה ָּםׁ ¡ זÚßׁדֹ¡ זםֽםל ָה םÚדׁ ¡ Úה ַָה Úַָ׃ זֳ־׀ ַָה Úַָ׃ Úה ֳָם ָה ßÚָ זׂםֿ ָה ַָֻÊ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        
+        'ַָה Úַדׁ
+         sanadan = sanadan & "׃הֿ Þֱַֹׁ ַבֵדַד / ַָה Úַדׁ" & vbNewLine
+         sanadan = sanadan & "Þַב ֳָז Úדׁז ַבַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+         sanadan = sanadan & "Ýֳדַ ׁזַםֹ וװַד : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ Þַב: ֻֽֿהַ ַָה דַּוֿ ¡ Þַב : ֻֽֿהַ ַבֽ׃םה ָה דוַׁה ַבּדַב ¡ Þַב :ֻֽֿהַ ֳֽדֿ ָה םׂםֿ ַבֽבזַהם ¡ Þַב : ֻֽֿהַ וװַד ָה Úדַׁ ¡ Þַב: ֻֽֿהַ Úַׁß ָה ־ַבֿ ַבדׁם ¡ Þַב :ÞֳׁÊ Úבל םֽםם ָה ַבַֻֽׁ ַב׀דַׁם ¡ זÞַב: ÞֳׁÊ Úבל Úָֿ ַבבו ָה Úַדׁ ¡ Þַב : ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם ַבÝÊֽ װם־הַ ¡ זÞַב: ÞֳׁÊ ָוַ Úבל Úָֿ ַבבו ָה ַבֽ׃םה ַבדÞׁםֱ ¡ ז Þַב : ÞֳׁÊ ָוַ Úבל דֽדֿ ָה ֳֽדֿ ָה Úַָֿה ¡ זÞַב : ÞֳׁÊ Úבל ַבֽבזַהם ¡ זÞַב : ÞֳׁÊ Úבל וװַד " & vbNewLine
+         sanadan = sanadan & "זֳדַ ׁזַםֹ ַָה ׀ßזַה : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ¡ Þַב:ֻֽֿהַ ֳֽדֿ ָה דז׃ל ָה דַּוֿ ¡ Þַב : ֻֽֿהַ ֳֽדֿ ָה םז׃Ý ַבÊÛבָם ¡ Þַב : ֻֽֿהַ Úָֿ ַבבו ָה ׀ßזַה ¡ Þַב : ֻֽֿהַ ֳםזָ ָה Êדםד ַבÊדםדם ¡ Þַב :ֻֽֿהַ םֽםם ָה ַבַֻֽׁ ַב׀דַׁם ¡ Þַב : ÞֳׁÊ Úבל ַָה Úַדׁ ¡ זÞַב ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֲׁה ßבו Úבל Úָֿ ַבÚׂםׂ ָה ּÚÝׁ ַבÝַׁ׃ם ַבדÞׁםֱ זÞַב בם : ÞֳׁÊ ָוַ Úבל ֳָל ָßׁ דֽדֿ ָה ַבֽ׃ה ַבהÞַװ ¡ זÞַב : ÞֳׁÊ ָוַ Úבל ֳָם Úָֿ ַבבו וַׁזה ָה דז׃ל ָה װׁםß ַבֳ־Ýװ זׁזַוַ ַבֳ־Ýװ Úה Úָֿ ַבבו ָה ׀ßזַה " & vbNewLine
+         sanadan = sanadan & "זּׁÜÜַב ַָה Úַדׁ ַבÜ׀םÜה ׃ÜÜדַוד : ֳָז ַבֱַֿֿׁ Úזםדׁ ָה Úַדׁ ױַָֽ ׁ׃זב ַבבו ¡ זַבדÛםֹׁ ָה ֳָם װוַָ ַבד־ׂזדם ¡ זֳ־Ü׀ ֳָז ַבֱַֿֿׁ ÚÜÜה ַבהָם . זֳ־׀ ַבדÛםֹׁ Úה Úֻדַה ָה ÚÝַה Úה ַבהָם Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -" & vbNewLine
+         snandan = sanadan & vbNewLine
+        
+        
+         'Úַױד
+         sanadan = sanadan & "׃הֿ Þֱַֹׁ ַבֵדַד / Úַױד" & vbNewLine
+         sanadan = sanadan & "Þַב ֳָÜÜז ÚÜדÜׁז ַבÜַֿהÜÜם ÝÜÜÜם ַבÜÊם׃םׁ:" & vbNewLine
+         sanadan = sanadan & "Ýֳדַ ׁזַםֹ ֳָם ָßׁ װÚָֹ: Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ָה Úבם ַבßַÊָ Þַב: ֻֽֿהַ ָה דַּוֿ Þַב: ֻֽֿהַ ֵַָׁוםד ָה ֳֽדֿ ָה Úדׁ ַבזßםÚם ¡ Þַב:ֻֽֿהַ ֳָם Þַב:ֻֽֿהַ םֽםם ָה ֳֿד ¡ Þַב: ֻֽֿהַ ֳָז ָßׁ Úה Úַױד ¡ Þַב ֳָז Úדׁז: זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל Ýַׁ׃ ָה ֳֽדֿ ַבדÞׁםֱ ¡ ז Þַב בם: ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃ה Úָֿ ַבַָÞם ָה ַבֽ׃ה ַבדÞׁםֱ ¡ זÞַב: ÞֳׁÊ Úבל ֵַָׁוםד ָה Úָֿ ַבֽׁדה ָה ֳֽדֿ ַבדÞׁםֱ ַבָÛַֿֿם זÞַב: ÞֳׁÊ Úבל םז׃Ý ָה םÚÞזָ ַבזַ׃״ם ¡ זÞַב: ÞֳׁÊ Úבל װÚםָ ָה ֳםזָ ַבױׁםÝםהם ¡ זÞַב: ÞֳׁÊ ָוַ Úבל םֽםם ָה ֳֿד Úה ֳָל ָßׁ Úה Úַױד." & vbNewLine
+         sanadan = sanadan & "זֳדַ ׁזַםֹ ֽÝױ : Ýֻֽֿהַ ָוַ ֳָז ַבֽ׃ה ״ַוÜׁ ָה Ûבָזה ַבדÞֶׁ ¡ Þַב : ֻֽֿהַ ֳָז ַבֽ׃ה Úבם ָה דֽדֿ ָה ױַבֽ ַבוַװדם ַבײׁםׁ ַבדÞֶׁ ַָבָױֹׁ ¡ Þַב: ֻֽֿהַ ֳָז ַבÚַָ׃ ֳֽדֿ ָה ׃וב ַבֳװהַהם ¡ זÞַב: ÞֳׁÊ Úבל ֳָם דֽדֿ Úָםֿ ָה ַבױַָֽ ¡ זÞַב: ÞֳׁÊ Úבל ֽÝױ ¡ זÞַב: ÞֳׁÊ Úבל ÚַױÜד ¡ זÞַב ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֲׁה ßבו Úבל װם־הַ ֳָם ַבֽ׃ה זÞַב בם: ÞֳׁÊ ָוַ Úבל ַבוַװדם זÞַב: ÞֳׁÊ Úבל ַבֳװהַהם Úה Úָםֿ Úה ֽÝױ Úה ÚַױÜד . " & vbNewLine
+         sanadan = sanadan & "זַּׁב Úַױד ַבÜ׀םÜה ׃דַוד ַֻהַה : ֳָז Úָֿ ַבֽׁדה Úָֿ ַבבו ָה ָֽםָ ַב׃בדם ¡ זֳָז דׁםד ׁׂ ָה ָֽםװ ¡ זֳ־Ü׀ ֳָז Úָֿ ַבֽׁדה Úה Úֻדַה ָה ÚÝַה ¡ זÚבם ָה ֳָם ״ַבָ  ¡ זֳָם ָה ßÚָ  ¡ זׂםֿ ָה ַָֻÊ  ¡ זÚָֿ ַבבו ָה ד׃Úזֿ ¡ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל - ¡ ֳ־׀ ׁׂ ָה ָֽםװ Úה Úֻדַה ָה ÚÜÝÜÜַה  ¡ זַָה ד׃Úזֿ  ¡ Úה ׁ׃זב ַבבו - ױבל ַבבו Úבםו ז ׃בד - ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+         snandan = sanadan & vbNewLine
+         
+        'ֽדֹׂ
+        sanadan = sanadan & "׃הֿ Þֱַֹׁ ַבֵדַד / ֽדֹׂ" & vbNewLine
+        sanadan = sanadan & "Þַב ֳָÜז Úדׁז ַבÜַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ ־בÝ : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ¡ Þַב : ֻֽֿהַ ַָה דַּוֿ ¡ ֻֽֿהַ ֵֿׁם׃ ָה Úָֿ ַבßׁםד ¡ Þַב : ֻֽֿהַ ־בÝ ¡ Þַב: Úה ׃בםד Úה ֽדֹׂ ¡ ז Þַב ֳָÜÜז ÚÜדÜׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם ַבֽ׃ה װם־הַ ¡ ז Þַב בם : ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃ה דֽדֿ ָה םז׃Ý ָה הוַׁ ַבֽׁÊßם ַָבָױֹׁ ¡ זÞַב בם : ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃םה ֳֽדֿ ָה Úֻדַה ָה ּÚÝׁ ָה ָזםַה ¡ זÞַב בם :ÞֳׁÊ Úבל ֵֿׁם׃ ָה Úָֿ ַבßׁםד Þָב ֳה םÞׁםֱ ַָ־Êםַׁ ־בÝ ¡ זÞַב בם : ÞֳׁÊ Úבל ־בÝ ¡ זÞַב : ÞֳׁÊ Úבל ׃בםד ¡ ז Þַב : ÞֳׁÊ Úבל ֽדֹׂ ." & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ ־בַֿ : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ¡ Þַב : ֻֽֿהַ ֳֽדֿ ָה דז׃ל ¡ Þַב : ֻֽֿהַ םֽםל ָה ֳֽדֿ ָה וַׁזה ַבדׂזÞ ¡ Úה ֳֽדֿ ָה םׂםֿ ַבֽבזַהם ¡ Úה ־בַֿ ¡ Úה ׃בםד ¡ Úה ֽדֹׂ ¡ ז Þַב ֳָÜÜז ÚÜדÜׁז : זÞֳׁÊ ָוַ ַבÞֲׁה ßבו Úבל ֳָם ַבÝÊֽ ַבײׁםׁ װם־הַ ¡ ז Þַב בם: ÞֳׁÊ ָוַ Úבל Úָֿ ַבבו ָה ַבֽ׃םה ַבדÞׁםֱ ¡ זÞַב : ÞֳׁÊ ָוַ Úבל דֽדֿ ָה ֳֽדֿ ָה װהָז׀ ¡ זÞַב : ÞֳׁÊ Úבל ֳָם ָßׁ דֽדֿ ָה װַ׀ַה ַבּזוׁם ַבדÞׁם ¡ זÞַב :ÞֳׁÊ Úבל ־בַֿ זÞַב : ÞֳׁÊ Úבל ׃בםד ¡ זÞֳׁ ׃בםד Úבל ֽדֹׂ." & vbNewLine
+        sanadan = sanadan & "זַּׁב ֽדֹׂ : זַּׁב ֽדֹׂ ּדַÚֹ דהוד ֳָז דֽדֿ ׃בםדַה ָה דוַׁה ַבֳÚדװ ¡ זדֽדֿ ָה Úָֿ ַבֽׁדה ָה ֳָם בםבל ַבÞַײם ¡ זֽדַׁה ָה ֳÚםה ¡ זֳָז ֵ׃ַֽÞ ַב׃ָםÚם ¡ זדהױזׁ ַָה ַבדÚÊדׁ ¡ זדÛםֹׁ ָה דÞ׃ד ¡ זּÚÝׁ ָה דֽדֿ ַבױַֿÞ ¡ זÛםׁוד ." & vbNewLine
+        sanadan = sanadan & "זֳ־׀ ַבֳÚדװ Úה םֽםל ָה זַָֻ ¡ זֳ־׀ םֽםל Úה ּדַÚֹ דה ֳױַָֽ ַָה ד׃Úזֿ : ÚבÞדֹ ¡ זַבֳ׃זֿ זÚָםֿ ָה הײבֹ ַב־ַׂÚם ¡ זׁׂ ָה ָֽםװ ¡ זֳָם Úָֿ ַבֽׁדה ַב׃בדם ¡ זÛםׁוד ¡ Úה ַָה ד׃Úזֿ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+       
+        'ַבß׃ֶַל
+         sanadan = sanadan & "׃הֿ Þֱַֹׁ ַבֵדַד / ַבß׃ֶַל" & vbNewLine
+         sanadan = sanadan & "Þַב ֳָז Úדׁז ַבÜַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+         sanadan = sanadan & "Ýֳדַ ׁזַםֹ ֳָם Úדׁז ַבֿזׁם : Ýֻֽֿהַ ָוַ ֳָז דֽדֿ Úָֿ ַבֽׁדה ָה Úדׁ ָה דֽדֿ ַבדÚֿב ¡ Þַב : ֻֽֿהַ ֳָז Úדׁ Úָֿ ַבבו ָה ֳֽדֿ ָה ֿםׂזםו ַבֿדװÞם ¡ Þַב : ֻֽֿהַ ּÚÝׁ ָה דֽדֿ ָה ֳ׃ֿ ַבהױםָם ¡ Þַב : ֻֽֿהַ ֳָז Úדׁ ַבֿזׁם ¡ Úה ַבß׃ֶַם ¡ ז Þַב ֳָז ÚÜדׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם ַבÝÊֽ ¡ זÞַב בם : ÞֳׁÊ ָוַ Úבל Úָֿ ַבַָÞם ָה ַבֽ׃ה ¡ זÞַב : ÞֳׁÊ Úבל ֳָם ָßׁ דֽדֿ ָה Úבם ָה ַבּבהֿם ַבדזױבם ¡ ז Þַב :ÞֳׁÊ Úבל ּÚÝׁ ָה דֽדֿ ¡ זÞַב : ÞֳׁÊ Úבל ֳָם Úדׁ ַבֿזׁם ¡ זÞַב : ÞֳׁÊ Úבל ַבß׃ֶַם ." & vbNewLine
+         sanadan = sanadan & "זֳדַ ׁזַםֹ ֳָם ַבַֻֽׁ : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ¡ Þַב : ֻֽֿהַ ָוַ ַָה דַּוֿ ¡ Þַב : ֻֽֿהַ דֽדֿ ָה םֽםל ( ַבß׃ֶַם ַבױÛםׁ) ¡ Úה ֳָם ַבַֻֽׁ ¡ Úה ַבß׃ֶַם ¡ ז Þַב ֳָÜÜז ÚÜדÜׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל Ýַׁ׃ ָה ֳֽדֿ ¡ ז Þַב בם : ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃ה Úָֿ ַבַָÞם ָה ַבֽ׃ה ַבדÞׁםֱ ¡ זÞַב : ÞֳׁÊ ָוַ Úבל ֳָם ַבÞַ׃ד ׂםֿ ָה Úבם ¡ זÞַב : ÞֳׁÊ Úבל ֳֽדֿ ָה ַבֽ׃ה ַבדÚׁזÝ ַָבָ״ם ¡ זÞַב :ÞֳׁÊ Úבל דֽדֿ ָה םֽםל ( ַבß׃ֶַם ַבױÛםׁ) ¡ זÞַב : ÞֳׁÊ Úבל ֳָם ַבַֻֽׁ ¡ זÞַב : ÞֳׁÊ Úבל ַבß׃ֶַם ." & vbNewLine
+         sanadan = sanadan & "זַּׁב ַבß׃ֶַם : ֽדֹׂ ָה ָֽםָ ַבׂםַÊ ¡ זÚם׃ל ָה Úדׁ ַבוד׀ַהם ¡ זדֽדֿ ָה ֳָם בםבל ַבÞַײם ¡ זÛםׁוד דה דװם־ֹ ַבßזÝםםה Ûםׁ ֳה דַֹֿ ÞֱַׁÊו זַÚÊדַֿו Ýם ַ־Êםַׁו Úה ֽדֹׂ ¡ זÞֿ ׀ßׁהַ ַÊױַב ÞֱַׁÊו ." & vbNewLine
+         sanadan = sanadan & "זַּׁב ֽדֹׂ : זַּׁב ֽדֹׂ ּדַÚֹ דהוד ֳָז דֽדֿ ׃בםדַה ָה דוַׁה ַבֳÚדװ ¡ זדֽדֿ ָה Úָֿ ַבֽׁדה ָה ֳָם בםבל ַבÞַײם ¡ זֽדַׁה ָה ֳÚםה ¡ זֳָז ֵ׃ַֽÞ ַב׃ָםÚם ¡ זדהױזׁ ַָה ַבדÚÊדׁ ¡ זדÛםֹׁ ָה דÞ׃ד ¡ זּÚÝׁ ָה דֽדֿ ַבױַֿÞ ¡ זÛםׁוד ." & vbNewLine
+         sanadan = sanadan & "זֳ־׀ ַבֳÚדװ Úה םֽםל ָה זַָֻ ¡ זֳ־׀ םֽםל Úה ּדַÚֹ דה ֳױַָֽ ַָה ד׃Úזֿ : ÚבÞדֹ ¡ זַבֳ׃זֿ זÚָםֿ ָה הײבֹ ַב־ַׂÚם ¡ זׁׂ ָה ָֽםװ ¡ זֳָם Úָֿ ַבֽׁדה ַב׃בדם ¡ זÛםׁוד ¡ Úה ַָה ד׃Úזֿ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+         snandan = sanadan & vbNewLine
+          
+        'ֳָז ּÚÝׁ
+        sanadan = sanadan & "׃הֿ Þֱַֹׁ ַבֵדַד / ֳָז ּÚÝׁ" & vbNewLine
+        sanadan = sanadan & "Þַב ַבֵדַד ֳָז ַב־םׁ דֽדֿ ָה ַבּׁׂם Ýל Êָֽםׁ ַבÊם׃םׁ : " & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ ַָה זַֿׁה : Ýֻֽֿהַ ָוַ ַבװם־ ֳָז ֽÝױ Úדׁ ָה ַבֽ׃ה ָה דׂםֿ ַבדַׁÛם ָÞֱַׁÊם Úבםו Þַב : ֳ־ָׁהַ ֳָז ַבֽ׃ה Úבם ָה ֳֽדֿ ָה Úָֿ ַבזַֽֿ ַב׃Úֿם דװַÝוֹ Úה ַבֵדַד ֳָם ַבםדה ׂםֿ ָה ַבֽ׃ה ַבבÛזם ¡ Þַב : ֳ־ָׁהַ ֳָז דֽדֿ Úָֿ ַבבו ָה Úבם ַבָÛַֿֿם ֳ־ָׁהַ ַבװׁםÝ ֳָז ַבÝײב Úָֿ ַבÞַוׁ ָה Úָֿ ַב׃בַד ַבÚַָ׃ם ¡ ֳ־ָׁהַ ֳָז Úָֿ ַבבו דֽדֿ ָה ַבֽ׃םה ַבßַׁׂםהם ¡ ֳ־ָׁהַ ֳָז ַבÝּׁ דֽדֿ ָה ֳֽדֿ ָה ֵַָׁוםד ַבװ״זם ¡ ֳ־ָׁהַ ֳָז ָßׁ דֽדֿ ָה ֳֽדֿ ָה וַׁזה ַבַׁׂם ¡ ֳ־ָׁהַ ֳָז ַבÚַָ׃ ַבÝײב ָה װַ׀ַה ָה Úם׃ל ַבַׁׂם ֳ־ָׁהַ ֳָז ַבֽ׃ה ֳֽדֿ ָה םׂםֿ ַבֽבזַהם ¡ֳ־ָׁהַ Úם׃ל ָה דםהַ Þַבזה ¡ ֳ־ָׁהַ Úם׃ל ָה זַֿׁה." & vbNewLine
+        sanadan = sanadan & "Þַב ַָה ַבּׁׂם : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ַבֵדַד ֳָם Úָֿ ַבבו דֽדֿ Úָֿ ַבֽׁדה ָה Úבם ַבהֽזם ¡ זֳ־ָׁהם ֳהו Þֳׁ ָוַ ַבÞֲׁה ßבו Úבל ַבֵדÜÜַד ֳָם Úָֿ דֽדֿ ָה ֳֽדֿ ָה Úָֿ ַב־ַבÞ ַבדױׁם ¡ Þַב : ÞֳׁÊ ָוַ ַבÞֲׁה Úבל ַבßדַב ֵַָׁוםד ָה ֳֽדֿ ָה Ýַׁ׃ ַבÊדםדם Þַב : ÞֳׁÊ ָוַ Úבל ֳָם ַבםדה ַבßהֿם ¡ Þַב : ÞֳׁÊ ָוַ Úבל ַבֵדַד ֳָם דהױזׁ דֽדֿ ָה Úָֿ ַבדבß ָה ַבֽ׃ה ָה ־םׁזה ַבָÛַֿֿם ¡ Þַב : ÞֳׁÊ ָוַ Úבל ֳָם ַבÞַ׃ד Úָֿ ַב׃םֿ ָה ÚÊַָ ַבדÞׁםֱ ¡ Þַב : ÞֳׁÊ ָוַ Úבל ֳָם ״ַוׁ דֽדֿ ָה םַ׃םה ַבֽבָם ¡ Þַב : ÞֳׁÊ ָוַ Úבל ֳָם ַבÝּׁ ַבװ״זם Þַב: ÞֳׁÊ ָוַ Úבל ֳָם ָßׁ ָה וַׁזה ¡ Þַב: ÞֳׁÊ ָוַ Úבל ַבÝײב ָה װַ׀ַה ¡ Þַב : ÞֳׁÊ ָוַ Úבל ַבֽבזַהם ¡ Þַב : ÞֳׁÊ ָוַ Úבל Þַבזה ¡ Þַב : ÞֳׁÊ ָוַ Úבל ַָה זַֿׁה . " & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ ַָה ּדַׂ : Ýֻֽֿהַ ָוַ ֳָז ֵ׃ַֽÞ ֵַָׁוםד ָה ֳֽדֿ ָה ֵַָׁוםד ָה ַֽÊד ַבּ׀ַדם ָÞֱַׁÊם Úבםו Úה ֳָם ֽÝױ Úדׁ ָה ÛÜֿםׁ ָה ַבÞזַ׃ ַבֿדװÞם ¡ ֳהֳָהַ ֳָז ַבםדה ָה ַבֽ׃ה ַבָÛַֿֿם ¡ ֳ־ָׁהַ ֳָז דֽדֿ ׃ָ״ ַב־םַ״ ¡ ֳ־ָׁהַ ַבֳ׃Êַ׀ ֳָז ַבÚׂ דֽדֿ ָה ַבֽ׃םה ָה ָהַֿׁ ַבזַ׃״ם ¡ ֳ־ָׁהַ ַבֵדַד ֳָז ַבÞַ׃ד םז׃Ý ָה ַָֹּׁ ַבו׀בם ¡ ֳ־ָׁהַ ֳָז הױׁ דהױזׁ ָה דֽדֿ ַבÞוהֿׂם ¡ ֳ־ָׁהַ ֳָז ַבֽ׃ה Úבם ָה דֽדֿ ַב־ַָׂם ¡ ֳ־ָׁהַ ֳָז ָßׁ דֽדֿ ָה Úָֿ ַבֽׁדה ָה ַבÝײב ַבּזוׁם ¡ ֳ־ָׁהַ דֽדֿ ָה ֳֽדֿ ָה ַבֽ׃ה ַבֻÞÝם ַבß׃ֶַם ¡ ֳ־ָׁהַ דֽדֿ ָה Úָֿ ַבבו ָה װַßׁ ַבױםׁÝם ¡ ֳ־ָׁהַ ֳָז ַבÚַָ׃ ֳֽדֿ ָה ׃וב ַב״םַה ¡ ֳ־ָׁהַ ֳָז Úדַׁה דז׃ל ָה Úָֿ ַבֽׁדה ַבַָׂׂ ¡ ֳ־ָׁהַ דֽדֿ ָה Úם׃ל ָה ֵַָׁוםד ָה ׁׂםה ַבֳױָוַהם ¡ ֳ־ָׁהַ ׃בםדַה ָה ַֿזֿ ָה Úבם ָה Úָֿ ַבבו ָה Úַָ׃ ַבוַװדם ¡ ֳ־ָׁהַ ֵ׃דַÚםב ָה ּÚÝׁ ָה ֳָם ßֻםׁ ַבדֿהם ¡ ֳ־ָׁהַ ׃בםדַה ָה ד׃בד ַָה ּדַׂ." & vbNewLine
+        sanadan = sanadan & "Þַב ַָה ַבּׁׂם : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם דֽדֿ ָה Úָֿ ַבֽׁדה ַבֽהÝם ¡ זÞֳׁ ָוַ ַבÞַׁה ßבו Úבל דֽדֿ ָה ֳֽדֿ ַבױֶַÛ ¡ זÞֳׁ ָוַ Úבל ֳָם ֵ׃ַֽÞ ָה Ýַׁ׃ ¡ זÞֳׁ ָוַ Úבל ֳָם ַבםדה ¡ זÞֳׁ ָוַ Úבל ׃ָ״ ַב־םַ״ ¡ זÞֳׁ ָוַ Úבל ַבֳ׃Êַ׀ ֳָם ״ַוׁ ֳֽדֿ ָה Úבם ָה Úָםֿ ַבבו ָה ׃זַׁ ¡ זÞֳׁ ָוַ Úבל ֳָם Úבם ַבֽ׃ה ָה ַבÝײב ַבװׁדÞַהם ¡ זÞֳׁ ָוַ Úבל ֳָם ָßׁ דֽדֿ ָה Úָֿ ַבבו ָה ַבדַָׁׂה ַבֳױָוַהם ¡ זÞֳׁ ָוַ Úבל ֳָם Úדׁ דֽדֿ ָה ֳֽדֿ ָה Úדׁ ַב־ׁÞם ¡ זÞֳׁ ָוַ Úבל דֽדֿ ָה ּÚÝׁ ָה דֽדזֿ ַבֳװהַהם ¡ זÞֳׁ ָוַ Úבל דֽדֿ ָה ֳֽדֿ ַבֻÞÝם ַבß׃ֶַם ¡ זÞֳׁ ָוַ Úבל ַָה װַßׁ ¡ זÞֳׁ ָוַ Úבל ַָה ׃וב ַב״םַה ¡ זÞֳׁ ָוַ Úבל ֳָם Úדַׁה ַבַָׂׂ ¡ זÞֳׁ ָוַ Úבל ַָה ׁׂםה ¡ זÞֳׁ ָוַ Úבל ַבוַװדם ¡ זÞֳׁ ָוַ Úבל ַָה ּÚÝׁ ¡ זÞֳׁ ָוַ Úבל ַָה ּדַׂ ¡ זÞֳׁ ַָה ּדַׂ ¡ זַָה זַֿׁה ¡ Úבל ֳָם ּÚÝׁ ." & vbNewLine
+        sanadan = sanadan & "זּׁÜÜַב ֳָם ּÚÝׁ ֻבַֹֻ : דזבַו Úָֿ ַבבו ָה Úםַװ ָה ֳָם ָׁםÚֹ ¡ זֳָז וׁםֹׁ ¡ זַָה Úַָ׃ . זÞֳׁ וִבֱַ ַבֻבַֹֻ Úבל ֳָם ָה ßÚָ ¡ זÞֳׁ ֳָז וׁםֹׁ ¡ זַָה Úַָ׃ ¡ ֳםײַ Úבל ׂםֿ ָה ַָֻÊ . זֳ־׀ ׂםֿ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד -¡ Úה ָּׁםב - Úבםו ַב׃בַד -  ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+          
+        'םÚÞזָ
+        sanadan = sanadan & "׃הֿ Þֱַֹׁ ַבֵדַד / םÚÞזָ ַבָױׁל" & vbNewLine
+        sanadan = sanadan & "Þַב ַבֵדַד ֳָז ַב־םׁ דֽדֿ ָה ַבּׁׂם Ýל Êָֽםׁ ַבÊם׃םׁ : " & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ ׁזם׃ : Ýֻֽֿהַ ָוַ ַבװם־ ַבֵדַד ֳָז ַבÚַָ׃ ֳֽדֿ ָה דֽדֿ ָה ַב־ײׁ ַבֽהÝם ָÞֱַׁÊם Úבםו Þַב: ֳ־ָׁהַ : ֳָז ַבÚַָ׃ ֳֽדֿ ָה ֳָם ״ַבָ ָה ֳָם ַבהÚד ַבױַבֽם Þֱַֹׁ Úבםו ¡ ֳ־ָׁהַ ֳָז ״ַבָ Úָֿ ַבב״םÝ ָה דֽדֿ ָה ַבÞָם״ם ¡ Ýם ßÊַָו ֳ־ָׁהַ ָוַ ֳָז ָßׁ ֳֽדֿ ָה ַבדÞָׁ ַבßׁ־ם Þֱַֹׁ Úבםו ¡ ֳ־ָׁהַ ֳָז ״ַוׁ ֳֽדֿ ָה Úבם ַבדÞׁםֱ ַבֳ׃Êַ׀ ֳ־ָׁהַ ֳָז ַבֽ׃ה Úבם ָה דֽדֿ ָה Úבם ַב־םַ״ ¡ ֳ־ָׁהַ ַבֳ׃Êַ׀ ַבֵדַד ֳָז ַבֽ׃ה Úבם ָה ֳֽדֿ ָה Úדׁ ַבֽדַדם ¡ ֳ־ָׁהַ ֳָז ַבÞַ׃ד Úָֿ ַבבו ָה ַבֽ׃ה ָה ׃בםדַה ַבה־ַ׃ ¡ ֳ־ָׁהַ ֳָז ָßׁ דֽדֿ ָה וַׁזה ָה הַÝÚ ַבÊדַׁ ַבָÛַֿֿם ¡ ֳ־ָׁהַ ֳָז Úָֿ ַבבו דֽדֿ ָה ַבדÊזßב ַבדÚׁזÝ ָׁזם׃ ." & vbNewLine
+        sanadan = sanadan & "Þַב ַָה ַבּׁׂם : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ַבֵדַד ֳָם דֽדֿ Úָֿ ַבֽׁדה ָה ֳֽדֿ ָה Úבם ַבָÛַֿֿם ¡ זֳ־ָׁהם ֳהו Þֳׁ ָוַ ַבÞֲׁה ßבו Úבל ַבֵדַד ַבÊÞם דֽדֿ ָה ֳֽדֿ ַבדױׁם ¡ זÞֳׁ ָוַ Úבל ֵַָׁוםד ָה ֳֽדֿ ַבֵ׃ßהֿׁם ¡ זÞֳׁ ָוַ Úבל ׂםֿ ָה ַבֽ׃ה ¡ זÞֳׁ ָוַ Úבל Úָֿ ַבבו ָה Úבם ַבָÛַֿֿם ¡ זÞֳׁ ָוַ Úבל ַבֳ׃Êַ׀ ֳָם ַבÚׂ ַבÞבַה׃ם ¡ זÞֳׁ ָוַ Úבל ֳָם Úבם ַבֽ׃ה ָה ַבÞַ׃ד ַבזַ׃״ם ¡ זÞֳׁ ָוַ Úבל : ַבֽדַדם ¡ זÞֳׁ ָוַ Úבל ַבה־ַ ׃ ¡ זÞֳׁ ָוַ Úבל ַבÊדַׁ ¡ זÞֳׁ Úבל ׁזם׃ ¡ זÞֳׁ ָוַ Úבל םÚÞזָ . " & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ ׁףזֽ : Ýֻֽֿהַ ָוַ ַבװם־ ֳָז ַבÚַָ׃ ֳֽדֿ ָה דֽדֿ ָה ַבֽ׃םה ַבװםַׁׂם ָÞֱַׁÊם Úבםו Úה ַבֵדַד ֳָם ַבֽ׃ה Úבם ָה ֳֽדֿ ַבדÞֿ׃ם ¡ ֳ־ָׁהַ ֳָז ַבםדה ַבßהֿם װÝַוַ ¡ ֳ־ָׁהַ ֳָז דֽדֿ ַבָÛַֿֿם ¡ ֳ־ָׁהַ ֳָז ַבÝײב ַבװׁםÝ ַבדßם ¡ ֳ־ָׁהַ דֽדֿ ָה ַבֽ׃םה ַבÝַׁ׃ם ¡ ֳ־ָׁהַ ֳָז ַבֽ׃ה Úבם ָה דֽדֿ ָה ֵַָׁוםד ָה ־װהַד ַבדַבßם ַבָױׁם ֳ־ָׁהַ ֳָז ַבÚַָ׃ דֽדֿ ָה םÚÞזָ ָה ַבַּּֽ ָה דÚַזםֹ ַבÊםדם ¡ ֳ־ָׁהַ ֳָז ָßׁ דֽדֿ ָה זוָ ָה םֽםל ָה ַבÚבֱַ ַבֻÞÝם ַבÞַׂׂ ¡ ֳ־ָׁהַ ׁזֽ ָה Úָֿ ַבדִדה ַבָױׁם ." & vbNewLine
+        sanadan = sanadan & "Þַב ַָה ַבּׁׂם : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל דֽדֿ ָה ֳֽדֿ ַָבÞַוֹׁ ַבדֽׁז׃ֹ ¡ זֳ־ָׁהם ֳהו Þֳׁ ָוַ ַבÞַׁה ßבו Úבל ַבֵדַד ֳָם Úָֿ ַבבו ַבױֶַÛ ¡ זÞֳׁ ָוַ Úבל ֳָם ֵ׃ַֽÞ ַבֿדװÞם זÞֳׁ ָוַ Úבל ׂםֿ ָה ַבֽ׃ה ¡ זÞֳׁ ָוַ Úבל Úָֿ ַבבו ָה Úבם ¡ זÞֳׁ ָוַ Úבל ַבֳ׃Êַ׀ ֳָם ״ַוׁ ָה ׃זַׁ ¡ זÞֳׁ ָוַ Úבל ֳָם ַבÞַ׃ד ַבד׃ַÝׁ ָה ַב״םָ ָה Úַָֿ ַבָױׁם ¡ זÞֳׁ ָוַ Úבל ַָה ־װהַד ¡ זÞֳׁ ָוַ Úבל ַָה Úַָ ׃ ַבÊםדם ¡ זÞֳׁ ָוַ Úבל ַָה זוָ ¡ זÞֳׁ ָוַ Úבל ׁזֽ ¡ זÞֳׁ ָוַ Úבל םÚÞזָ ." & vbNewLine
+        sanadan = sanadan & "זּׁÜÜַב םÚÞזָ ַב׀םה ׃דַוד ֳָׁÚֹ : ֳָז ַבדה׀ׁ ׃בַד ָה ׃בםדַה ַב״זםב ¡ זװוַָ ָה װׁהÝֹ ¡ זדוֿם ָה דםדזה ¡ זֳָז ַבֳװוָ ּÚÝׁ ָה ֽםַה ַבÚ״ַֿׁם .זÞםב ֵה םÚÞזָ Þֳׁ Úבל ֳָם Úדׁז ָה ַבÚבֱַ זÞֳׁ ׃בַד Úבל Úַױד זֳָם Úדׁז ¡ זÞÜÜÜֳׁ װוַָ ַבּֽֿׁם זÞֳׁ Úַױד Úבל ַבֽ׃ה ַבָױׁם זÚבל ׃בםדַה ָה ÞÊֹ זÞֳׁ ׃בםדַה Úבל ַָÜה Úַָ ׃ זÞֳׁ דוֿם Úבל װÚםָ ָה ַבַָָֽֽ זÞֳׁ Úבל ֳָם ַבÚַבםֹ ַבׁםַֽם זÞֳׁ Úבל ֳָם זׂםֿ זÞֳׁ ֳָז ַבֳװוָ Úבל ֳָם ֱַּׁ Úדַׁה ָה דבַֽה ַבÚ״ַֿׁם זÞֳׁ Úבל ֳָם דז׃ÜÜÜל ַבֳװÚׁם זÞֳׁ Úבל ׁ׃זב ַבבו Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+  
+  
+         '־בÝ
+         sanadan = sanadan & "׃הֿ Þֱַֹׁ ַבֵדַד / ־בÝ ַבַָׁׂ" & vbNewLine
+         sanadan = sanadan & "Þַב ַבֵדַד ֳָז ַב־םׁ דֽדֿ ָה ַבּׁׂם Ýל Êָֽםׁ ַבÊם׃םׁ : " & vbNewLine
+         sanadan = sanadan & "ֳדַ ׁזַםֹ ֵֿׁם׃ ַבזַׁÞ : Ýֻֽֿהַ ָוַ ֳָז ֽÝױ Úדׁ ָה ַבֽ׃ה ָÞֱַׁÊם Úבםו Ùַוׁ ֿדװÞ ¡ Úה װם־ו ַבֵדַד ַב־״םָ ֳָם ַבÚַָ׃ ֳֽדֿ ָה ֵַָׁוםד ָה Úדׁ ַבÝַׁזֶם ַבװַÝÚם ¡ Þַב : ֳ־ָׁהַ זַבֿם ¡ Þַב : ֳ־ָׁהַ ֳָז ַב׃ÚַַֿÊ ַבֳ׃Úֿ ָה ׃ב״ַה ַבזַ׃״ם ¡ ֳ־ָׁהַ ֳָז ַבÚׂ דֽדֿ ָה ַבֽ׃םה ַבזַ׃״ם ¡ ֳ־ָׁהַ ֳָז ַבֽ׃םה ֳֽדֿ ָה Úָֿ ַבבו ָה ַב־ײׁ ַב׃ז׃הּֿׁם ¡ ֳ־ָׁהַ ֳָז ַבֽ׃ה דֽדֿ ָה Úָֿ ַבבו ָה דֽדֿ ָה דֹׁ ַב״ז׃ם ַבדÚׁזÝ ַָָה ֳָם Úדׁ ַבהÞַװ ¡ ֳ־ָׁהַ ֳָז םÚÞזָ ֵ׃ַֽÞ ָה ֵַָׁוםד ַבזַׁÞ ." & vbNewLine
+         sanadan = sanadan & "Þַב ַָה ַבּׁׂם : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ßב דה ַבװם־םה ֳָם Úָֿ ַבבו ַבֽהÝם ¡ זֳָם דֽדֿ ַבװַÝÚם ַבדױׁםםה ¡ זÞֳׁ ßב דהודַ Úבל ֳָם Úָֿ ַבבו דֽדֿ ָה ֳֽדֿ ָה Úָֿ ַב־ַבÞ ַבדױׁם ¡ זÞֳׁ ָוַ Úבל ַבßדַב ָה Ýַׁ׃ ¡ זÞֳׁ ָוַ Úבל ׂםֿ ָה ַבֽ׃ה ¡ זÞֳׁ ָוַ Úבל ֳָם ַבÞַ׃ד וָֹ ַבבו ָה ֳֽדֿ ָה ַב״ָׁ ַבָÛַֿֿם ¡ זÞֳׁ ָוַ Úבל ֳָם ָßׁ דֽדֿ ָה Úבם ָה דז׃ל ַב־םַ״ ¡ זÞֳׁ ָוַ Úבל ֳָם ַבֽ׃םה ַב׃ז׃הּֿׁם ¡ זÞֳׁ ָוַ Úבל ַָה ֳָם Úדׁ ַב״ז׃ם ¡ זÞֳׁ ָוַ Úבל ֵ׃ַֽÞ ַבזַׁÞ ¡ זÞֳׁ ָוַ Úבל ־בÝ ." & vbNewLine
+         sanadan = sanadan & "זֳדַ ׁזַםֹ ֵֿׁם׃ : Ýֻֽֿהַ ָוַ ֳֽדֿ ָה דֽדֿ ָה ַבֽ׃םה ַבÝַׁ׃ם ָÞֱַׁÊם Úבםו ¡ ֳ־ָׁהַ Úבם ָה ֳֽדֿ Ýםדַ װַÝוהם ָו ¡Úה ׂםֿ ָה ַבֽ׃ה ַבָÛַֿֿם ¡ ֳ־ָׁהַ ֳָז ַבÞַ׃ד ָה ֳֽדֿ ַבֽׁםׁם ¡ ֳ־ָׁהַ ֳָז ָßׁדֽדֿ ָה Úָם ָה דֽדֿ ַב־םַ״ ¡ ֳ־ָׁהַ ֳָז ַבֽ׃ה Úבם ָה דֽדֿ ָה Úָֿ ַבבו ַבֽ׀ֱַ ¡ ֳ־ָׁהַ ֳָז ֵ׃ַֽÞ ֵַָׁוםד ָה ַבֽ׃םה ָה Úָֿ ַבבו ַבה׃ַּ ַבדÚׁזÝ ַָבװ״ם ¡ ֳ־ָׁהַ ֵֿׁם׃ ָה Úָֿ ַבßׁםד ַבַֽֿֿ." & vbNewLine
+         sanadan = sanadan & "Þַב ַָה ַבּׁׂם : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ַבװם־ ֳָם דֽדֿ Úָֿ ַבֽׁדה ָה ֳֽדֿ ַבזַ׃״ם ¡ זֳ־ָׁהם ֳהו Þֳׁ ָוַ Úבל דֽדֿ ָה ֳֽדֿ ָה Úָֿ ַב־ַבÞ ַבדÚֿב ¡ זÞֳׁ ָוַ Úבל ֵַָׁוםד ָה ֳֽדֿ ¡ זÞֳׁ ָוַ Úבל ֳָם ַבםדה ¡ זÞֳׁ ָוַ Úבל ֳָם דֽדֿ ׃ָ״ ַב־םַ״ ¡ Þַב : זÞֳׁÊ ָוַ ַבÞֲׁה דה ֳזבו ֵבל ֲ־ׁו Úבל ַבֵדַדםה ַבװׁםÝ ֳָם ַבÝײב Úָֿ ַבÞַוׁ ָה Úָֿ ַב׃בַד ַבÚַָ׃ם ¡ זֳָם ַבדÚַבם ַָֻÊ ָה ָהַֿׁ ָה ֵַָׁוםד ַבָÞַב ¡ Ýֳדַ ַבװׁםÝ Ýֳ־ָׁהם ֳהו Þֳׁ ָוַ Úבל ַבֵדַד ֳָם Úָֿ ַבבו דֽדֿ ָה ַבֽ׃םה ַבßַׁׂםהם ¡ זֳ־ָׁו ֳהו Þֳׁ ָוַ Úבל ַבֵדַד ֳָם ַבÚַָ׃ ַבֽ׃ה ָה ׃Úםֿ ָה ּÚÝׁ ַבד״זÚם ¡ זֳדַ ֳָז ַבדÚַבם Ýֳ־ָׁהם ֳהו Þֳׁ ָוַ Úבל ַבֵדַד ַבÞַײם ֳָם ַבÚבֱַ דֽדֿ ָה Úבם ָה םÚÞזָ ַבזַ׃״ם ¡ זÞֳׁ ַבזַ׃״ם ָוַ דה ַבßÊַָ Úבל ַבֵדַד ֳָם ָßׁ ֳֽדֿ ָה ּÚÝׁ ָה ֽדַֿה ָה דַבß ַבÞ״םÚם ¡ זÞֳׁ ַבÞ״םÚם זַבד״זÚם ּדםÚַ Úבל ֵֿׁם׃ ¡ זÞֳׁ ֵֿׁם׃ Úבל ־בÝ ¡ זַבבו ַבדזÝÞ . " & vbNewLine
+         sanadan = sanadan & "זַּׁב ־בÝ : זַּׁב ־בÝ ׃בםד ױַָֽ ֽדֹׂ ¡ זםÚÞזָ ָה ־בםÝֹ ַבֳÚװל ױַָֽ ֳָם ָßׁ ¡ זֳָז ׂםֿ ׃Úםֿ ׃Úםֿ ָה ֳז׃ ַבֳהױַׁם ױַָֽ ַבדÝײב ַבײָם זֳַָה ַבÚ״ַׁ ¡ זÞֳׁ ֳָז ָßׁ ¡ זַבדÝײב ¡ זֳַָה Úבל Úַױד . זׁזל ַבÞֱַֹׁ ֳםײַ Úה ַבß׃ֶַם זÚה םֽםל ָה ֲֿד Úה ֳָם ָßׁ ¡ זַבבו ַבדזÝÞ . ÞבÊ : זֳ־׀ Úַױד Úה ֳָם Úָֿ ַבֽׁדה Úָֿ ַבבו ָה ָֽםָ ַב׃בדם ¡ זֳָם דׁםד ׁׂ ָה ָֽםװ ¡ זֳ־Ü׀ ֳָז Úָֿ ַבֽׁדה Úה Úֻדַה ָה ÚÝַה ¡ זÚבם ָה ֳָם ״ַבָ ¡ זֳָם ָה ßÚָ ¡ זׂםֿ ָה ַָֻÊ ¡ זÚָֿ ַבבו ָה ד׃Úזֿ ¡ Úה ַבהָם ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+         sanadan = sanadan & "זֳ־׀ ׁׂ ָה ָֽםװ Úה Úֻדַה ָה ÚÜÝÜÜַה ¡ זַָה ד׃Úזֿ ¡ Úה ׁ׃זב ַבבו ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -. זַּׁב ֽדֹׂ : זַּׁב ֽדֹׂ ּדַÚֹ דהוד ֳָז דֽדֿ ׃בםדַה ָה דוַׁה ַבֳÚדװ ¡ זדֽדֿ ָה Úָֿ ַבֽׁדה ָה ֳָם בםבל ַבÞַײם ¡ זֽדַׁה ָה ֳÚםה ¡ זֳָז ֵ׃ַֽÞ ַב׃ָםÚם ¡ זדהױזׁ ַָה ַבדÚÊדׁ ¡ זדÛםֹׁ ָה דÞ׃ד ¡ זּÚÝׁ ָה דֽדֿ ַבױַֿÞ ¡ זÛםׁוד . זֳ־׀ ַבֳÚדװ Úה םֽםל ָה זַָֻ ¡ זֳ־׀ םֽםל Úה ּדַÚֹ דה ֳױַָֽ ַָה ד׃Úזֿ : ÚבÞדֹ ¡ זַבֳ׃זֿ זÚָםֿ ָה הײבֹ ַב־ַׂÚם ¡ זׁׂ ָה ָֽםװ ¡ זֳָם Úָֿ ַבֽׁדה ַב׃בדם ¡ זÛםׁוד ¡ Úה ַָה ד׃Úזֿ Úה ַבהָם Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+         snandan = sanadan & vbNewLine
+ 
+        ElseIf index = -4 Then
+        
+        'Þַבזה
+        sanadan = "Þַב ֳָז Úדׁז ַבַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+        sanadan = sanadan + "ֳדַ ׁזַםֹ Þַבזה : Ýֻֽֿהַ ָוַ ֳֽדֿ ָה Úדׁ ָה דֽדֿ ַבּםׂם ¡ Þַב: ֻֽֿהַ דֽדֿ ָה ֳֽדֿ ָה דהםׁ ¡ Þַב: ֻֽֿהַ Úָֿ ַבבו ָה Úם׃ל ַבדֿהם ¡ Þַב:ֻֽֿהַ Þַבזה Úה הַÝÚ¡ ז Þַב ֳָÜÜז ÚÜדÜׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל װם־ם ֳָם ַבÝÊֽ Ýַׁ׃ ָה ֳֽדֿ ָה דז׃ל ָה Úדַׁה ¡ ַבדÞׁםֱ ַבײׁםׁ ¡ ז Þַב בם: ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃ה Úָֿ ַבַָÞם ָה ַבֽ׃ה ַבדÞֶׁ ¡ זÞַב: ÞֳׁÊ Úבל ֵַָׁוםד ָה Úדׁ ַבדÞֶׁ ¡ זÞַב: ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃םה ֳֽדֿ ָה Úֻדַה ָה ּÚÝׁ ָה ָזםַה ¡ זÞַב:ÞֳׁÊ Úבל ֳָם ָßׁ ֳֽדֿ ָה דֽדֿ ָה ַבֳװÚֻ זÞַב: ÞֳׁÊ Úבל ֳָם הװם״ דֽדֿ ָה וַׁזה ¡ זÞַב: ÞֳׁÊ Úבל Þַבזה ¡ זÞַב: ÞֳׁÊ Úבל הַÝÚ ." & vbNewLine
+        sanadan = sanadan + "זַּׁב הַÝÚ ַב׀םה ׃דַוד ־ד׃ֹ : ֳָז ּÚÝׁ םׂ םֿ ָה ַבÞÚÞַÚ ַבÞֶַׁ ¡ זֳָז ַֿזֿ Úָֿ ַבֽׁדה ָה וׁדׂ ַבֳÚּׁ ¡ זװםָֹ ָה הױַֽ ַבÞַײם ¡ זֳָז Úָֿ ַבבו ד׃בד ָה ּהָֿ ַבו׀בם ַבÞַױ ¡ זֳָז ׁזֽ םׂםֿ ָה ׁזדַה ¡ זֳ־׀ וִבֱַ ַבÞֱַֹׁ Úה ֳָם וׁםֹׁ ¡ זַָה Úַָ׃ ¡ זÚָֿ ַבבו ָה Úםַװ ָה ֳָם ָׁםÚֹ ¡ Úה ֳָם ָה ßÚָ ¡ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+     
+        ' ַָה ßֻםׁ
+        sanadan = sanadan & "׃הֿ Þֱַֹׁ ַבֵדַד / ַָה ßֻםׁ" & vbNewLine
+        sanadan = sanadan & "Þַב ֳָÜז Úדׁז ַבÜַֿהם Ýם ַבÊם׃םׁ  " & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ ַבָׂם : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ָה ַבßַÊָ ¡ Þַב:ֻֽֿהַ ֳֽדֿ ָה דז׃ל ¡ Þַב: ֻֽֿהַ דײׁ ָה דֽדֿ ַבײָם ¡ Þַב:ֻֽֿהַ ֳֽדֿ ָה ֳָם ָֹׂ ¡ Þַב: ÞֳׁÊ Úבל Úßׁדֹ ָה ׃בםדַה ָה Úַדׁ ¡ זÞַב: ÞֳׁÊ Úבל ֵ׃דַÚםב ָה Úָֿ ַבבו ַבÞ׃״ ¡ זÞַב : ÞֳׁÊ Úבל ַָה ßֻםׁ הÝ׃ו ¡ Þַב ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם ַבÞַ׃ד Úָֿ ַבÚׂםׂ ָה ּÚÝׁ ָה דֽדֿ ַבדÞׁםֱ ַבÝַׁ׃ם ¡ זÞַב בם: ÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם ָßׁ דֽדֿ ָה ַבֽ׃ה ַבהÞַװ ¡ זÞַב: ÞֳׁÊ ָוַ Úבל ֳָם ָׁםÚֹ דֽדֿ ָה ֵ׃ַֽÞ ַבׁ ָÚם ¡ זÞַב: ÞֳׁÊ Úבל ַבָׂם ." & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ Þהָב : Ýֻֽֿהַ ָוַ ֳָז ד׃בד דֽדֿ ָה ֳֽדֿ ַבָÛַֿֿם ¡ Þַב: ֻֽֿהַ ַָה דַּוֿ ¡ Þַב: ÞֳׁÊ Úבל Þהָב ¡ זÞַב: ÞֳׁÊ Úבל ֳָם ַבֽ׃ה ֳֽדֿ ָה Úזה ַבÞזַ׃ זÞַב: ÞֳׁÊ Úבל ֳָם ַבַ־ׁ ם״ זוָ ָה זַײֽ ¡ זÞַב: ÞֳׁÊ Úבל ֵ׃דַÚםב ָה Úָֿ ַבבו ַבÞ׃״ ¡ זÞַב: ÞֳׁÊ Úבל װָב ָה Úַָֿ ז דÚׁזÝ ָה דװßַה ¡ זÞַבַ Þֳׁהַ Úבל ַָה ßֻÜםÜׁ ¡ ז Þַב ֳָÜÜÜÜז ÚÜÜדÜÜׁז : זÞֳׁÊ ָוַ ַבÞֲׁה ßבו Úבל Ýַׁ׃ ָה ֳֽדֿ ַבֽדױם ַבדÞׁםֱ ַבײׁםׁ זÞַב: ÞֳׁÊ ָוַ Úבל Úָֿ ַבבו ָה ַבֽ׃םה ַבָÛַֿֿם ¡ זÞַב: ÞֳׁÊ ָוַ Úבל ַָה דַּוֿ זÞַב: ÞֳׁÊ Úבל Þהָב ." & vbNewLine
+        sanadan = sanadan & " זּׁÜÜַב ַָה ßֻםׁ ַבÜ׀םÜה ׃דַוד ֻבַֹֻ : Úָֿ ַבבו ָה ַב׃ֶַָ ַבד־ׂזדם ױַָֽ ׁ׃זב ַבבו  זדַּוֿ ָה ָּׁ ֳָז ַבַּּֽ דזבל Þם׃ ָה ַב׃ֶַָ ¡ זַָֿׁ׃ דזבל ַָה Úַָ׃ . זֳ־׀ Úָֿ ַבבו Úה ֳָם ָה ßÚָ הÝ׃ו. זֳ־׀ דַּוֿ זַָֿׁ׃¡ Úה ַָה Úַָ׃¡ Úה ֳָם ¡ זׂםֿ ָה ַָֻÊ ¡ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - ¡ Úה ָּׁםב - Úבםו ַב׃בַד -  ¡Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -."
+      
+        'ֳָז ּÚÝׁ
+        sanadan = sanadan & "׃הֿ Þֱַֹׁ ַבֵדַד / ֳָז ּÚÝׁ" & vbNewLine
+        sanadan = sanadan & "Þַב ַבֵדַד ֳָז ַב־םׁ דֽדֿ ָה ַבּׁׂם Ýל Êָֽםׁ ַבÊם׃םׁ : " & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ ַָה זַֿׁה : Ýֻֽֿהַ ָוַ ַבװם־ ֳָז ֽÝױ Úדׁ ָה ַבֽ׃ה ָה דׂםֿ ַבדַׁÛם ָÞֱַׁÊם Úבםו Þַב : ֳ־ָׁהַ ֳָז ַבֽ׃ה Úבם ָה ֳֽדֿ ָה Úָֿ ַבזַֽֿ ַב׃Úֿם דװַÝוֹ Úה ַבֵדַד ֳָם ַבםדה ׂםֿ ָה ַבֽ׃ה ַבבÛזם ¡ Þַב : ֳ־ָׁהַ ֳָז דֽדֿ Úָֿ ַבבו ָה Úבם ַבָÛַֿֿם ֳ־ָׁהַ ַבװׁםÝ ֳָז ַבÝײב Úָֿ ַבÞַוׁ ָה Úָֿ ַב׃בַד ַבÚַָ׃ם ¡ ֳ־ָׁהַ ֳָז Úָֿ ַבבו דֽדֿ ָה ַבֽ׃םה ַבßַׁׂםהם ¡ ֳ־ָׁהַ ֳָז ַבÝּׁ דֽדֿ ָה ֳֽדֿ ָה ֵַָׁוםד ַבװ״זם ¡ ֳ־ָׁהַ ֳָז ָßׁ דֽדֿ ָה ֳֽדֿ ָה וַׁזה ַבַׁׂם ¡ ֳ־ָׁהַ ֳָז ַבÚַָ׃ ַבÝײב ָה װַ׀ַה ָה Úם׃ל ַבַׁׂם ֳ־ָׁהַ ֳָז ַבֽ׃ה ֳֽדֿ ָה םׂםֿ ַבֽבזַהם ¡ֳ־ָׁהַ Úם׃ל ָה דםהַ Þַבזה ¡ ֳ־ָׁהַ Úם׃ל ָה זַֿׁה." & vbNewLine
+        sanadan = sanadan & "Þַב ַָה ַבּׁׂם : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ַבֵדַד ֳָם Úָֿ ַבבו דֽדֿ Úָֿ ַבֽׁדה ָה Úבם ַבהֽזם ¡ זֳ־ָׁהם ֳהו Þֳׁ ָוַ ַבÞֲׁה ßבו Úבל ַבֵדÜÜַד ֳָם Úָֿ דֽדֿ ָה ֳֽדֿ ָה Úָֿ ַב־ַבÞ ַבדױׁם ¡ Þַב : ÞֳׁÊ ָוַ ַבÞֲׁה Úבל ַבßדַב ֵַָׁוםד ָה ֳֽדֿ ָה Ýַׁ׃ ַבÊדםדם Þַב : ÞֳׁÊ ָוַ Úבל ֳָם ַבםדה ַבßהֿם ¡ Þַב : ÞֳׁÊ ָוַ Úבל ַבֵדַד ֳָם דהױזׁ דֽדֿ ָה Úָֿ ַבדבß ָה ַבֽ׃ה ָה ־םׁזה ַבָÛַֿֿם ¡ Þַב : ÞֳׁÊ ָוַ Úבל ֳָם ַבÞַ׃ד Úָֿ ַב׃םֿ ָה ÚÊַָ ַבדÞׁםֱ ¡ Þַב : ÞֳׁÊ ָוַ Úבל ֳָם ״ַוׁ דֽדֿ ָה םַ׃םה ַבֽבָם ¡ Þַב : ÞֳׁÊ ָוַ Úבל ֳָם ַבÝּׁ ַבװ״זם Þַב: ÞֳׁÊ ָוַ Úבל ֳָם ָßׁ ָה וַׁזה ¡ Þַב: ÞֳׁÊ ָוַ Úבל ַבÝײב ָה װַ׀ַה ¡ Þַב : ÞֳׁÊ ָוַ Úבל ַבֽבזַהם ¡ Þַב : ÞֳׁÊ ָוַ Úבל Þַבזה ¡ Þַב : ÞֳׁÊ ָוַ Úבל ַָה זַֿׁה . " & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ ַָה ּדַׂ : Ýֻֽֿהַ ָוַ ֳָז ֵ׃ַֽÞ ֵַָׁוםד ָה ֳֽדֿ ָה ֵַָׁוםד ָה ַֽÊד ַבּ׀ַדם ָÞֱַׁÊם Úבםו Úה ֳָם ֽÝױ Úדׁ ָה ÛÜֿםׁ ָה ַבÞזַ׃ ַבֿדװÞם ¡ ֳהֳָהַ ֳָז ַבםדה ָה ַבֽ׃ה ַבָÛַֿֿם ¡ ֳ־ָׁהַ ֳָז דֽדֿ ׃ָ״ ַב־םַ״ ¡ ֳ־ָׁהַ ַבֳ׃Êַ׀ ֳָז ַבÚׂ דֽדֿ ָה ַבֽ׃םה ָה ָהַֿׁ ַבזַ׃״ם ¡ ֳ־ָׁהַ ַבֵדַד ֳָז ַבÞַ׃ד םז׃Ý ָה ַָֹּׁ ַבו׀בם ¡ ֳ־ָׁהַ ֳָז הױׁ דהױזׁ ָה דֽדֿ ַבÞוהֿׂם ¡ ֳ־ָׁהַ ֳָז ַבֽ׃ה Úבם ָה דֽדֿ ַב־ַָׂם ¡ ֳ־ָׁהַ ֳָז ָßׁ דֽדֿ ָה Úָֿ ַבֽׁדה ָה ַבÝײב ַבּזוׁם ¡ ֳ־ָׁהַ דֽדֿ ָה ֳֽדֿ ָה ַבֽ׃ה ַבֻÞÝם ַבß׃ֶַם ¡ ֳ־ָׁהַ דֽדֿ ָה Úָֿ ַבבו ָה װַßׁ ַבױםׁÝם ¡ ֳ־ָׁהַ ֳָז ַבÚַָ׃ ֳֽדֿ ָה ׃וב ַב״םַה ¡ ֳ־ָׁהַ ֳָז Úדַׁה דז׃ל ָה Úָֿ ַבֽׁדה ַבַָׂׂ ¡ ֳ־ָׁהַ דֽדֿ ָה Úם׃ל ָה ֵַָׁוםד ָה ׁׂםה ַבֳױָוַהם ¡ ֳ־ָׁהַ ׃בםדַה ָה ַֿזֿ ָה Úבם ָה Úָֿ ַבבו ָה Úַָ׃ ַבוַװדם ¡ ֳ־ָׁהַ ֵ׃דַÚםב ָה ּÚÝׁ ָה ֳָם ßֻםׁ ַבדֿהם ¡ ֳ־ָׁהַ ׃בםדַה ָה ד׃בד ַָה ּדַׂ." & vbNewLine
+        sanadan = sanadan & "Þַב ַָה ַבּׁׂם : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם דֽדֿ ָה Úָֿ ַבֽׁדה ַבֽהÝם ¡ זÞֳׁ ָוַ ַבÞַׁה ßבו Úבל דֽדֿ ָה ֳֽדֿ ַבױֶַÛ ¡ זÞֳׁ ָוַ Úבל ֳָם ֵ׃ַֽÞ ָה Ýַׁ׃ ¡ זÞֳׁ ָוַ Úבל ֳָם ַבםדה ¡ זÞֳׁ ָוַ Úבל ׃ָ״ ַב־םַ״ ¡ זÞֳׁ ָוַ Úבל ַבֳ׃Êַ׀ ֳָם ״ַוׁ ֳֽדֿ ָה Úבם ָה Úָםֿ ַבבו ָה ׃זַׁ ¡ זÞֳׁ ָוַ Úבל ֳָם Úבם ַבֽ׃ה ָה ַבÝײב ַבװׁדÞַהם ¡ זÞֳׁ ָוַ Úבל ֳָם ָßׁ דֽדֿ ָה Úָֿ ַבבו ָה ַבדַָׁׂה ַבֳױָוַהם ¡ זÞֳׁ ָוַ Úבל ֳָם Úדׁ דֽדֿ ָה ֳֽדֿ ָה Úדׁ ַב־ׁÞם ¡ זÞֳׁ ָוַ Úבל דֽדֿ ָה ּÚÝׁ ָה דֽדזֿ ַבֳװהַהם ¡ זÞֳׁ ָוַ Úבל דֽדֿ ָה ֳֽדֿ ַבֻÞÝם ַבß׃ֶַם ¡ זÞֳׁ ָוַ Úבל ַָה װַßׁ ¡ זÞֳׁ ָוַ Úבל ַָה ׃וב ַב״םַה ¡ זÞֳׁ ָוַ Úבל ֳָם Úדַׁה ַבַָׂׂ ¡ זÞֳׁ ָוַ Úבל ַָה ׁׂםה ¡ זÞֳׁ ָוַ Úבל ַבוַװדם ¡ זÞֳׁ ָוַ Úבל ַָה ּÚÝׁ ¡ זÞֳׁ ָוַ Úבל ַָה ּדַׂ ¡ זÞֳׁ ַָה ּדַׂ ¡ זַָה זַֿׁה ¡ Úבל ֳָם ּÚÝׁ ." & vbNewLine
+        sanadan = sanadan & "זּׁÜÜַב ֳָם ּÚÝׁ ֻבַֹֻ : דזבַו Úָֿ ַבבו ָה Úםַװ ָה ֳָם ָׁםÚֹ ¡ זֳָז וׁםֹׁ ¡ זַָה Úַָ׃ . זÞֳׁ וִבֱַ ַבֻבַֹֻ Úבל ֳָם ָה ßÚָ ¡ זÞֳׁ ֳָז וׁםֹׁ ¡ זַָה Úַָ׃ ¡ ֳםײַ Úבל ׂםֿ ָה ַָֻÊ . זֳ־׀ ׂםֿ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד -¡ Úה ָּׁםב - Úבםו ַב׃בַד -  ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+       
+         ElseIf index = -5 Then
+        
+         ' הַÝÚ
+        sanadan = "׃הֿ Þֱַֹׁ ַבֵדַד / הַÝÚ" & vbNewLine
+        sanadan = sanadan & "Þַב ֳָז Úדׁז ַבַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+        sanadan = sanadan & "ֳדַ ׁזַםֹ Þַבזה : Ýֻֽֿהַ ָוַ ֳֽדֿ ָה Úדׁ ָה דֽדֿ ַבּםׂם ¡ Þַב: ֻֽֿהַ דֽדֿ ָה ֳֽדֿ ָה דהםׁ ¡ Þַב: ֻֽֿהַ Úָֿ ַבבו ָה Úם׃ל ַבדֿהם ¡ Þַב:ֻֽֿהַ Þַבזה Úה הַÝÚ¡ ז Þַב ֳָÜÜז ÚÜדÜׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל װם־ם ֳָם ַבÝÊֽ Ýַׁ׃ ָה ֳֽדֿ ָה דז׃ל ָה Úדַׁה ¡ ַבדÞׁםֱ ַבײׁםׁ ¡ ז Þַב בם: ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃ה Úָֿ ַבַָÞם ָה ַבֽ׃ה ַבדÞֶׁ ¡ זÞַב: ÞֳׁÊ Úבל ֵַָׁוםד ָה Úדׁ ַבדÞֶׁ ¡ זÞַב: ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃םה ֳֽדֿ ָה Úֻדַה ָה ּÚÝׁ ָה ָזםַה ¡ זÞַב:ÞֳׁÊ Úבל ֳָם ָßׁ ֳֽדֿ ָה דֽדֿ ָה ַבֳװÚֻ זÞַב: ÞֳׁÊ Úבל ֳָם הװם״ דֽדֿ ָה וַׁזה ¡ זÞַב: ÞֳׁÊ Úבל Þַבזה ¡ זÞַב: ÞֳׁÊ Úבל הַÝÚ ." & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ זׁװ : Ýֻֽֿהַ ָוַ ֳָז Úָֿ ַבבו ֳֽדֿ ָה דֽÝזÙ ַבÞַײם ָדױׁ ¡ Þַב: ֻֽֿהַ ֳֽדֿ ָה ֵַָׁוםד ָה ַּדÚ ¡ Þַב : ֻֽֿהַ ֳָז דֽדֿ ָßׁ ָה ׃וב ¡ Þַב: ֻֽֿהַ ֳָז דֽדֿ Úָֿ ַבױדֿ ָה Úָֿ ַבֽׁדה ¡ Þַב : ֻֽֿהַ זׁװ Úה הַÝÚ ¡ ז Þַב ֳָÜÜז ÚÜדÜׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל װם־ם ֳָם ַבÞַ׃ד ־בÝ ָה ֵַָׁוםד ָה דֽדֿ ָה ־ַÞַה ַבדÞׁםֱ ָדױׁ ¡ ז Þַב בם : ÞֳׁÊ ָוַ ַבÞַׁה Úבל ֳָם ּÚÝׁ ֳֽדֿ ָה ֳ׃ַדֹ ַבÊּםָם ¡ זÞַב בם : ÞֳׁÊ ָוַ ַבÞַׁה Úבל ֵ׃דַÚםב ָה Úָֿ ַבבו ַבהַֽ׃ ¡ זÞַב : ÞֳׁÊ Úבל ֳָם םÚÞזָ םז׃Ý ָה Úדׁז ָה ם׃ַׁ ַבֳׁׂÞ ¡ זÞַב :ÞֳׁÊ Úבל זׁװ זÞַב : ÞֳׁÊ Úבל הַÝÚ ." & vbNewLine
+        sanadan = sanadan & "זַּׁב הַÝÚ ַב׀םה ׃דַוד ־ד׃ֹ : ֳָז ּÚÝׁ םׂ םֿ ָה ַבÞÚÞַÚ ַבÞֶַׁ ¡ זֳָז ַֿזֿ Úָֿ ַבֽׁדה ָה וׁדׂ ַבֳÚּׁ ¡ זװםָֹ ָה הױַֽ ַבÞַײם ¡ זֳָז Úָֿ ַבבו ד׃בד ָה ּהָֿ ַבו׀בם ַבÞַױ ¡ זֳָז ׁזֽ םׂםֿ ָה ׁזדַה ¡ זֳ־׀ וִבֱַ ַבÞֱַֹׁ Úה ֳָם וׁםֹׁ ¡ זַָה Úַָ׃ ¡ זÚָֿ ַבבו ָה Úםַװ ָה ֳָם ָׁםÚֹ ¡ Úה ֳָם ָה ßÚָ ¡ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+      
+         ' ַָה ßֻםׁ
+        sanadan = sanadan & "׃הֿ Þֱַֹׁ ַבֵדַד / ַָה ßֻםׁ" & vbNewLine
+        sanadan = sanadan & "Þַב ֳָÜז Úדׁז ַבÜַֿהם Ýם ַבÊם׃םׁ  " & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ ַבָׂם : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ָה ַבßַÊָ ¡ Þַב:ֻֽֿהַ ֳֽדֿ ָה דז׃ל ¡ Þַב: ֻֽֿהַ דײׁ ָה דֽדֿ ַבײָם ¡ Þַב:ֻֽֿהַ ֳֽדֿ ָה ֳָם ָֹׂ ¡ Þַב: ÞֳׁÊ Úבל Úßׁדֹ ָה ׃בםדַה ָה Úַדׁ ¡ זÞַב: ÞֳׁÊ Úבל ֵ׃דַÚםב ָה Úָֿ ַבבו ַבÞ׃״ ¡ זÞַב : ÞֳׁÊ Úבל ַָה ßֻםׁ הÝ׃ו ¡ Þַב ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם ַבÞַ׃ד Úָֿ ַבÚׂםׂ ָה ּÚÝׁ ָה דֽדֿ ַבדÞׁםֱ ַבÝַׁ׃ם ¡ זÞַב בם: ÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם ָßׁ דֽדֿ ָה ַבֽ׃ה ַבהÞַװ ¡ זÞַב: ÞֳׁÊ ָוַ Úבל ֳָם ָׁםÚֹ דֽדֿ ָה ֵ׃ַֽÞ ַבׁ ָÚם ¡ זÞַב: ÞֳׁÊ Úבל ַבָׂם ." & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ Þהָב : Ýֻֽֿהַ ָוַ ֳָז ד׃בד דֽדֿ ָה ֳֽדֿ ַבָÛַֿֿם ¡ Þַב: ֻֽֿהַ ַָה דַּוֿ ¡ Þַב: ÞֳׁÊ Úבל Þהָב ¡ זÞַב: ÞֳׁÊ Úבל ֳָם ַבֽ׃ה ֳֽדֿ ָה Úזה ַבÞזַ׃ זÞַב: ÞֳׁÊ Úבל ֳָם ַבַ־ׁ ם״ זוָ ָה זַײֽ ¡ זÞַב: ÞֳׁÊ Úבל ֵ׃דַÚםב ָה Úָֿ ַבבו ַבÞ׃״ ¡ זÞַב: ÞֳׁÊ Úבל װָב ָה Úַָֿ ז דÚׁזÝ ָה דװßַה ¡ זÞַבַ Þֳׁהַ Úבל ַָה ßֻÜםÜׁ ¡ ז Þַב ֳָÜÜÜÜז ÚÜÜדÜÜׁז : זÞֳׁÊ ָוַ ַבÞֲׁה ßבו Úבל Ýַׁ׃ ָה ֳֽדֿ ַבֽדױם ַבדÞׁםֱ ַבײׁםׁ זÞַב: ÞֳׁÊ ָוַ Úבל Úָֿ ַבבו ָה ַבֽ׃םה ַבָÛַֿֿם ¡ זÞַב: ÞֳׁÊ ָוַ Úבל ַָה דַּוֿ זÞַב: ÞֳׁÊ Úבל Þהָב ." & vbNewLine
+        sanadan = sanadan & " זּׁÜÜַב ַָה ßֻםׁ ַבÜ׀םÜה ׃דַוד ֻבַֹֻ : Úָֿ ַבבו ָה ַב׃ֶַָ ַבד־ׂזדם ױַָֽ ׁ׃זב ַבבו  זדַּוֿ ָה ָּׁ ֳָז ַבַּּֽ דזבל Þם׃ ָה ַב׃ֶַָ ¡ זַָֿׁ׃ דזבל ַָה Úַָ׃ . זֳ־׀ Úָֿ ַבבו Úה ֳָם ָה ßÚָ הÝ׃ו. זֳ־׀ דַּוֿ זַָֿׁ׃¡ Úה ַָה Úַָ׃¡ Úה ֳָם ¡ זׂםֿ ָה ַָֻÊ ¡ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - ¡ Úה ָּׁםב - Úבםו ַב׃בַד -  ¡Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+      
+       ' ֳָז Úדׁז
+        sanadan = sanadan & "׃הֿ Þֱַֹׁ ַבֵדַד / ֳָז Úדׁז ַבָױׁל" & vbNewLine
+        sanadan = sanadan & "Þַב ֳָז Úדׁז ַבַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ ֳָם Úדׁ ַבֿזׁם : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ָה Úבם ¡ Þַב: ֳ־ָׁהַ ֳָז Úם׃ל דֽדֿ ָה ֳֽדֿ ָה Þ״ה ׃הֹ ֻדַה Úװֹׁ זֻבַֻדֶַֹ¡ Þַב: ֳ־ָׁהַ ֳָז ־בַֿ ׃בםדַה ָה ־בַֿ Þַב:ֻֽֿהַ ַבםׂםֿם Úה ֳָם Úדׁז ¡ Þַב ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו דה ״ׁםÞ ֳָם Úדׁ ַבֿזׁם Úבל װם־הַ Úָֿ ַבÚׂ םׂ ָה ּÚÝׁ ָה דֽדֿ ָה ֵ׃ַֽÞ ַבָÛַֿֿם ַבÝַׁ׃ם ַבדÞׁםֱ ¡ ז Þַב בם : ÞֳׁÊ ָוַ Úבל ֳָם ״ַוׁ Úָֿ ַבזַֽֿ ָה Úדׁ ָה ֳָם וַװד ַבדÞׁםֱ ¡ דַ בַ ֳֽױםו ßֹֻׁ ¡ זÞַב בם : ÞֳׁÊ ָוַ Úבל ֳָם ָßׁ ָה דַּוֿ ¡ זÞַב : ÞֳׁÊ ָוַ Úבל ֳָם ַבׂÚֱַׁ Úָֿ ַבֽׁדה ָה Úָֿז׃ זÞַב :ÞֳׁÊ Úבל ֳָם Úדׁ ¡ זÞַב : ÞֳׁÊ ָוַ Úבל ַבםׂםֿם ¡ זÞַב ÞֳׁÊ ָוַ Úבל : ֳָם Úדׁז. " & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ ֳָם װÚםָ ַב׃ז׃ם : Ýֻֽֿהַ ָוַ ־בÝ ָה ֵַָׁוםד ָה דֽדֿ ַבדÞֶׁ ¡ Þַב : ֻֽֿהַ ֳָז דֽדֿ ַבֽ׃ה ָה ׁװםÞ ַבדÚֿב ¡ Þַב : ֻֽֿהַ ֳָז Úָֿ ַבֽׁדה ֳֽדֿ ָה װÚםָ ַבה׃ֶַם ¡ Þַב : ֳ־ָׁהַ ֳָז װÚםָ ¡ Þַב : ֳ־ָׁהַ ַבםׂםֿם ¡ Úה ֳָם Úדׁז ¡ זÞַב ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֲׁה ßבו ֵָÙוַׁ ַבֳזב דה ַבדֻבםה זַבדÊÞַָׁםה זֵָֿÛַדו Úבל Ýַׁ׃ ָה ֳֽדֿ ַבדÞׁםֱ ¡ זÞַב בם : ÞֳׁÊ ָוַ ß׀בß Úבל Úָֿ ַבבו ָה ַבֽ׃םה ַבדÞׁםֱ ¡ זÞַב בם : ÞֳׁÊ ָוַ ַבÞַׁה ßבו ß׀בß Úבל ֳָם Úדַׁה דז׃ל ָה ּׁםׁ ַבהֽזם ¡ זÞַב : ÞֳׁÊ ָוַ Úבל ֳָם װÚםָ ¡ זÞַב : ÞֳׁÊ Úבל ַבםׂםֿם ¡ זÞַב : ÞֳׁÊ Úבל ֳָם Úדׁז" & vbNewLine
+        sanadan = sanadan & "Þַב ֳָז Úדׁז: זֻֽֿהַ ֳָױזב ַבֵֿÛַד דֽדֿ ָה ֳֽדֿ Úה ַָה דַּוֿ Úה Úָֿ ַבֽׁדה ָה Úָֿז׃ Úה ַבֿזׁם Úה ַבםׂםֿם Úה ֳָל Úדׁז¡ זֻֽֿהַ ָוַ ֳםײַ ֳָז ַבֽ׃ה װם־הַ ¡ Þַב : ֻֽֿהַ Úָֿ ַבבו ָה ַבדַָׁß Úה ּÚÝׁ ָה ׃בםדַה Úה ֳָם װÚםָ Úה ַבםׂםֿם Úה ֳָם Úדׁז . " & vbNewLine
+        sanadan = sanadan & "זַּׁב ֳָם Úדׁז : ּדַÚֹ דה ֳוב ַבַּֽׂ זדה ֳוב ַבָױֹׁ ¡ Ýדה ֳוב דßֹ : דַּוֿ ¡ ז׃Úםֿ ָה ָּםׁ ¡ זÚßׁדֹ ָה ־ַבֿ ¡ זÚ״ֱַ ָה ֳָם ַָֽׁ ¡ זÚָֿ ַבבו ָה ßֻםׁ ¡ זדֽדֿ ָה Úָֿ ַבֽׁדה ָה דֽםױה ¡ זֽדםֿ ָה Þם׃ ַבֳÚּׁ ַבÞֶַׁ ¡ זדה ֳוב ַבדֿםהֹ : םׂםֿ ָה ַבÞÚÞַÚ ַבÞַׁםֱ זםׂםֿ ָה ׁזדַה ¡ זװםָֹ ָה הױַֽ ¡ זדה ֳוב ַבָױֹׁ : ַבֽ׃ה ָה ֳָם ַבֽ׃ה ַבָױׁם ¡ זםֽם ָה םÚדׁ ¡ זÛםׁודַ ¡ זֳ־׀ וִבֱַ ַבÞֱַֹׁ Úדה ÊÞֿד דה ַבױַָֹֽ זÛםׁוד . " & vbNewLine
+        sanadan = sanadan & "ÞבÊ : זֳ־׀ ׃Úםֿ ָה ָּםׁ ¡ זÚßׁדֹ¡ זםֽםל ָה םÚדׁ ¡ Úה ַָה Úַָ׃ זֳ־׀ ַָה Úַָ׃ Úה ֳָם ָה ßÚָ זׂםֿ ָה ַָֻÊ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        
+        'ַָה Úַדׁ
+         sanadan = sanadan & "׃הֿ Þֱַֹׁ ַבֵדַד / ַָה Úַדׁ" & vbNewLine
+         sanadan = sanadan & "Þַב ֳָז Úדׁז ַבַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+         sanadan = sanadan & "Ýֳדַ ׁזַםֹ וװַד : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ Þַב: ֻֽֿהַ ַָה דַּוֿ ¡ Þַב : ֻֽֿהַ ַבֽ׃םה ָה דוַׁה ַבּדַב ¡ Þַב :ֻֽֿהַ ֳֽדֿ ָה םׂםֿ ַבֽבזַהם ¡ Þַב : ֻֽֿהַ וװַד ָה Úדַׁ ¡ Þַב: ֻֽֿהַ Úַׁß ָה ־ַבֿ ַבדׁם ¡ Þַב :ÞֳׁÊ Úבל םֽםם ָה ַבַֻֽׁ ַב׀דַׁם ¡ זÞַב: ÞֳׁÊ Úבל Úָֿ ַבבו ָה Úַדׁ ¡ Þַב : ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם ַבÝÊֽ װם־הַ ¡ זÞַב: ÞֳׁÊ ָוַ Úבל Úָֿ ַבבו ָה ַבֽ׃םה ַבדÞׁםֱ ¡ ז Þַב : ÞֳׁÊ ָוַ Úבל דֽדֿ ָה ֳֽדֿ ָה Úַָֿה ¡ זÞַב : ÞֳׁÊ Úבל ַבֽבזַהם ¡ זÞַב : ÞֳׁÊ Úבל וװַד " & vbNewLine
+         sanadan = sanadan & "זֳדַ ׁזַםֹ ַָה ׀ßזַה : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ¡ Þַב:ֻֽֿהַ ֳֽדֿ ָה דז׃ל ָה דַּוֿ ¡ Þַב : ֻֽֿהַ ֳֽדֿ ָה םז׃Ý ַבÊÛבָם ¡ Þַב : ֻֽֿהַ Úָֿ ַבבו ָה ׀ßזַה ¡ Þַב : ֻֽֿהַ ֳםזָ ָה Êדםד ַבÊדםדם ¡ Þַב :ֻֽֿהַ םֽםם ָה ַבַֻֽׁ ַב׀דַׁם ¡ Þַב : ÞֳׁÊ Úבל ַָה Úַדׁ ¡ זÞַב ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֲׁה ßבו Úבל Úָֿ ַבÚׂםׂ ָה ּÚÝׁ ַבÝַׁ׃ם ַבדÞׁםֱ זÞַב בם : ÞֳׁÊ ָוַ Úבל ֳָל ָßׁ דֽדֿ ָה ַבֽ׃ה ַבהÞַװ ¡ זÞַב : ÞֳׁÊ ָוַ Úבל ֳָם Úָֿ ַבבו וַׁזה ָה דז׃ל ָה װׁםß ַבֳ־Ýװ זׁזַוַ ַבֳ־Ýװ Úה Úָֿ ַבבו ָה ׀ßזַה " & vbNewLine
+         sanadan = sanadan & "זּׁÜÜַב ַָה Úַדׁ ַבÜ׀םÜה ׃ÜÜדַוד : ֳָז ַבֱַֿֿׁ Úזםדׁ ָה Úַדׁ ױַָֽ ׁ׃זב ַבבו ¡ זַבדÛםֹׁ ָה ֳָם װוַָ ַבד־ׂזדם ¡ זֳ־Ü׀ ֳָז ַבֱַֿֿׁ ÚÜÜה ַבהָם . זֳ־׀ ַבדÛםֹׁ Úה Úֻדַה ָה ÚÝַה Úה ַבהָם Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -" & vbNewLine
+         snandan = sanadan & vbNewLine
+        
+        
+         'Úַױד
+         sanadan = sanadan & "׃הֿ Þֱַֹׁ ַבֵדַד / Úַױד" & vbNewLine
+         sanadan = sanadan & "Þַב ֳָÜÜז ÚÜדÜׁז ַבÜַֿהÜÜם ÝÜÜÜם ַבÜÊם׃םׁ:" & vbNewLine
+         sanadan = sanadan & "Ýֳדַ ׁזַםֹ ֳָם ָßׁ װÚָֹ: Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ָה Úבם ַבßַÊָ Þַב: ֻֽֿהַ ָה דַּוֿ Þַב: ֻֽֿהַ ֵַָׁוםד ָה ֳֽדֿ ָה Úדׁ ַבזßםÚם ¡ Þַב:ֻֽֿהַ ֳָם Þַב:ֻֽֿהַ םֽםם ָה ֳֿד ¡ Þַב: ֻֽֿהַ ֳָז ָßׁ Úה Úַױד ¡ Þַב ֳָז Úדׁז: זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל Ýַׁ׃ ָה ֳֽדֿ ַבדÞׁםֱ ¡ ז Þַב בם: ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃ה Úָֿ ַבַָÞם ָה ַבֽ׃ה ַבדÞׁםֱ ¡ זÞַב: ÞֳׁÊ Úבל ֵַָׁוםד ָה Úָֿ ַבֽׁדה ָה ֳֽדֿ ַבדÞׁםֱ ַבָÛַֿֿם זÞַב: ÞֳׁÊ Úבל םז׃Ý ָה םÚÞזָ ַבזַ׃״ם ¡ זÞַב: ÞֳׁÊ Úבל װÚםָ ָה ֳםזָ ַבױׁםÝםהם ¡ זÞַב: ÞֳׁÊ ָוַ Úבל םֽםם ָה ֳֿד Úה ֳָל ָßׁ Úה Úַױד." & vbNewLine
+         sanadan = sanadan & "זֳדַ ׁזַםֹ ֽÝױ : Ýֻֽֿהַ ָוַ ֳָז ַבֽ׃ה ״ַוÜׁ ָה Ûבָזה ַבדÞֶׁ ¡ Þַב : ֻֽֿהַ ֳָז ַבֽ׃ה Úבם ָה דֽדֿ ָה ױַבֽ ַבוַװדם ַבײׁםׁ ַבדÞֶׁ ַָבָױֹׁ ¡ Þַב: ֻֽֿהַ ֳָז ַבÚַָ׃ ֳֽדֿ ָה ׃וב ַבֳװהַהם ¡ זÞַב: ÞֳׁÊ Úבל ֳָם דֽדֿ Úָםֿ ָה ַבױַָֽ ¡ זÞַב: ÞֳׁÊ Úבל ֽÝױ ¡ זÞַב: ÞֳׁÊ Úבל ÚַױÜד ¡ זÞַב ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֲׁה ßבו Úבל װם־הַ ֳָם ַבֽ׃ה זÞַב בם: ÞֳׁÊ ָוַ Úבל ַבוַװדם זÞַב: ÞֳׁÊ Úבל ַבֳװהַהם Úה Úָםֿ Úה ֽÝױ Úה ÚַױÜד . " & vbNewLine
+         sanadan = sanadan & "זַּׁב Úַױד ַבÜ׀םÜה ׃דַוד ַֻהַה : ֳָז Úָֿ ַבֽׁדה Úָֿ ַבבו ָה ָֽםָ ַב׃בדם ¡ זֳָז דׁםד ׁׂ ָה ָֽםװ ¡ זֳ־Ü׀ ֳָז Úָֿ ַבֽׁדה Úה Úֻדַה ָה ÚÝַה ¡ זÚבם ָה ֳָם ״ַבָ  ¡ זֳָם ָה ßÚָ  ¡ זׂםֿ ָה ַָֻÊ  ¡ זÚָֿ ַבבו ָה ד׃Úזֿ ¡ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל - ¡ ֳ־׀ ׁׂ ָה ָֽםװ Úה Úֻדַה ָה ÚÜÝÜÜַה  ¡ זַָה ד׃Úזֿ  ¡ Úה ׁ׃זב ַבבו - ױבל ַבבו Úבםו ז ׃בד - ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+         snandan = sanadan & vbNewLine
+         
+        'ֽדֹׂ
+        sanadan = sanadan & "׃הֿ Þֱַֹׁ ַבֵדַד / ֽדֹׂ" & vbNewLine
+        sanadan = sanadan & "Þַב ֳָÜז Úדׁז ַבÜַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ ־בÝ : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ¡ Þַב : ֻֽֿהַ ַָה דַּוֿ ¡ ֻֽֿהַ ֵֿׁם׃ ָה Úָֿ ַבßׁםד ¡ Þַב : ֻֽֿהַ ־בÝ ¡ Þַב: Úה ׃בםד Úה ֽדֹׂ ¡ ז Þַב ֳָÜÜז ÚÜדÜׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם ַבֽ׃ה װם־הַ ¡ ז Þַב בם : ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃ה דֽדֿ ָה םז׃Ý ָה הוַׁ ַבֽׁÊßם ַָבָױֹׁ ¡ זÞַב בם : ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃םה ֳֽדֿ ָה Úֻדַה ָה ּÚÝׁ ָה ָזםַה ¡ זÞַב בם :ÞֳׁÊ Úבל ֵֿׁם׃ ָה Úָֿ ַבßׁםד Þָב ֳה םÞׁםֱ ַָ־Êםַׁ ־בÝ ¡ זÞַב בם : ÞֳׁÊ Úבל ־בÝ ¡ זÞַב : ÞֳׁÊ Úבל ׃בםד ¡ ז Þַב : ÞֳׁÊ Úבל ֽדֹׂ ." & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ ־בַֿ : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ¡ Þַב : ֻֽֿהַ ֳֽדֿ ָה דז׃ל ¡ Þַב : ֻֽֿהַ םֽםל ָה ֳֽדֿ ָה וַׁזה ַבדׂזÞ ¡ Úה ֳֽדֿ ָה םׂםֿ ַבֽבזַהם ¡ Úה ־בַֿ ¡ Úה ׃בםד ¡ Úה ֽדֹׂ ¡ ז Þַב ֳָÜÜז ÚÜדÜׁז : זÞֳׁÊ ָוַ ַבÞֲׁה ßבו Úבל ֳָם ַבÝÊֽ ַבײׁםׁ װם־הַ ¡ ז Þַב בם: ÞֳׁÊ ָוַ Úבל Úָֿ ַבבו ָה ַבֽ׃םה ַבדÞׁםֱ ¡ זÞַב : ÞֳׁÊ ָוַ Úבל דֽדֿ ָה ֳֽדֿ ָה װהָז׀ ¡ זÞַב : ÞֳׁÊ Úבל ֳָם ָßׁ דֽדֿ ָה װַ׀ַה ַבּזוׁם ַבדÞׁם ¡ זÞַב :ÞֳׁÊ Úבל ־בַֿ זÞַב : ÞֳׁÊ Úבל ׃בםד ¡ זÞֳׁ ׃בםד Úבל ֽדֹׂ." & vbNewLine
+        sanadan = sanadan & "זַּׁב ֽדֹׂ : זַּׁב ֽדֹׂ ּדַÚֹ דהוד ֳָז דֽדֿ ׃בםדַה ָה דוַׁה ַבֳÚדװ ¡ זדֽדֿ ָה Úָֿ ַבֽׁדה ָה ֳָם בםבל ַבÞַײם ¡ זֽדַׁה ָה ֳÚםה ¡ זֳָז ֵ׃ַֽÞ ַב׃ָםÚם ¡ זדהױזׁ ַָה ַבדÚÊדׁ ¡ זדÛםֹׁ ָה דÞ׃ד ¡ זּÚÝׁ ָה דֽדֿ ַבױַֿÞ ¡ זÛםׁוד ." & vbNewLine
+        sanadan = sanadan & "זֳ־׀ ַבֳÚדװ Úה םֽםל ָה זַָֻ ¡ זֳ־׀ םֽםל Úה ּדַÚֹ דה ֳױַָֽ ַָה ד׃Úזֿ : ÚבÞדֹ ¡ זַבֳ׃זֿ זÚָםֿ ָה הײבֹ ַב־ַׂÚם ¡ זׁׂ ָה ָֽםװ ¡ זֳָם Úָֿ ַבֽׁדה ַב׃בדם ¡ זÛםׁוד ¡ Úה ַָה ד׃Úזֿ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+       
+        'ַבß׃ֶַל
+         sanadan = sanadan & "׃הֿ Þֱַֹׁ ַבֵדַד / ַבß׃ֶַל" & vbNewLine
+         sanadan = sanadan & "Þַב ֳָז Úדׁז ַבÜַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+         sanadan = sanadan & "Ýֳדַ ׁזַםֹ ֳָם Úדׁז ַבֿזׁם : Ýֻֽֿהַ ָוַ ֳָז דֽדֿ Úָֿ ַבֽׁדה ָה Úדׁ ָה דֽדֿ ַבדÚֿב ¡ Þַב : ֻֽֿהַ ֳָז Úדׁ Úָֿ ַבבו ָה ֳֽדֿ ָה ֿםׂזםו ַבֿדװÞם ¡ Þַב : ֻֽֿהַ ּÚÝׁ ָה דֽדֿ ָה ֳ׃ֿ ַבהױםָם ¡ Þַב : ֻֽֿהַ ֳָז Úדׁ ַבֿזׁם ¡ Úה ַבß׃ֶַם ¡ ז Þַב ֳָז ÚÜדׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם ַבÝÊֽ ¡ זÞַב בם : ÞֳׁÊ ָוַ Úבל Úָֿ ַבַָÞם ָה ַבֽ׃ה ¡ זÞַב : ÞֳׁÊ Úבל ֳָם ָßׁ דֽדֿ ָה Úבם ָה ַבּבהֿם ַבדזױבם ¡ ז Þַב :ÞֳׁÊ Úבל ּÚÝׁ ָה דֽדֿ ¡ זÞַב : ÞֳׁÊ Úבל ֳָם Úדׁ ַבֿזׁם ¡ זÞַב : ÞֳׁÊ Úבל ַבß׃ֶַם ." & vbNewLine
+         sanadan = sanadan & "זֳדַ ׁזַםֹ ֳָם ַבַֻֽׁ : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ¡ Þַב : ֻֽֿהַ ָוַ ַָה דַּוֿ ¡ Þַב : ֻֽֿהַ דֽדֿ ָה םֽםל ( ַבß׃ֶַם ַבױÛםׁ) ¡ Úה ֳָם ַבַֻֽׁ ¡ Úה ַבß׃ֶַם ¡ ז Þַב ֳָÜÜז ÚÜדÜׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל Ýַׁ׃ ָה ֳֽדֿ ¡ ז Þַב בם : ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃ה Úָֿ ַבַָÞם ָה ַבֽ׃ה ַבדÞׁםֱ ¡ זÞַב : ÞֳׁÊ ָוַ Úבל ֳָם ַבÞַ׃ד ׂםֿ ָה Úבם ¡ זÞַב : ÞֳׁÊ Úבל ֳֽדֿ ָה ַבֽ׃ה ַבדÚׁזÝ ַָבָ״ם ¡ זÞַב :ÞֳׁÊ Úבל דֽדֿ ָה םֽםל ( ַבß׃ֶַם ַבױÛםׁ) ¡ זÞַב : ÞֳׁÊ Úבל ֳָם ַבַֻֽׁ ¡ זÞַב : ÞֳׁÊ Úבל ַבß׃ֶַם ." & vbNewLine
+         sanadan = sanadan & "זַּׁב ַבß׃ֶַם : ֽדֹׂ ָה ָֽםָ ַבׂםַÊ ¡ זÚם׃ל ָה Úדׁ ַבוד׀ַהם ¡ זדֽדֿ ָה ֳָם בםבל ַבÞַײם ¡ זÛםׁוד דה דװם־ֹ ַבßזÝםםה Ûםׁ ֳה דַֹֿ ÞֱַׁÊו זַÚÊדַֿו Ýם ַ־Êםַׁו Úה ֽדֹׂ ¡ זÞֿ ׀ßׁהַ ַÊױַב ÞֱַׁÊו ." & vbNewLine
+         sanadan = sanadan & "זַּׁב ֽדֹׂ : זַּׁב ֽדֹׂ ּדַÚֹ דהוד ֳָז דֽדֿ ׃בםדַה ָה דוַׁה ַבֳÚדװ ¡ זדֽדֿ ָה Úָֿ ַבֽׁדה ָה ֳָם בםבל ַבÞַײם ¡ זֽדַׁה ָה ֳÚםה ¡ זֳָז ֵ׃ַֽÞ ַב׃ָםÚם ¡ זדהױזׁ ַָה ַבדÚÊדׁ ¡ זדÛםֹׁ ָה דÞ׃ד ¡ זּÚÝׁ ָה דֽדֿ ַבױַֿÞ ¡ זÛםׁוד ." & vbNewLine
+         sanadan = sanadan & "זֳ־׀ ַבֳÚדװ Úה םֽםל ָה זַָֻ ¡ זֳ־׀ םֽםל Úה ּדַÚֹ דה ֳױַָֽ ַָה ד׃Úזֿ : ÚבÞדֹ ¡ זַבֳ׃זֿ זÚָםֿ ָה הײבֹ ַב־ַׂÚם ¡ זׁׂ ָה ָֽםװ ¡ זֳָם Úָֿ ַבֽׁדה ַב׃בדם ¡ זÛםׁוד ¡ Úה ַָה ד׃Úזֿ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+         snandan = sanadan & vbNewLine
+          
+       
+        ElseIf index = 1 Then
+        ' הַÝÚ
+        sanadan = "Þַב ֳָז Úדׁז ַבַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+        sanadan = sanadan & "ֳדַ ׁזַםֹ Þַבזה : Ýֻֽֿהַ ָוַ ֳֽדֿ ָה Úדׁ ָה דֽדֿ ַבּםׂם ¡ Þַב: ֻֽֿהַ דֽדֿ ָה ֳֽדֿ ָה דהםׁ ¡ Þַב: ֻֽֿהַ Úָֿ ַבבו ָה Úם׃ל ַבדֿהם ¡ Þַב:ֻֽֿהַ Þַבזה Úה הַÝÚ¡ ז Þַב ֳָÜÜז ÚÜדÜׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל װם־ם ֳָם ַבÝÊֽ Ýַׁ׃ ָה ֳֽדֿ ָה דז׃ל ָה Úדַׁה ¡ ַבדÞׁםֱ ַבײׁםׁ ¡ ז Þַב בם: ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃ה Úָֿ ַבַָÞם ָה ַבֽ׃ה ַבדÞֶׁ ¡ זÞַב: ÞֳׁÊ Úבל ֵַָׁוםד ָה Úדׁ ַבדÞֶׁ ¡ זÞַב: ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃םה ֳֽדֿ ָה Úֻדַה ָה ּÚÝׁ ָה ָזםַה ¡ זÞַב:ÞֳׁÊ Úבל ֳָם ָßׁ ֳֽדֿ ָה דֽדֿ ָה ַבֳװÚֻ זÞַב: ÞֳׁÊ Úבל ֳָם הװם״ דֽדֿ ָה וַׁזה ¡ זÞַב: ÞֳׁÊ Úבל Þַבזה ¡ זÞַב: ÞֳׁÊ Úבל הַÝÚ ." & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ זׁװ : Ýֻֽֿהַ ָוַ ֳָז Úָֿ ַבבו ֳֽדֿ ָה דֽÝזÙ ַבÞַײם ָדױׁ ¡ Þַב: ֻֽֿהַ ֳֽדֿ ָה ֵַָׁוםד ָה ַּדÚ ¡ Þַב : ֻֽֿהַ ֳָז דֽדֿ ָßׁ ָה ׃וב ¡ Þַב: ֻֽֿהַ ֳָז דֽדֿ Úָֿ ַבױדֿ ָה Úָֿ ַבֽׁדה ¡ Þַב : ֻֽֿהַ זׁװ Úה הַÝÚ ¡ ז Þַב ֳָÜÜז ÚÜדÜׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל װם־ם ֳָם ַבÞַ׃ד ־בÝ ָה ֵַָׁוםד ָה דֽדֿ ָה ־ַÞַה ַבדÞׁםֱ ָדױׁ ¡ ז Þַב בם : ÞֳׁÊ ָוַ ַבÞַׁה Úבל ֳָם ּÚÝׁ ֳֽדֿ ָה ֳ׃ַדֹ ַבÊּםָם ¡ זÞַב בם : ÞֳׁÊ ָוַ ַבÞַׁה Úבל ֵ׃דַÚםב ָה Úָֿ ַבבו ַבהַֽ׃ ¡ זÞַב : ÞֳׁÊ Úבל ֳָם םÚÞזָ םז׃Ý ָה Úדׁז ָה ם׃ַׁ ַבֳׁׂÞ ¡ זÞַב :ÞֳׁÊ Úבל זׁװ זÞַב : ÞֳׁÊ Úבל הַÝÚ ." & vbNewLine
+        sanadan = sanadan & "זַּׁב הַÝÚ ַב׀םה ׃דַוד ־ד׃ֹ : ֳָז ּÚÝׁ םׂ םֿ ָה ַבÞÚÞַÚ ַבÞֶַׁ ¡ זֳָז ַֿזֿ Úָֿ ַבֽׁדה ָה וׁדׂ ַבֳÚּׁ ¡ זװםָֹ ָה הױַֽ ַבÞַײם ¡ זֳָז Úָֿ ַבבו ד׃בד ָה ּהָֿ ַבו׀בם ַבÞַױ ¡ זֳָז ׁזֽ םׂםֿ ָה ׁזדַה ¡ זֳ־׀ וִבֱַ ַבÞֱַֹׁ Úה ֳָם וׁםֹׁ ¡ זַָה Úַָ׃ ¡ זÚָֿ ַבבו ָה Úםַװ ָה ֳָם ָׁםÚֹ ¡ Úה ֳָם ָה ßÚָ ¡ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        
+        ElseIf index = 2 Then
+        ' ַָה ßֻםׁ
+        sanadan = "Þַב ֳָÜז Úדׁז ַבÜַֿהם Ýם ַבÊם׃םׁ  " & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ ַבָׂם : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ָה ַבßַÊָ ¡ Þַב:ֻֽֿהַ ֳֽדֿ ָה דז׃ל ¡ Þַב: ֻֽֿהַ דײׁ ָה דֽדֿ ַבײָם ¡ Þַב:ֻֽֿהַ ֳֽדֿ ָה ֳָם ָֹׂ ¡ Þַב: ÞֳׁÊ Úבל Úßׁדֹ ָה ׃בםדַה ָה Úַדׁ ¡ זÞַב: ÞֳׁÊ Úבל ֵ׃דַÚםב ָה Úָֿ ַבבו ַבÞ׃״ ¡ זÞַב : ÞֳׁÊ Úבל ַָה ßֻםׁ הÝ׃ו ¡ Þַב ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם ַבÞַ׃ד Úָֿ ַבÚׂםׂ ָה ּÚÝׁ ָה דֽדֿ ַבדÞׁםֱ ַבÝַׁ׃ם ¡ זÞַב בם: ÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם ָßׁ דֽדֿ ָה ַבֽ׃ה ַבהÞַװ ¡ זÞַב: ÞֳׁÊ ָוַ Úבל ֳָם ָׁםÚֹ דֽדֿ ָה ֵ׃ַֽÞ ַבׁ ָÚם ¡ זÞַב: ÞֳׁÊ Úבל ַבָׂם ." & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ Þהָב : Ýֻֽֿהַ ָוַ ֳָז ד׃בד דֽדֿ ָה ֳֽדֿ ַבָÛַֿֿם ¡ Þַב: ֻֽֿהַ ַָה דַּוֿ ¡ Þַב: ÞֳׁÊ Úבל Þהָב ¡ זÞַב: ÞֳׁÊ Úבל ֳָם ַבֽ׃ה ֳֽדֿ ָה Úזה ַבÞזַ׃ זÞַב: ÞֳׁÊ Úבל ֳָם ַבַ־ׁ ם״ זוָ ָה זַײֽ ¡ זÞַב: ÞֳׁÊ Úבל ֵ׃דַÚםב ָה Úָֿ ַבבו ַבÞ׃״ ¡ זÞַב: ÞֳׁÊ Úבל װָב ָה Úַָֿ ז דÚׁזÝ ָה דװßַה ¡ זÞַבַ Þֳׁהַ Úבל ַָה ßֻÜםÜׁ ¡ ז Þַב ֳָÜÜÜÜז ÚÜÜדÜÜׁז : זÞֳׁÊ ָוַ ַבÞֲׁה ßבו Úבל Ýַׁ׃ ָה ֳֽדֿ ַבֽדױם ַבדÞׁםֱ ַבײׁםׁ זÞַב: ÞֳׁÊ ָוַ Úבל Úָֿ ַבבו ָה ַבֽ׃םה ַבָÛַֿֿם ¡ זÞַב: ÞֳׁÊ ָוַ Úבל ַָה דַּוֿ זÞַב: ÞֳׁÊ Úבל Þהָב ." & vbNewLine
+        sanadan = sanadan & " זּׁÜÜַב ַָה ßֻםׁ ַבÜ׀םÜה ׃דַוד ֻבַֹֻ : Úָֿ ַבבו ָה ַב׃ֶַָ ַבד־ׂזדם ױַָֽ ׁ׃זב ַבבו  זדַּוֿ ָה ָּׁ ֳָז ַבַּּֽ דזבל Þם׃ ָה ַב׃ֶַָ ¡ זַָֿׁ׃ דזבל ַָה Úַָ׃ . זֳ־׀ Úָֿ ַבבו Úה ֳָם ָה ßÚָ הÝ׃ו. זֳ־׀ דַּוֿ זַָֿׁ׃¡ Úה ַָה Úַָ׃¡ Úה ֳָם ¡ זׂםֿ ָה ַָֻÊ ¡ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - ¡ Úה ָּׁםב - Úבםו ַב׃בַד -  ¡Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        
+        ElseIf index = 3 Then
+        ' ֳָז Úדׁז
+        sanadan = "Þַב ֳָז Úדׁז ַבַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ ֳָם Úדׁ ַבֿזׁם : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ָה Úבם ¡ Þַב: ֳ־ָׁהַ ֳָז Úם׃ל דֽדֿ ָה ֳֽדֿ ָה Þ״ה ׃הֹ ֻדַה Úװֹׁ זֻבַֻדֶַֹ¡ Þַב: ֳ־ָׁהַ ֳָז ־בַֿ ׃בםדַה ָה ־בַֿ Þַב:ֻֽֿהַ ַבםׂםֿם Úה ֳָם Úדׁז ¡ Þַב ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו דה ״ׁםÞ ֳָם Úדׁ ַבֿזׁם Úבל װם־הַ Úָֿ ַבÚׂ םׂ ָה ּÚÝׁ ָה דֽדֿ ָה ֵ׃ַֽÞ ַבָÛַֿֿם ַבÝַׁ׃ם ַבדÞׁםֱ ¡ ז Þַב בם : ÞֳׁÊ ָוַ Úבל ֳָם ״ַוׁ Úָֿ ַבזַֽֿ ָה Úדׁ ָה ֳָם וַװד ַבדÞׁםֱ ¡ דַ בַ ֳֽױםו ßֹֻׁ ¡ זÞַב בם : ÞֳׁÊ ָוַ Úבל ֳָם ָßׁ ָה דַּוֿ ¡ זÞַב : ÞֳׁÊ ָוַ Úבל ֳָם ַבׂÚֱַׁ Úָֿ ַבֽׁדה ָה Úָֿז׃ זÞַב :ÞֳׁÊ Úבל ֳָם Úדׁ ¡ זÞַב : ÞֳׁÊ ָוַ Úבל ַבםׂםֿם ¡ זÞַב ÞֳׁÊ ָוַ Úבל : ֳָם Úדׁז. " & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ ֳָם װÚםָ ַב׃ז׃ם : Ýֻֽֿהַ ָוַ ־בÝ ָה ֵַָׁוםד ָה דֽדֿ ַבדÞֶׁ ¡ Þַב : ֻֽֿהַ ֳָז דֽדֿ ַבֽ׃ה ָה ׁװםÞ ַבדÚֿב ¡ Þַב : ֻֽֿהַ ֳָז Úָֿ ַבֽׁדה ֳֽדֿ ָה װÚםָ ַבה׃ֶַם ¡ Þַב : ֳ־ָׁהַ ֳָז װÚםָ ¡ Þַב : ֳ־ָׁהַ ַבםׂםֿם ¡ Úה ֳָם Úדׁז ¡ זÞַב ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֲׁה ßבו ֵָÙוַׁ ַבֳזב דה ַבדֻבםה זַבדÊÞַָׁםה זֵָֿÛַדו Úבל Ýַׁ׃ ָה ֳֽדֿ ַבדÞׁםֱ ¡ זÞַב בם : ÞֳׁÊ ָוַ ß׀בß Úבל Úָֿ ַבבו ָה ַבֽ׃םה ַבדÞׁםֱ ¡ זÞַב בם : ÞֳׁÊ ָוַ ַבÞַׁה ßבו ß׀בß Úבל ֳָם Úדַׁה דז׃ל ָה ּׁםׁ ַבהֽזם ¡ זÞַב : ÞֳׁÊ ָוַ Úבל ֳָם װÚםָ ¡ זÞַב : ÞֳׁÊ Úבל ַבםׂםֿם ¡ זÞַב : ÞֳׁÊ Úבל ֳָם Úדׁז" & vbNewLine
+        sanadan = sanadan & "Þַב ֳָז Úדׁז: זֻֽֿהַ ֳָױזב ַבֵֿÛַד דֽדֿ ָה ֳֽדֿ Úה ַָה דַּוֿ Úה Úָֿ ַבֽׁדה ָה Úָֿז׃ Úה ַבֿזׁם Úה ַבםׂםֿם Úה ֳָל Úדׁז¡ זֻֽֿהַ ָוַ ֳםײַ ֳָז ַבֽ׃ה װם־הַ ¡ Þַב : ֻֽֿהַ Úָֿ ַבבו ָה ַבדַָׁß Úה ּÚÝׁ ָה ׃בםדַה Úה ֳָם װÚםָ Úה ַבםׂםֿם Úה ֳָם Úדׁז . " & vbNewLine
+        sanadan = sanadan & "זַּׁב ֳָם Úדׁז : ּדַÚֹ דה ֳוב ַבַּֽׂ זדה ֳוב ַבָױֹׁ ¡ Ýדה ֳוב דßֹ : דַּוֿ ¡ ז׃Úםֿ ָה ָּםׁ ¡ זÚßׁדֹ ָה ־ַבֿ ¡ זÚ״ֱַ ָה ֳָם ַָֽׁ ¡ זÚָֿ ַבבו ָה ßֻםׁ ¡ זדֽדֿ ָה Úָֿ ַבֽׁדה ָה דֽםױה ¡ זֽדםֿ ָה Þם׃ ַבֳÚּׁ ַבÞֶַׁ ¡ זדה ֳוב ַבדֿםהֹ : םׂםֿ ָה ַבÞÚÞַÚ ַבÞַׁםֱ זםׂםֿ ָה ׁזדַה ¡ זװםָֹ ָה הױַֽ ¡ זדה ֳוב ַבָױֹׁ : ַבֽ׃ה ָה ֳָם ַבֽ׃ה ַבָױׁם ¡ זםֽם ָה םÚדׁ ¡ זÛםׁודַ ¡ זֳ־׀ וִבֱַ ַבÞֱַֹׁ Úדה ÊÞֿד דה ַבױַָֹֽ זÛםׁוד . " & vbNewLine
+        sanadan = sanadan & "ÞבÊ : זֳ־׀ ׃Úםֿ ָה ָּםׁ ¡ זÚßׁדֹ¡ זםֽםל ָה םÚדׁ ¡ Úה ַָה Úַָ׃ זֳ־׀ ַָה Úַָ׃ Úה ֳָם ָה ßÚָ זׂםֿ ָה ַָֻÊ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -."
+        
+        ElseIf index = 4 Then
+        'ַָה Úַדׁ
+        sanadan = "Þַב ֳָז Úדׁז ַבַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ וװַד : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ Þַב: ֻֽֿהַ ַָה דַּוֿ ¡ Þַב : ֻֽֿהַ ַבֽ׃םה ָה דוַׁה ַבּדַב ¡ Þַב :ֻֽֿהַ ֳֽדֿ ָה םׂםֿ ַבֽבזַהם ¡ Þַב : ֻֽֿהַ וװַד ָה Úדַׁ ¡ Þַב: ֻֽֿהַ Úַׁß ָה ־ַבֿ ַבדׁם ¡ Þַב :ÞֳׁÊ Úבל םֽםם ָה ַבַֻֽׁ ַב׀דַׁם ¡ זÞַב: ÞֳׁÊ Úבל Úָֿ ַבבו ָה Úַדׁ ¡ Þַב : ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם ַבÝÊֽ װם־הַ ¡ זÞַב: ÞֳׁÊ ָוַ Úבל Úָֿ ַבבו ָה ַבֽ׃םה ַבדÞׁםֱ ¡ ז Þַב : ÞֳׁÊ ָוַ Úבל דֽדֿ ָה ֳֽדֿ ָה Úַָֿה ¡ זÞַב : ÞֳׁÊ Úבל ַבֽבזַהם ¡ זÞַב : ÞֳׁÊ Úבל וװַד " & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ ַָה ׀ßזַה : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ¡ Þַב:ֻֽֿהַ ֳֽדֿ ָה דז׃ל ָה דַּוֿ ¡ Þַב : ֻֽֿהַ ֳֽדֿ ָה םז׃Ý ַבÊÛבָם ¡ Þַב : ֻֽֿהַ Úָֿ ַבבו ָה ׀ßזַה ¡ Þַב : ֻֽֿהַ ֳםזָ ָה Êדםד ַבÊדםדם ¡ Þַב :ֻֽֿהַ םֽםם ָה ַבַֻֽׁ ַב׀דַׁם ¡ Þַב : ÞֳׁÊ Úבל ַָה Úַדׁ ¡ זÞַב ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֲׁה ßבו Úבל Úָֿ ַבÚׂםׂ ָה ּÚÝׁ ַבÝַׁ׃ם ַבדÞׁםֱ זÞַב בם : ÞֳׁÊ ָוַ Úבל ֳָל ָßׁ דֽדֿ ָה ַבֽ׃ה ַבהÞַװ ¡ זÞַב : ÞֳׁÊ ָוַ Úבל ֳָם Úָֿ ַבבו וַׁזה ָה דז׃ל ָה װׁםß ַבֳ־Ýװ זׁזַוַ ַבֳ־Ýװ Úה Úָֿ ַבבו ָה ׀ßזַה " & vbNewLine
+        sanadan = sanadan & "זּׁÜÜַב ַָה Úַדׁ ַבÜ׀םÜה ׃ÜÜדַוד : ֳָז ַבֱַֿֿׁ Úזםדׁ ָה Úַדׁ ױַָֽ ׁ׃זב ַבבו ¡ זַבדÛםֹׁ ָה ֳָם װוַָ ַבד־ׂזדם ¡ זֳ־Ü׀ ֳָז ַבֱַֿֿׁ ÚÜÜה ַבהָם . זֳ־׀ ַבדÛםֹׁ Úה Úֻדַה ָה ÚÝַה Úה ַבהָם Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -" & vbNewLine
+        
+        ElseIf index = 5 Then
+        'Úַױד
+        sanadan = "Þַב ֳָÜÜז ÚÜדÜׁז ַבÜַֿהÜÜם ÝÜÜÜם ַבÜÊם׃םׁ:" & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ ֳָם ָßׁ װÚָֹ: Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ָה Úבם ַבßַÊָ Þַב: ֻֽֿהַ ָה דַּוֿ Þַב: ֻֽֿהַ ֵַָׁוםד ָה ֳֽדֿ ָה Úדׁ ַבזßםÚם ¡ Þַב:ֻֽֿהַ ֳָם Þַב:ֻֽֿהַ םֽםם ָה ֳֿד ¡ Þַב: ֻֽֿהַ ֳָז ָßׁ Úה Úַױד ¡ Þַב ֳָז Úדׁז: זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל Ýַׁ׃ ָה ֳֽדֿ ַבדÞׁםֱ ¡ ז Þַב בם: ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃ה Úָֿ ַבַָÞם ָה ַבֽ׃ה ַבדÞׁםֱ ¡ זÞַב: ÞֳׁÊ Úבל ֵַָׁוםד ָה Úָֿ ַבֽׁדה ָה ֳֽדֿ ַבדÞׁםֱ ַבָÛַֿֿם זÞַב: ÞֳׁÊ Úבל םז׃Ý ָה םÚÞזָ ַבזַ׃״ם ¡ זÞַב: ÞֳׁÊ Úבל װÚםָ ָה ֳםזָ ַבױׁםÝםהם ¡ זÞַב: ÞֳׁÊ ָוַ Úבל םֽםם ָה ֳֿד Úה ֳָל ָßׁ Úה Úַױד." & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ ֽÝױ : Ýֻֽֿהַ ָוַ ֳָז ַבֽ׃ה ״ַוÜׁ ָה Ûבָזה ַבדÞֶׁ ¡ Þַב : ֻֽֿהַ ֳָז ַבֽ׃ה Úבם ָה דֽדֿ ָה ױַבֽ ַבוַװדם ַבײׁםׁ ַבדÞֶׁ ַָבָױֹׁ ¡ Þַב: ֻֽֿהַ ֳָז ַבÚַָ׃ ֳֽדֿ ָה ׃וב ַבֳװהַהם ¡ זÞַב: ÞֳׁÊ Úבל ֳָם דֽדֿ Úָםֿ ָה ַבױַָֽ ¡ זÞַב: ÞֳׁÊ Úבל ֽÝױ ¡ זÞַב: ÞֳׁÊ Úבל ÚַױÜד ¡ זÞַב ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֲׁה ßבו Úבל װם־הַ ֳָם ַבֽ׃ה זÞַב בם: ÞֳׁÊ ָוַ Úבל ַבוַװדם זÞַב: ÞֳׁÊ Úבל ַבֳװהַהם Úה Úָםֿ Úה ֽÝױ Úה ÚַױÜד . " & vbNewLine
+        sanadan = sanadan & "זַּׁב Úַױד ַבÜ׀םÜה ׃דַוד ַֻהַה : ֳָז Úָֿ ַבֽׁדה Úָֿ ַבבו ָה ָֽםָ ַב׃בדם ¡ זֳָז דׁםד ׁׂ ָה ָֽםװ ¡ זֳ־Ü׀ ֳָז Úָֿ ַבֽׁדה Úה Úֻדַה ָה ÚÝַה ¡ זÚבם ָה ֳָם ״ַבָ  ¡ זֳָם ָה ßÚָ  ¡ זׂםֿ ָה ַָֻÊ  ¡ זÚָֿ ַבבו ָה ד׃Úזֿ ¡ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל - ¡ ֳ־׀ ׁׂ ָה ָֽםװ Úה Úֻדַה ָה ÚÜÝÜÜַה  ¡ זַָה ד׃Úזֿ  ¡ Úה ׁ׃זב ַבבו - ױבל ַבבו Úבםו ז ׃בד - ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        
+        ElseIf index = 6 Then
+        'ֽדֹׂ
+        sanadan = "Þַב ֳָÜז Úדׁז ַבÜַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ ־בÝ : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ¡ Þַב : ֻֽֿהַ ַָה דַּוֿ ¡ ֻֽֿהַ ֵֿׁם׃ ָה Úָֿ ַבßׁםד ¡ Þַב : ֻֽֿהַ ־בÝ ¡ Þַב: Úה ׃בםד Úה ֽדֹׂ ¡ ז Þַב ֳָÜÜז ÚÜדÜׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם ַבֽ׃ה װם־הַ ¡ ז Þַב בם : ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃ה דֽדֿ ָה םז׃Ý ָה הוַׁ ַבֽׁÊßם ַָבָױֹׁ ¡ זÞַב בם : ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃םה ֳֽדֿ ָה Úֻדַה ָה ּÚÝׁ ָה ָזםַה ¡ זÞַב בם :ÞֳׁÊ Úבל ֵֿׁם׃ ָה Úָֿ ַבßׁםד Þָב ֳה םÞׁםֱ ַָ־Êםַׁ ־בÝ ¡ זÞַב בם : ÞֳׁÊ Úבל ־בÝ ¡ זÞַב : ÞֳׁÊ Úבל ׃בםד ¡ ז Þַב : ÞֳׁÊ Úבל ֽדֹׂ ." & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ ־בַֿ : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ¡ Þַב : ֻֽֿהַ ֳֽדֿ ָה דז׃ל ¡ Þַב : ֻֽֿהַ םֽםל ָה ֳֽדֿ ָה וַׁזה ַבדׂזÞ ¡ Úה ֳֽדֿ ָה םׂםֿ ַבֽבזַהם ¡ Úה ־בַֿ ¡ Úה ׃בםד ¡ Úה ֽדֹׂ ¡ ז Þַב ֳָÜÜז ÚÜדÜׁז : זÞֳׁÊ ָוַ ַבÞֲׁה ßבו Úבל ֳָם ַבÝÊֽ ַבײׁםׁ װם־הַ ¡ ז Þַב בם: ÞֳׁÊ ָוַ Úבל Úָֿ ַבבו ָה ַבֽ׃םה ַבדÞׁםֱ ¡ זÞַב : ÞֳׁÊ ָוַ Úבל דֽדֿ ָה ֳֽדֿ ָה װהָז׀ ¡ זÞַב : ÞֳׁÊ Úבל ֳָם ָßׁ דֽדֿ ָה װַ׀ַה ַבּזוׁם ַבדÞׁם ¡ זÞַב :ÞֳׁÊ Úבל ־בַֿ זÞַב : ÞֳׁÊ Úבל ׃בםד ¡ זÞֳׁ ׃בםד Úבל ֽדֹׂ." & vbNewLine
+        sanadan = sanadan & "זַּׁב ֽדֹׂ : זַּׁב ֽדֹׂ ּדַÚֹ דהוד ֳָז דֽדֿ ׃בםדַה ָה דוַׁה ַבֳÚדװ ¡ זדֽדֿ ָה Úָֿ ַבֽׁדה ָה ֳָם בםבל ַבÞַײם ¡ זֽדַׁה ָה ֳÚםה ¡ זֳָז ֵ׃ַֽÞ ַב׃ָםÚם ¡ זדהױזׁ ַָה ַבדÚÊדׁ ¡ זדÛםֹׁ ָה דÞ׃ד ¡ זּÚÝׁ ָה דֽדֿ ַבױַֿÞ ¡ זÛםׁוד ." & vbNewLine
+        sanadan = sanadan & "זֳ־׀ ַבֳÚדװ Úה םֽםל ָה זַָֻ ¡ זֳ־׀ םֽםל Úה ּדַÚֹ דה ֳױַָֽ ַָה ד׃Úזֿ : ÚבÞדֹ ¡ זַבֳ׃זֿ זÚָםֿ ָה הײבֹ ַב־ַׂÚם ¡ זׁׂ ָה ָֽםװ ¡ זֳָם Úָֿ ַבֽׁדה ַב׃בדם ¡ זÛםׁוד ¡ Úה ַָה ד׃Úזֿ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        
+        ElseIf index = 7 Then
+        'ַבß׃ֶַל
+        sanadan = "Þַב ֳָז Úדׁז ַבÜַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ ֳָם Úדׁז ַבֿזׁם : Ýֻֽֿהַ ָוַ ֳָז דֽדֿ Úָֿ ַבֽׁדה ָה Úדׁ ָה דֽדֿ ַבדÚֿב ¡ Þַב : ֻֽֿהַ ֳָז Úדׁ Úָֿ ַבבו ָה ֳֽדֿ ָה ֿםׂזםו ַבֿדװÞם ¡ Þַב : ֻֽֿהַ ּÚÝׁ ָה דֽדֿ ָה ֳ׃ֿ ַבהױםָם ¡ Þַב : ֻֽֿהַ ֳָז Úדׁ ַבֿזׁם ¡ Úה ַבß׃ֶַם ¡ ז Þַב ֳָז ÚÜדׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם ַבÝÊֽ ¡ זÞַב בם : ÞֳׁÊ ָוַ Úבל Úָֿ ַבַָÞם ָה ַבֽ׃ה ¡ זÞַב : ÞֳׁÊ Úבל ֳָם ָßׁ דֽדֿ ָה Úבם ָה ַבּבהֿם ַבדזױבם ¡ ז Þַב :ÞֳׁÊ Úבל ּÚÝׁ ָה דֽדֿ ¡ זÞַב : ÞֳׁÊ Úבל ֳָם Úדׁ ַבֿזׁם ¡ זÞַב : ÞֳׁÊ Úבל ַבß׃ֶַם ." & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ ֳָם ַבַֻֽׁ : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ¡ Þַב : ֻֽֿהַ ָוַ ַָה דַּוֿ ¡ Þַב : ֻֽֿהַ דֽדֿ ָה םֽםל ( ַבß׃ֶַם ַבױÛםׁ) ¡ Úה ֳָם ַבַֻֽׁ ¡ Úה ַבß׃ֶַם ¡ ז Þַב ֳָÜÜז ÚÜדÜׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל Ýַׁ׃ ָה ֳֽדֿ ¡ ז Þַב בם : ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃ה Úָֿ ַבַָÞם ָה ַבֽ׃ה ַבדÞׁםֱ ¡ זÞַב : ÞֳׁÊ ָוַ Úבל ֳָם ַבÞַ׃ד ׂםֿ ָה Úבם ¡ זÞַב : ÞֳׁÊ Úבל ֳֽדֿ ָה ַבֽ׃ה ַבדÚׁזÝ ַָבָ״ם ¡ זÞַב :ÞֳׁÊ Úבל דֽדֿ ָה םֽםל ( ַבß׃ֶַם ַבױÛםׁ) ¡ זÞַב : ÞֳׁÊ Úבל ֳָם ַבַֻֽׁ ¡ זÞַב : ÞֳׁÊ Úבל ַבß׃ֶַם ." & vbNewLine
+        sanadan = sanadan & "זַּׁב ַבß׃ֶַם : ֽדֹׂ ָה ָֽםָ ַבׂםַÊ ¡ זÚם׃ל ָה Úדׁ ַבוד׀ַהם ¡ זדֽדֿ ָה ֳָם בםבל ַבÞַײם ¡ זÛםׁוד דה דװם־ֹ ַבßזÝםםה Ûםׁ ֳה דַֹֿ ÞֱַׁÊו זַÚÊדַֿו Ýם ַ־Êםַׁו Úה ֽדֹׂ ¡ זÞֿ ׀ßׁהַ ַÊױַב ÞֱַׁÊו ." & vbNewLine
+        sanadan = sanadan & "זַּׁב ֽדֹׂ : זַּׁב ֽדֹׂ ּדַÚֹ דהוד ֳָז דֽדֿ ׃בםדַה ָה דוַׁה ַבֳÚדװ ¡ זדֽדֿ ָה Úָֿ ַבֽׁדה ָה ֳָם בםבל ַבÞַײם ¡ זֽדַׁה ָה ֳÚםה ¡ זֳָז ֵ׃ַֽÞ ַב׃ָםÚם ¡ זדהױזׁ ַָה ַבדÚÊדׁ ¡ זדÛםֹׁ ָה דÞ׃ד ¡ זּÚÝׁ ָה דֽדֿ ַבױַֿÞ ¡ זÛםׁוד ." & vbNewLine
+        sanadan = sanadan & "זֳ־׀ ַבֳÚדװ Úה םֽםל ָה זַָֻ ¡ זֳ־׀ םֽםל Úה ּדַÚֹ דה ֳױַָֽ ַָה ד׃Úזֿ : ÚבÞדֹ ¡ זַבֳ׃זֿ זÚָםֿ ָה הײבֹ ַב־ַׂÚם ¡ זׁׂ ָה ָֽםװ ¡ זֳָם Úָֿ ַבֽׁדה ַב׃בדם ¡ זÛםׁוד ¡ Úה ַָה ד׃Úזֿ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        
+        ElseIf index = 8 Then
+        'ֳָז ּÚÝׁ
+        sanadan = "Þַב ַבֵדַד ֳָז ַב־םׁ דֽדֿ ָה ַבּׁׂם Ýל Êָֽםׁ ַבÊם׃םׁ : " & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ ַָה זַֿׁה : Ýֻֽֿהַ ָוַ ַבװם־ ֳָז ֽÝױ Úדׁ ָה ַבֽ׃ה ָה דׂםֿ ַבדַׁÛם ָÞֱַׁÊם Úבםו Þַב : ֳ־ָׁהַ ֳָז ַבֽ׃ה Úבם ָה ֳֽדֿ ָה Úָֿ ַבזַֽֿ ַב׃Úֿם דװַÝוֹ Úה ַבֵדַד ֳָם ַבםדה ׂםֿ ָה ַבֽ׃ה ַבבÛזם ¡ Þַב : ֳ־ָׁהַ ֳָז דֽדֿ Úָֿ ַבבו ָה Úבם ַבָÛַֿֿם ֳ־ָׁהַ ַבװׁםÝ ֳָז ַבÝײב Úָֿ ַבÞַוׁ ָה Úָֿ ַב׃בַד ַבÚַָ׃ם ¡ ֳ־ָׁהַ ֳָז Úָֿ ַבבו דֽדֿ ָה ַבֽ׃םה ַבßַׁׂםהם ¡ ֳ־ָׁהַ ֳָז ַבÝּׁ דֽדֿ ָה ֳֽדֿ ָה ֵַָׁוםד ַבװ״זם ¡ ֳ־ָׁהַ ֳָז ָßׁ דֽדֿ ָה ֳֽדֿ ָה וַׁזה ַבַׁׂם ¡ ֳ־ָׁהַ ֳָז ַבÚַָ׃ ַבÝײב ָה װַ׀ַה ָה Úם׃ל ַבַׁׂם ֳ־ָׁהַ ֳָז ַבֽ׃ה ֳֽדֿ ָה םׂםֿ ַבֽבזַהם ¡ֳ־ָׁהַ Úם׃ל ָה דםהַ Þַבזה ¡ ֳ־ָׁהַ Úם׃ל ָה זַֿׁה." & vbNewLine
+        sanadan = sanadan & "Þַב ַָה ַבּׁׂם : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ַבֵדַד ֳָם Úָֿ ַבבו דֽדֿ Úָֿ ַבֽׁדה ָה Úבם ַבהֽזם ¡ זֳ־ָׁהם ֳהו Þֳׁ ָוַ ַבÞֲׁה ßבו Úבל ַבֵדÜÜַד ֳָם Úָֿ דֽדֿ ָה ֳֽדֿ ָה Úָֿ ַב־ַבÞ ַבדױׁם ¡ Þַב : ÞֳׁÊ ָוַ ַבÞֲׁה Úבל ַבßדַב ֵַָׁוםד ָה ֳֽדֿ ָה Ýַׁ׃ ַבÊדםדם Þַב : ÞֳׁÊ ָוַ Úבל ֳָם ַבםדה ַבßהֿם ¡ Þַב : ÞֳׁÊ ָוַ Úבל ַבֵדַד ֳָם דהױזׁ דֽדֿ ָה Úָֿ ַבדבß ָה ַבֽ׃ה ָה ־םׁזה ַבָÛַֿֿם ¡ Þַב : ÞֳׁÊ ָוַ Úבל ֳָם ַבÞַ׃ד Úָֿ ַב׃םֿ ָה ÚÊַָ ַבדÞׁםֱ ¡ Þַב : ÞֳׁÊ ָוַ Úבל ֳָם ״ַוׁ דֽדֿ ָה םַ׃םה ַבֽבָם ¡ Þַב : ÞֳׁÊ ָוַ Úבל ֳָם ַבÝּׁ ַבװ״זם Þַב: ÞֳׁÊ ָוַ Úבל ֳָם ָßׁ ָה וַׁזה ¡ Þַב: ÞֳׁÊ ָוַ Úבל ַבÝײב ָה װַ׀ַה ¡ Þַב : ÞֳׁÊ ָוַ Úבל ַבֽבזַהם ¡ Þַב : ÞֳׁÊ ָוַ Úבל Þַבזה ¡ Þַב : ÞֳׁÊ ָוַ Úבל ַָה זַֿׁה . " & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ ַָה ּדַׂ : Ýֻֽֿהַ ָוַ ֳָז ֵ׃ַֽÞ ֵַָׁוםד ָה ֳֽדֿ ָה ֵַָׁוםד ָה ַֽÊד ַבּ׀ַדם ָÞֱַׁÊם Úבםו Úה ֳָם ֽÝױ Úדׁ ָה ÛÜֿםׁ ָה ַבÞזַ׃ ַבֿדװÞם ¡ ֳהֳָהַ ֳָז ַבםדה ָה ַבֽ׃ה ַבָÛַֿֿם ¡ ֳ־ָׁהַ ֳָז דֽדֿ ׃ָ״ ַב־םַ״ ¡ ֳ־ָׁהַ ַבֳ׃Êַ׀ ֳָז ַבÚׂ דֽדֿ ָה ַבֽ׃םה ָה ָהַֿׁ ַבזַ׃״ם ¡ ֳ־ָׁהַ ַבֵדַד ֳָז ַבÞַ׃ד םז׃Ý ָה ַָֹּׁ ַבו׀בם ¡ ֳ־ָׁהַ ֳָז הױׁ דהױזׁ ָה דֽדֿ ַבÞוהֿׂם ¡ ֳ־ָׁהַ ֳָז ַבֽ׃ה Úבם ָה דֽדֿ ַב־ַָׂם ¡ ֳ־ָׁהַ ֳָז ָßׁ דֽדֿ ָה Úָֿ ַבֽׁדה ָה ַבÝײב ַבּזוׁם ¡ ֳ־ָׁהַ דֽדֿ ָה ֳֽדֿ ָה ַבֽ׃ה ַבֻÞÝם ַבß׃ֶַם ¡ ֳ־ָׁהַ דֽדֿ ָה Úָֿ ַבבו ָה װַßׁ ַבױםׁÝם ¡ ֳ־ָׁהַ ֳָז ַבÚַָ׃ ֳֽדֿ ָה ׃וב ַב״םַה ¡ ֳ־ָׁהַ ֳָז Úדַׁה דז׃ל ָה Úָֿ ַבֽׁדה ַבַָׂׂ ¡ ֳ־ָׁהַ דֽדֿ ָה Úם׃ל ָה ֵַָׁוםד ָה ׁׂםה ַבֳױָוַהם ¡ ֳ־ָׁהַ ׃בםדַה ָה ַֿזֿ ָה Úבם ָה Úָֿ ַבבו ָה Úַָ׃ ַבוַװדם ¡ ֳ־ָׁהַ ֵ׃דַÚםב ָה ּÚÝׁ ָה ֳָם ßֻםׁ ַבדֿהם ¡ ֳ־ָׁהַ ׃בםדַה ָה ד׃בד ַָה ּדַׂ." & vbNewLine
+        sanadan = sanadan & "Þַב ַָה ַבּׁׂם : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם דֽדֿ ָה Úָֿ ַבֽׁדה ַבֽהÝם ¡ זÞֳׁ ָוַ ַבÞַׁה ßבו Úבל דֽדֿ ָה ֳֽדֿ ַבױֶַÛ ¡ זÞֳׁ ָוַ Úבל ֳָם ֵ׃ַֽÞ ָה Ýַׁ׃ ¡ זÞֳׁ ָוַ Úבל ֳָם ַבםדה ¡ זÞֳׁ ָוַ Úבל ׃ָ״ ַב־םַ״ ¡ זÞֳׁ ָוַ Úבל ַבֳ׃Êַ׀ ֳָם ״ַוׁ ֳֽדֿ ָה Úבם ָה Úָםֿ ַבבו ָה ׃זַׁ ¡ זÞֳׁ ָוַ Úבל ֳָם Úבם ַבֽ׃ה ָה ַבÝײב ַבװׁדÞַהם ¡ זÞֳׁ ָוַ Úבל ֳָם ָßׁ דֽדֿ ָה Úָֿ ַבבו ָה ַבדַָׁׂה ַבֳױָוַהם ¡ זÞֳׁ ָוַ Úבל ֳָם Úדׁ דֽדֿ ָה ֳֽדֿ ָה Úדׁ ַב־ׁÞם ¡ זÞֳׁ ָוַ Úבל דֽדֿ ָה ּÚÝׁ ָה דֽדזֿ ַבֳװהַהם ¡ זÞֳׁ ָוַ Úבל דֽדֿ ָה ֳֽדֿ ַבֻÞÝם ַבß׃ֶַם ¡ זÞֳׁ ָוַ Úבל ַָה װַßׁ ¡ זÞֳׁ ָוַ Úבל ַָה ׃וב ַב״םַה ¡ זÞֳׁ ָוַ Úבל ֳָם Úדַׁה ַבַָׂׂ ¡ זÞֳׁ ָוַ Úבל ַָה ׁׂםה ¡ זÞֳׁ ָוַ Úבל ַבוַװדם ¡ זÞֳׁ ָוַ Úבל ַָה ּÚÝׁ ¡ זÞֳׁ ָוַ Úבל ַָה ּדַׂ ¡ זÞֳׁ ַָה ּדַׂ ¡ זַָה זַֿׁה ¡ Úבל ֳָם ּÚÝׁ ." & vbNewLine
+        sanadan = sanadan & "זּׁÜÜַב ֳָם ּÚÝׁ ֻבַֹֻ : דזבַו Úָֿ ַבבו ָה Úםַװ ָה ֳָם ָׁםÚֹ ¡ זֳָז וׁםֹׁ ¡ זַָה Úַָ׃ . זÞֳׁ וִבֱַ ַבֻבַֹֻ Úבל ֳָם ָה ßÚָ ¡ זÞֳׁ ֳָז וׁםֹׁ ¡ זַָה Úַָ׃ ¡ ֳםײַ Úבל ׂםֿ ָה ַָֻÊ . זֳ־׀ ׂםֿ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד -¡ Úה ָּׁםב - Úבםו ַב׃בַד -  ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        
+        ElseIf index = 9 Then
+        'םÚÞזָ
+        sanadan = "Þַב ַבֵדַד ֳָז ַב־םׁ דֽדֿ ָה ַבּׁׂם Ýל Êָֽםׁ ַבÊם׃םׁ : " & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ ׁזם׃ : Ýֻֽֿהַ ָוַ ַבװם־ ַבֵדַד ֳָז ַבÚַָ׃ ֳֽדֿ ָה דֽדֿ ָה ַב־ײׁ ַבֽהÝם ָÞֱַׁÊם Úבםו Þַב: ֳ־ָׁהַ : ֳָז ַבÚַָ׃ ֳֽדֿ ָה ֳָם ״ַבָ ָה ֳָם ַבהÚד ַבױַבֽם Þֱַֹׁ Úבםו ¡ ֳ־ָׁהַ ֳָז ״ַבָ Úָֿ ַבב״םÝ ָה דֽדֿ ָה ַבÞָם״ם ¡ Ýם ßÊַָו ֳ־ָׁהַ ָוַ ֳָז ָßׁ ֳֽדֿ ָה ַבדÞָׁ ַבßׁ־ם Þֱַֹׁ Úבםו ¡ ֳ־ָׁהַ ֳָז ״ַוׁ ֳֽדֿ ָה Úבם ַבדÞׁםֱ ַבֳ׃Êַ׀ ֳ־ָׁהַ ֳָז ַבֽ׃ה Úבם ָה דֽדֿ ָה Úבם ַב־םַ״ ¡ ֳ־ָׁהַ ַבֳ׃Êַ׀ ַבֵדַד ֳָז ַבֽ׃ה Úבם ָה ֳֽדֿ ָה Úדׁ ַבֽדַדם ¡ ֳ־ָׁהַ ֳָז ַבÞַ׃ד Úָֿ ַבבו ָה ַבֽ׃ה ָה ׃בםדַה ַבה־ַ׃ ¡ ֳ־ָׁהַ ֳָז ָßׁ דֽדֿ ָה וַׁזה ָה הַÝÚ ַבÊדַׁ ַבָÛַֿֿם ¡ ֳ־ָׁהַ ֳָז Úָֿ ַבבו דֽדֿ ָה ַבדÊזßב ַבדÚׁזÝ ָׁזם׃ ." & vbNewLine
+        sanadan = sanadan & "Þַב ַָה ַבּׁׂם : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ַבֵדַד ֳָם דֽדֿ Úָֿ ַבֽׁדה ָה ֳֽדֿ ָה Úבם ַבָÛַֿֿם ¡ זֳ־ָׁהם ֳהו Þֳׁ ָוַ ַבÞֲׁה ßבו Úבל ַבֵדַד ַבÊÞם דֽדֿ ָה ֳֽדֿ ַבדױׁם ¡ זÞֳׁ ָוַ Úבל ֵַָׁוםד ָה ֳֽדֿ ַבֵ׃ßהֿׁם ¡ זÞֳׁ ָוַ Úבל ׂםֿ ָה ַבֽ׃ה ¡ זÞֳׁ ָוַ Úבל Úָֿ ַבבו ָה Úבם ַבָÛַֿֿם ¡ זÞֳׁ ָוַ Úבל ַבֳ׃Êַ׀ ֳָם ַבÚׂ ַבÞבַה׃ם ¡ זÞֳׁ ָוַ Úבל ֳָם Úבם ַבֽ׃ה ָה ַבÞַ׃ד ַבזַ׃״ם ¡ זÞֳׁ ָוַ Úבל : ַבֽדַדם ¡ זÞֳׁ ָוַ Úבל ַבה־ַ ׃ ¡ זÞֳׁ ָוַ Úבל ַבÊדַׁ ¡ זÞֳׁ Úבל ׁזם׃ ¡ זÞֳׁ ָוַ Úבל םÚÞזָ . " & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ ׁףזֽ : Ýֻֽֿהַ ָוַ ַבװם־ ֳָז ַבÚַָ׃ ֳֽדֿ ָה דֽדֿ ָה ַבֽ׃םה ַבװםַׁׂם ָÞֱַׁÊם Úבםו Úה ַבֵדַד ֳָם ַבֽ׃ה Úבם ָה ֳֽדֿ ַבדÞֿ׃ם ¡ ֳ־ָׁהַ ֳָז ַבםדה ַבßהֿם װÝַוַ ¡ ֳ־ָׁהַ ֳָז דֽדֿ ַבָÛַֿֿם ¡ ֳ־ָׁהַ ֳָז ַבÝײב ַבװׁםÝ ַבדßם ¡ ֳ־ָׁהַ דֽדֿ ָה ַבֽ׃םה ַבÝַׁ׃ם ¡ ֳ־ָׁהַ ֳָז ַבֽ׃ה Úבם ָה דֽדֿ ָה ֵַָׁוםד ָה ־װהַד ַבדַבßם ַבָױׁם ֳ־ָׁהַ ֳָז ַבÚַָ׃ דֽדֿ ָה םÚÞזָ ָה ַבַּּֽ ָה דÚַזםֹ ַבÊםדם ¡ ֳ־ָׁהַ ֳָז ָßׁ דֽדֿ ָה זוָ ָה םֽםל ָה ַבÚבֱַ ַבֻÞÝם ַבÞַׂׂ ¡ ֳ־ָׁהַ ׁזֽ ָה Úָֿ ַבדִדה ַבָױׁם ." & vbNewLine
+        sanadan = sanadan & "Þַב ַָה ַבּׁׂם : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל דֽדֿ ָה ֳֽדֿ ַָבÞַוֹׁ ַבדֽׁז׃ֹ ¡ זֳ־ָׁהם ֳהו Þֳׁ ָוַ ַבÞַׁה ßבו Úבל ַבֵדַד ֳָם Úָֿ ַבבו ַבױֶַÛ ¡ זÞֳׁ ָוַ Úבל ֳָם ֵ׃ַֽÞ ַבֿדװÞם זÞֳׁ ָוַ Úבל ׂםֿ ָה ַבֽ׃ה ¡ זÞֳׁ ָוַ Úבל Úָֿ ַבבו ָה Úבם ¡ זÞֳׁ ָוַ Úבל ַבֳ׃Êַ׀ ֳָם ״ַוׁ ָה ׃זַׁ ¡ זÞֳׁ ָוַ Úבל ֳָם ַבÞַ׃ד ַבד׃ַÝׁ ָה ַב״םָ ָה Úַָֿ ַבָױׁם ¡ זÞֳׁ ָוַ Úבל ַָה ־װהַד ¡ זÞֳׁ ָוַ Úבל ַָה Úַָ ׃ ַבÊםדם ¡ זÞֳׁ ָוַ Úבל ַָה זוָ ¡ זÞֳׁ ָוַ Úבל ׁזֽ ¡ זÞֳׁ ָוַ Úבל םÚÞזָ ." & vbNewLine
+        sanadan = sanadan & "זּׁÜÜַב םÚÞזָ ַב׀םה ׃דַוד ֳָׁÚֹ : ֳָז ַבדה׀ׁ ׃בַד ָה ׃בםדַה ַב״זםב ¡ זװוַָ ָה װׁהÝֹ ¡ זדוֿם ָה דםדזה ¡ זֳָז ַבֳװוָ ּÚÝׁ ָה ֽםַה ַבÚ״ַֿׁם .זÞםב ֵה םÚÞזָ Þֳׁ Úבל ֳָם Úדׁז ָה ַבÚבֱַ זÞֳׁ ׃בַד Úבל Úַױד זֳָם Úדׁז ¡ זÞÜÜÜֳׁ װוַָ ַבּֽֿׁם זÞֳׁ Úַױד Úבל ַבֽ׃ה ַבָױׁם זÚבל ׃בםדַה ָה ÞÊֹ זÞֳׁ ׃בםדַה Úבל ַָÜה Úַָ ׃ זÞֳׁ דוֿם Úבל װÚםָ ָה ַבַָָֽֽ זÞֳׁ Úבל ֳָם ַבÚַבםֹ ַבׁםַֽם זÞֳׁ Úבל ֳָם זׂםֿ זÞֳׁ ֳָז ַבֳװוָ Úבל ֳָם ֱַּׁ Úדַׁה ָה דבַֽה ַבÚ״ַֿׁם זÞֳׁ Úבל ֳָם דז׃ÜÜÜל ַבֳװÚׁם זÞֳׁ Úבל ׁ׃זב ַבבו Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        
+        ElseIf index = 10 Then
+        '־בÝ
+        sanadan = "Þַב ַבֵדַד ֳָז ַב־םׁ דֽדֿ ָה ַבּׁׂם Ýל Êָֽםׁ ַבÊם׃םׁ : " & vbNewLine
+        sanadan = sanadan & "ֳדַ ׁזַםֹ ֵֿׁם׃ ַבזַׁÞ : Ýֻֽֿהַ ָוַ ֳָז ֽÝױ Úדׁ ָה ַבֽ׃ה ָÞֱַׁÊם Úבםו Ùַוׁ ֿדװÞ ¡ Úה װם־ו ַבֵדַד ַב־״םָ ֳָם ַבÚַָ׃ ֳֽדֿ ָה ֵַָׁוםד ָה Úדׁ ַבÝַׁזֶם ַבװַÝÚם ¡ Þַב : ֳ־ָׁהַ זַבֿם ¡ Þַב : ֳ־ָׁהַ ֳָז ַב׃ÚַַֿÊ ַבֳ׃Úֿ ָה ׃ב״ַה ַבזַ׃״ם ¡ ֳ־ָׁהַ ֳָז ַבÚׂ דֽדֿ ָה ַבֽ׃םה ַבזַ׃״ם ¡ ֳ־ָׁהַ ֳָז ַבֽ׃םה ֳֽדֿ ָה Úָֿ ַבבו ָה ַב־ײׁ ַב׃ז׃הּֿׁם ¡ ֳ־ָׁהַ ֳָז ַבֽ׃ה דֽדֿ ָה Úָֿ ַבבו ָה דֽדֿ ָה דֹׁ ַב״ז׃ם ַבדÚׁזÝ ַָָה ֳָם Úדׁ ַבהÞַװ ¡ ֳ־ָׁהַ ֳָז םÚÞזָ ֵ׃ַֽÞ ָה ֵַָׁוםד ַבזַׁÞ ." & vbNewLine
+        sanadan = sanadan & "Þַב ַָה ַבּׁׂם : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ßב דה ַבװם־םה ֳָם Úָֿ ַבבו ַבֽהÝם ¡ זֳָם דֽדֿ ַבװַÝÚם ַבדױׁםםה ¡ זÞֳׁ ßב דהודַ Úבל ֳָם Úָֿ ַבבו דֽדֿ ָה ֳֽדֿ ָה Úָֿ ַב־ַבÞ ַבדױׁם ¡ זÞֳׁ ָוַ Úבל ַבßדַב ָה Ýַׁ׃ ¡ זÞֳׁ ָוַ Úבל ׂםֿ ָה ַבֽ׃ה ¡ זÞֳׁ ָוַ Úבל ֳָם ַבÞַ׃ד וָֹ ַבבו ָה ֳֽדֿ ָה ַב״ָׁ ַבָÛַֿֿם ¡ זÞֳׁ ָוַ Úבל ֳָם ָßׁ דֽדֿ ָה Úבם ָה דז׃ל ַב־םַ״ ¡ זÞֳׁ ָוַ Úבל ֳָם ַבֽ׃םה ַב׃ז׃הּֿׁם ¡ זÞֳׁ ָוַ Úבל ַָה ֳָם Úדׁ ַב״ז׃ם ¡ זÞֳׁ ָוַ Úבל ֵ׃ַֽÞ ַבזַׁÞ ¡ זÞֳׁ ָוַ Úבל ־בÝ ." & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ ֵֿׁם׃ : Ýֻֽֿהַ ָוַ ֳֽדֿ ָה דֽדֿ ָה ַבֽ׃םה ַבÝַׁ׃ם ָÞֱַׁÊם Úבםו ¡ ֳ־ָׁהַ Úבם ָה ֳֽדֿ Ýםדַ װַÝוהם ָו ¡Úה ׂםֿ ָה ַבֽ׃ה ַבָÛַֿֿם ¡ ֳ־ָׁהַ ֳָז ַבÞַ׃ד ָה ֳֽדֿ ַבֽׁםׁם ¡ ֳ־ָׁהַ ֳָז ָßׁדֽדֿ ָה Úָם ָה דֽדֿ ַב־םַ״ ¡ ֳ־ָׁהַ ֳָז ַבֽ׃ה Úבם ָה דֽדֿ ָה Úָֿ ַבבו ַבֽ׀ֱַ ¡ ֳ־ָׁהַ ֳָז ֵ׃ַֽÞ ֵַָׁוםד ָה ַבֽ׃םה ָה Úָֿ ַבבו ַבה׃ַּ ַבדÚׁזÝ ַָבװ״ם ¡ ֳ־ָׁהַ ֵֿׁם׃ ָה Úָֿ ַבßׁםד ַבַֽֿֿ." & vbNewLine
+        sanadan = sanadan & "Þַב ַָה ַבּׁׂם : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ַבװם־ ֳָם דֽדֿ Úָֿ ַבֽׁדה ָה ֳֽדֿ ַבזַ׃״ם ¡ זֳ־ָׁהם ֳהו Þֳׁ ָוַ Úבל דֽדֿ ָה ֳֽדֿ ָה Úָֿ ַב־ַבÞ ַבדÚֿב ¡ זÞֳׁ ָוַ Úבל ֵַָׁוםד ָה ֳֽדֿ ¡ זÞֳׁ ָוַ Úבל ֳָם ַבםדה ¡ זÞֳׁ ָוַ Úבל ֳָם דֽדֿ ׃ָ״ ַב־םַ״ ¡ Þַב : זÞֳׁÊ ָוַ ַבÞֲׁה דה ֳזבו ֵבל ֲ־ׁו Úבל ַבֵדַדםה ַבװׁםÝ ֳָם ַבÝײב Úָֿ ַבÞַוׁ ָה Úָֿ ַב׃בַד ַבÚַָ׃ם ¡ זֳָם ַבדÚַבם ַָֻÊ ָה ָהַֿׁ ָה ֵַָׁוםד ַבָÞַב ¡ Ýֳדַ ַבװׁםÝ Ýֳ־ָׁהם ֳהו Þֳׁ ָוַ Úבל ַבֵדַד ֳָם Úָֿ ַבבו דֽדֿ ָה ַבֽ׃םה ַבßַׁׂםהם ¡ זֳ־ָׁו ֳהו Þֳׁ ָוַ Úבל ַבֵדַד ֳָם ַבÚַָ׃ ַבֽ׃ה ָה ׃Úםֿ ָה ּÚÝׁ ַבד״זÚם ¡ זֳדַ ֳָז ַבדÚַבם Ýֳ־ָׁהם ֳהו Þֳׁ ָוַ Úבל ַבֵדַד ַבÞַײם ֳָם ַבÚבֱַ דֽדֿ ָה Úבם ָה םÚÞזָ ַבזַ׃״ם ¡ זÞֳׁ ַבזַ׃״ם ָוַ דה ַבßÊַָ Úבל ַבֵדַד ֳָם ָßׁ ֳֽדֿ ָה ּÚÝׁ ָה ֽדַֿה ָה דַבß ַבÞ״םÚם ¡ זÞֳׁ ַבÞ״םÚם זַבד״זÚם ּדםÚַ Úבל ֵֿׁם׃ ¡ זÞֳׁ ֵֿׁם׃ Úבל ־בÝ ¡ זַבבו ַבדזÝÞ . " & vbNewLine
+        sanadan = sanadan & "זַּׁב ־בÝ : זַּׁב ־בÝ ׃בםד ױַָֽ ֽדֹׂ ¡ זםÚÞזָ ָה ־בםÝֹ ַבֳÚװל ױַָֽ ֳָם ָßׁ ¡ זֳָז ׂםֿ ׃Úםֿ ׃Úםֿ ָה ֳז׃ ַבֳהױַׁם ױַָֽ ַבדÝײב ַבײָם זֳַָה ַבÚ״ַׁ ¡ זÞֳׁ ֳָז ָßׁ ¡ זַבדÝײב ¡ זֳַָה Úבל Úַױד . זׁזל ַבÞֱַֹׁ ֳםײַ Úה ַבß׃ֶַם זÚה םֽםל ָה ֲֿד Úה ֳָם ָßׁ ¡ זַבבו ַבדזÝÞ . ÞבÊ : זֳ־׀ Úַױד Úה ֳָם Úָֿ ַבֽׁדה Úָֿ ַבבו ָה ָֽםָ ַב׃בדם ¡ זֳָם דׁםד ׁׂ ָה ָֽםװ ¡ זֳ־Ü׀ ֳָז Úָֿ ַבֽׁדה Úה Úֻדַה ָה ÚÝַה ¡ זÚבם ָה ֳָם ״ַבָ ¡ זֳָם ָה ßÚָ ¡ זׂםֿ ָה ַָֻÊ ¡ זÚָֿ ַבבו ָה ד׃Úזֿ ¡ Úה ַבהָם ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        sanadan = sanadan & "זֳ־׀ ׁׂ ָה ָֽםװ Úה Úֻדַה ָה ÚÜÝÜÜַה ¡ זַָה ד׃Úזֿ ¡ Úה ׁ׃זב ַבבו ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -. זַּׁב ֽדֹׂ : זַּׁב ֽדֹׂ ּדַÚֹ דהוד ֳָז דֽדֿ ׃בםדַה ָה דוַׁה ַבֳÚדװ ¡ זדֽדֿ ָה Úָֿ ַבֽׁדה ָה ֳָם בםבל ַבÞַײם ¡ זֽדַׁה ָה ֳÚםה ¡ זֳָז ֵ׃ַֽÞ ַב׃ָםÚם ¡ זדהױזׁ ַָה ַבדÚÊדׁ ¡ זדÛםֹׁ ָה דÞ׃ד ¡ זּÚÝׁ ָה דֽדֿ ַבױַֿÞ ¡ זÛםׁוד . זֳ־׀ ַבֳÚדװ Úה םֽםל ָה זַָֻ ¡ זֳ־׀ םֽםל Úה ּדַÚֹ דה ֳױַָֽ ַָה ד׃Úזֿ : ÚבÞדֹ ¡ זַבֳ׃זֿ זÚָםֿ ָה הײבֹ ַב־ַׂÚם ¡ זׁׂ ָה ָֽםװ ¡ זֳָם Úָֿ ַבֽׁדה ַב׃בדם ¡ זÛםׁוד ¡ Úה ַָה ד׃Úזֿ Úה ַבהָם Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        
+        ElseIf index = 11 Then
+        'זׁװ
+        sanadan = "Þַב ֳָז Úדׁז ַבַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+        sanadan = sanadan + "זֳדַ ׁזַםֹ זׁװ : Ýֻֽֿהַ ָוַ ֳָז Úָֿ ַבבו ֳֽדֿ ָה דֽÝזÙ ַבÞַײם ָדױׁ ¡ Þַב: ֻֽֿהַ ֳֽדֿ ָה ֵַָׁוםד ָה ַּדÚ ¡ Þַב : ֻֽֿהַ ֳָז דֽדֿ ָßׁ ָה ׃וב ¡ Þַב: ֻֽֿהַ ֳָז דֽדֿ Úָֿ ַבױדֿ ָה Úָֿ ַבֽׁדה ¡ Þַב : ֻֽֿהַ זׁװ Úה הַÝÚ ¡ ז Þַב ֳָÜÜז ÚÜדÜׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל װם־ם ֳָם ַבÞַ׃ד ־בÝ ָה ֵַָׁוםד ָה דֽדֿ ָה ־ַÞַה ַבדÞׁםֱ ָדױׁ ¡ ז Þַב בם : ÞֳׁÊ ָוַ ַבÞַׁה Úבל ֳָם ּÚÝׁ ֳֽדֿ ָה ֳ׃ַדֹ ַבÊּםָם ¡ זÞַב בם : ÞֳׁÊ ָוַ ַבÞַׁה Úבל ֵ׃דַÚםב ָה Úָֿ ַבבו ַבהַֽ׃ ¡ זÞַב : ÞֳׁÊ Úבל ֳָם םÚÞזָ םז׃Ý ָה Úדׁז ָה ם׃ַׁ ַבֳׁׂÞ ¡ זÞַב :ÞֳׁÊ Úבל זׁװ זÞַב : ÞֳׁÊ Úבל הַÝÚ ." & vbNewLine
+        sanadan = sanadan + "זַּׁב הַÝÚ ַב׀םה ׃דַוד ־ד׃ֹ : ֳָז ּÚÝׁ םׂ םֿ ָה ַבÞÚÞַÚ ַבÞֶַׁ ¡ זֳָז ַֿזֿ Úָֿ ַבֽׁדה ָה וׁדׂ ַבֳÚּׁ ¡ זװםָֹ ָה הױַֽ ַבÞַײם ¡ זֳָז Úָֿ ַבבו ד׃בד ָה ּהָֿ ַבו׀בם ַבÞַױ ¡ זֳָז ׁזֽ םׂםֿ ָה ׁזדַה ¡ זֳ־׀ וִבֱַ ַבÞֱַֹׁ Úה ֳָם וׁםֹׁ ¡ זַָה Úַָ׃ ¡ זÚָֿ ַבבו ָה Úםַװ ָה ֳָם ָׁםÚֹ ¡ Úה ֳָם ָה ßÚָ ¡ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        
+        ElseIf index = 21 Then
+        'Þהָב
+        sanadan = "Þַב ֳָÜז Úדׁז ַבÜַֿהם Ýם ַבÊם׃םׁ  " & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ Þהָב : Ýֻֽֿהַ ָוַ ֳָז ד׃בד דֽדֿ ָה ֳֽדֿ ַבָÛַֿֿם ¡ Þַב: ֻֽֿהַ ַָה דַּוֿ ¡ Þַב: ÞֳׁÊ Úבל Þהָב ¡ זÞַב: ÞֳׁÊ Úבל ֳָם ַבֽ׃ה ֳֽדֿ ָה Úזה ַבÞזַ׃ זÞַב: ÞֳׁÊ Úבל ֳָם ַבַ־ׁ ם״ זוָ ָה זַײֽ ¡ זÞַב: ÞֳׁÊ Úבל ֵ׃דַÚםב ָה Úָֿ ַבבו ַבÞ׃״ ¡ זÞַב: ÞֳׁÊ Úבל װָב ָה Úַָֿ ז דÚׁזÝ ָה דװßַה ¡ זÞַבַ Þֳׁהַ Úבל ַָה ßֻÜםÜׁ ¡ ז Þַב ֳָÜÜÜÜז ÚÜÜדÜÜׁז : זÞֳׁÊ ָוַ ַבÞֲׁה ßבו Úבל Ýַׁ׃ ָה ֳֽדֿ ַבֽדױם ַבדÞׁםֱ ַבײׁםׁ זÞַב: ÞֳׁÊ ָוַ Úבל Úָֿ ַבבו ָה ַבֽ׃םה ַבָÛַֿֿם ¡ זÞַב: ÞֳׁÊ ָוַ Úבל ַָה דַּוֿ זÞַב: ÞֳׁÊ Úבל Þהָב ." & vbNewLine
+        sanadan = sanadan & " זּׁÜÜַב ַָה ßֻםׁ ַבÜ׀םÜה ׃דַוד ֻבַֹֻ : Úָֿ ַבבו ָה ַב׃ֶַָ ַבד־ׂזדם ױַָֽ ׁ׃זב ַבבו  זדַּוֿ ָה ָּׁ ֳָז ַבַּּֽ דזבל Þם׃ ָה ַב׃ֶַָ ¡ זַָֿׁ׃ דזבל ַָה Úַָ׃ . זֳ־׀ Úָֿ ַבבו Úה ֳָם ָה ßÚָ הÝ׃ו. זֳ־׀ דַּוֿ זַָֿׁ׃¡ Úה ַָה Úַָ׃¡ Úה ֳָם ¡ זׂםֿ ָה ַָֻÊ ¡ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - ¡ Úה ָּׁםב - Úבםו ַב׃בַד -  ¡Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -."
+        
+        ElseIf index = 31 Then
+        'ַב׃ז׃ל
+        sanadan = "Þַב ֳָז Úדׁז ַבַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ ֳָם װÚםָ ַב׃ז׃ם : Ýֻֽֿהַ ָוַ ־בÝ ָה ֵַָׁוםד ָה דֽדֿ ַבדÞֶׁ ¡ Þַב : ֻֽֿהַ ֳָז דֽדֿ ַבֽ׃ה ָה ׁװםÞ ַבדÚֿב ¡ Þַב : ֻֽֿהַ ֳָז Úָֿ ַבֽׁדה ֳֽדֿ ָה װÚםָ ַבה׃ֶַם ¡ Þַב : ֳ־ָׁהַ ֳָז װÚםָ ¡ Þַב : ֳ־ָׁהַ ַבםׂםֿם ¡ Úה ֳָם Úדׁז ¡ זÞַב ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֲׁה ßבו ֵָÙוַׁ ַבֳזב דה ַבדֻבםה זַבדÊÞַָׁםה זֵָֿÛַדו Úבל Ýַׁ׃ ָה ֳֽדֿ ַבדÞׁםֱ ¡ זÞַב בם : ÞֳׁÊ ָוַ ß׀בß Úבל Úָֿ ַבבו ָה ַבֽ׃םה ַבדÞׁםֱ ¡ זÞַב בם : ÞֳׁÊ ָוַ ַבÞַׁה ßבו ß׀בß Úבל ֳָם Úדַׁה דז׃ל ָה ּׁםׁ ַבהֽזם ¡ זÞַב : ÞֳׁÊ ָוַ Úבל ֳָם װÚםָ ¡ זÞַב : ÞֳׁÊ Úבל ַבםׂםֿם ¡ זÞַב : ÞֳׁÊ Úבל ֳָם Úדׁז" & vbNewLine
+        sanadan = sanadan & "Þַב ֳָז Úדׁז: זֻֽֿהַ ֳָױזב ַבֵֿÛַד דֽדֿ ָה ֳֽדֿ Úה ַָה דַּוֿ Úה Úָֿ ַבֽׁדה ָה Úָֿז׃ Úה ַבֿזׁם Úה ַבםׂםֿם Úה ֳָל Úדׁז¡ זֻֽֿהַ ָוַ ֳםײַ ֳָז ַבֽ׃ה װם־הַ ¡ Þַב : ֻֽֿהַ Úָֿ ַבבו ָה ַבדַָׁß Úה ּÚÝׁ ָה ׃בםדַה Úה ֳָם װÚםָ Úה ַבםׂםֿם Úה ֳָם Úדׁז . " & vbNewLine
+        sanadan = sanadan & "זַּׁב ֳָם Úדׁז : ּדַÚֹ דה ֳוב ַבַּֽׂ זדה ֳוב ַבָױֹׁ ¡ Ýדה ֳוב דßֹ : דַּוֿ ¡ ז׃Úםֿ ָה ָּםׁ ¡ זÚßׁדֹ ָה ־ַבֿ ¡ זÚ״ֱַ ָה ֳָם ַָֽׁ ¡ זÚָֿ ַבבו ָה ßֻםׁ ¡ זדֽדֿ ָה Úָֿ ַבֽׁדה ָה דֽםױה ¡ זֽדםֿ ָה Þם׃ ַבֳÚּׁ ַבÞֶַׁ ¡ זדה ֳוב ַבדֿםהֹ : םׂםֿ ָה ַבÞÚÞַÚ ַבÞַׁםֱ זםׂםֿ ָה ׁזדַה ¡ זװםָֹ ָה הױַֽ ¡ זדה ֳוב ַבָױֹׁ : ַבֽ׃ה ָה ֳָם ַבֽ׃ה ַבָױׁם ¡ זםֽם ָה םÚדׁ ¡ זÛםׁודַ ¡ זֳ־׀ וִבֱַ ַבÞֱַֹׁ Úדה ÊÞֿד דה ַבױַָֹֽ זÛםׁוד . " & vbNewLine
+        sanadan = sanadan & "ÞבÊ : זֳ־׀ ׃Úםֿ ָה ָּםׁ ¡ זÚßׁדֹ¡ זםֽםל ָה םÚדׁ ¡ Úה ַָה Úַָ׃ זֳ־׀ ַָה Úַָ׃ Úה ֳָם ָה ßÚָ זׂםֿ ָה ַָֻÊ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -."
+        
+        ElseIf index = 41 Then
+        'ַָה ׀ßזַה
+        sanadan = "Þַב ֳָז Úדׁז ַבַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ ַָה ׀ßזַה : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ¡ Þַב:ֻֽֿהַ ֳֽדֿ ָה דז׃ל ָה דַּוֿ ¡ Þַב : ֻֽֿהַ ֳֽדֿ ָה םז׃Ý ַבÊÛבָם ¡ Þַב : ֻֽֿהַ Úָֿ ַבבו ָה ׀ßזַה ¡ Þַב : ֻֽֿהַ ֳםזָ ָה Êדםד ַבÊדםדם ¡ Þַב :ֻֽֿהַ םֽםם ָה ַבַֻֽׁ ַב׀דַׁם ¡ Þַב : ÞֳׁÊ Úבל ַָה Úַדׁ ¡ זÞַב ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֲׁה ßבו Úבל Úָֿ ַבÚׂםׂ ָה ּÚÝׁ ַבÝַׁ׃ם ַבדÞׁםֱ זÞַב בם : ÞֳׁÊ ָוַ Úבל ֳָל ָßׁ דֽדֿ ָה ַבֽ׃ה ַבהÞַװ ¡ זÞַב : ÞֳׁÊ ָוַ Úבל ֳָם Úָֿ ַבבו וַׁזה ָה דז׃ל ָה װׁםß ַבֳ־Ýװ זׁזַוַ ַבֳ־Ýװ Úה Úָֿ ַבבו ָה ׀ßזַה " & vbNewLine
+        sanadan = sanadan & "זּׁÜÜַב ַָה Úַדׁ ַבÜ׀םÜה ׃ÜÜדַוד : ֳָז ַבֱַֿֿׁ Úזםדׁ ָה Úַדׁ ױַָֽ ׁ׃זב ַבבו ¡ זַבדÛםֹׁ ָה ֳָם װוַָ ַבד־ׂזדם ¡ זֳ־Ü׀ ֳָז ַבֱַֿֿׁ ÚÜÜה ַבהָם . זֳ־׀ ַבדÛםֹׁ Úה Úֻדַה ָה ÚÝַה Úה ַבהָם Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -" & vbNewLine
+        
+        ElseIf index = 51 Then
+        'ֽÝױ
+        sanadan = "Þַב ֳָÜÜז ÚÜדÜׁז ַבÜַֿהÜÜם ÝÜÜÜם ַבÜÊם׃םׁ:" & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ ֽÝױ : Ýֻֽֿהַ ָוַ ֳָז ַבֽ׃ה ״ַוÜׁ ָה Ûבָזה ַבדÞֶׁ ¡ Þַב : ֻֽֿהַ ֳָז ַבֽ׃ה Úבם ָה דֽדֿ ָה ױַבֽ ַבוַװדם ַבײׁםׁ ַבדÞֶׁ ַָבָױֹׁ ¡ Þַב: ֻֽֿהַ ֳָז ַבÚַָ׃ ֳֽדֿ ָה ׃וב ַבֳװהַהם ¡ זÞַב: ÞֳׁÊ Úבל ֳָם דֽדֿ Úָםֿ ָה ַבױַָֽ ¡ זÞַב: ÞֳׁÊ Úבל ֽÝױ ¡ זÞַב: ÞֳׁÊ Úבל ÚַױÜד ¡ זÞַב ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֲׁה ßבו Úבל װם־הַ ֳָם ַבֽ׃ה זÞַב בם: ÞֳׁÊ ָוַ Úבל ַבוַװדם זÞַב: ÞֳׁÊ Úבל ַבֳװהַהם Úה Úָםֿ Úה ֽÝױ Úה ÚַױÜד . " & vbNewLine
+        sanadan = sanadan & "זַּׁב Úַױד ַבÜ׀םÜה ׃דַוד ַֻהַה : ֳָז Úָֿ ַבֽׁדה Úָֿ ַבבו ָה ָֽםָ ַב׃בדם ¡ זֳָז דׁםד ׁׂ ָה ָֽםװ ¡ זֳ־Ü׀ ֳָז Úָֿ ַבֽׁדה Úה Úֻדַה ָה ÚÝַה ¡ זÚבם ָה ֳָם ״ַבָ  ¡ זֳָם ָה ßÚָ  ¡ זׂםֿ ָה ַָֻÊ  ¡ זÚָֿ ַבבו ָה ד׃Úזֿ ¡ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל - ¡ ֳ־׀ ׁׂ ָה ָֽםװ Úה Úֻדַה ָה ÚÜÝÜÜַה  ¡ זַָה ד׃Úזֿ  ¡ Úה ׁ׃זב ַבבו - ױבל ַבבו Úבםו ז ׃בד - ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        
+        ElseIf index = 61 Then
+        '־בַֿ
+        sanadan = "Þַב ֳָÜז Úדׁז ַבÜַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ ־בַֿ : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ¡ Þַב : ֻֽֿהַ ֳֽדֿ ָה דז׃ל ¡ Þַב : ֻֽֿהַ םֽםל ָה ֳֽדֿ ָה וַׁזה ַבדׂזÞ ¡ Úה ֳֽדֿ ָה םׂםֿ ַבֽבזַהם ¡ Úה ־בַֿ ¡ Úה ׃בםד ¡ Úה ֽדֹׂ ¡ ז Þַב ֳָÜÜז ÚÜדÜׁז : זÞֳׁÊ ָוַ ַבÞֲׁה ßבו Úבל ֳָם ַבÝÊֽ ַבײׁםׁ װם־הַ ¡ ז Þַב בם: ÞֳׁÊ ָוַ Úבל Úָֿ ַבבו ָה ַבֽ׃םה ַבדÞׁםֱ ¡ זÞַב : ÞֳׁÊ ָוַ Úבל דֽדֿ ָה ֳֽדֿ ָה װהָז׀ ¡ זÞַב : ÞֳׁÊ Úבל ֳָם ָßׁ דֽדֿ ָה װַ׀ַה ַבּזוׁם ַבדÞׁם ¡ זÞַב :ÞֳׁÊ Úבל ־בַֿ זÞַב : ÞֳׁÊ Úבל ׃בםד ¡ זÞֳׁ ׃בםד Úבל ֽדֹׂ." & vbNewLine
+        sanadan = sanadan & "זַּׁב ֽדֹׂ : זַּׁב ֽדֹׂ ּדַÚֹ דהוד ֳָז דֽדֿ ׃בםדַה ָה דוַׁה ַבֳÚדװ ¡ זדֽדֿ ָה Úָֿ ַבֽׁדה ָה ֳָם בםבל ַבÞַײם ¡ זֽדַׁה ָה ֳÚםה ¡ זֳָז ֵ׃ַֽÞ ַב׃ָםÚם ¡ זדהױזׁ ַָה ַבדÚÊדׁ ¡ זדÛםֹׁ ָה דÞ׃ד ¡ זּÚÝׁ ָה דֽדֿ ַבױַֿÞ ¡ זÛםׁוד ." & vbNewLine
+        sanadan = sanadan & "זֳ־׀ ַבֳÚדװ Úה םֽםל ָה זַָֻ ¡ זֳ־׀ םֽםל Úה ּדַÚֹ דה ֳױַָֽ ַָה ד׃Úזֿ : ÚבÞדֹ ¡ זַבֳ׃זֿ זÚָםֿ ָה הײבֹ ַב־ַׂÚם ¡ זׁׂ ָה ָֽםװ ¡ זֳָם Úָֿ ַבֽׁדה ַב׃בדם ¡ זÛםׁוד ¡ Úה ַָה ד׃Úזֿ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        
+        ElseIf index = 71 Then
+        'ֳָז ַבַֻֽׁ
+        sanadan = "Þַב ֳָז Úדׁז ַבÜַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ ֳָם ַבַֻֽׁ : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ¡ Þַב : ֻֽֿהַ ָוַ ַָה דַּוֿ ¡ Þַב : ֻֽֿהַ דֽדֿ ָה םֽםל ( ַבß׃ֶַם ַבױÛםׁ) ¡ Úה ֳָם ַבַֻֽׁ ¡ Úה ַבß׃ֶַם ¡ ז Þַב ֳָÜÜז ÚÜדÜׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל Ýַׁ׃ ָה ֳֽדֿ ¡ ז Þַב בם : ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃ה Úָֿ ַבַָÞם ָה ַבֽ׃ה ַבדÞׁםֱ ¡ זÞַב : ÞֳׁÊ ָוַ Úבל ֳָם ַבÞַ׃ד ׂםֿ ָה Úבם ¡ זÞַב : ÞֳׁÊ Úבל ֳֽדֿ ָה ַבֽ׃ה ַבדÚׁזÝ ַָבָ״ם ¡ זÞַב :ÞֳׁÊ Úבל דֽדֿ ָה םֽםל ( ַבß׃ֶַם ַבױÛםׁ) ¡ זÞַב : ÞֳׁÊ Úבל ֳָם ַבַֻֽׁ ¡ זÞַב : ÞֳׁÊ Úבל ַבß׃ֶַם ." & vbNewLine
+        sanadan = sanadan & "זַּׁב ַבß׃ֶַם : ֽדֹׂ ָה ָֽםָ ַבׂםַÊ ¡ זÚם׃ל ָה Úדׁ ַבוד׀ַהם ¡ זדֽדֿ ָה ֳָם בםבל ַבÞַײם ¡ זÛםׁוד דה דװם־ֹ ַבßזÝםםה Ûםׁ ֳה דַֹֿ ÞֱַׁÊו זַÚÊדַֿו Ýם ַ־Êםַׁו Úה ֽדֹׂ ¡ זÞֿ ׀ßׁהַ ַÊױַב ÞֱַׁÊו ." & vbNewLine
+        sanadan = sanadan & "זַּׁב ֽדֹׂ : זַּׁב ֽדֹׂ ּדַÚֹ דהוד ֳָז דֽדֿ ׃בםדַה ָה דוַׁה ַבֳÚדװ ¡ זדֽדֿ ָה Úָֿ ַבֽׁדה ָה ֳָם בםבל ַבÞַײם ¡ זֽדַׁה ָה ֳÚםה ¡ זֳָז ֵ׃ַֽÞ ַב׃ָםÚם ¡ זדהױזׁ ַָה ַבדÚÊדׁ ¡ זדÛםֹׁ ָה דÞ׃ד ¡ זּÚÝׁ ָה דֽדֿ ַבױַֿÞ ¡ זÛםׁוד ." & vbNewLine
+        sanadan = sanadan & "זֳ־׀ ַבֳÚדװ Úה םֽםל ָה זַָֻ ¡ זֳ־׀ םֽםל Úה ּדַÚֹ דה ֳױַָֽ ַָה ד׃Úזֿ : ÚבÞדֹ ¡ זַבֳ׃זֿ זÚָםֿ ָה הײבֹ ַב־ַׂÚם ¡ זׁׂ ָה ָֽםװ ¡ זֳָם Úָֿ ַבֽׁדה ַב׃בדם ¡ זÛםׁוד ¡ Úה ַָה ד׃Úזֿ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        
+        ElseIf index = 81 Then
+        'ַָה ּדַׂ
+        sanadan = "Þַב ַבֵדַד ֳָז ַב־םׁ דֽדֿ ָה ַבּׁׂם Ýל Êָֽםׁ ַבÊם׃םׁ : " & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ ַָה ּדַׂ : Ýֻֽֿהַ ָוַ ֳָז ֵ׃ַֽÞ ֵַָׁוםד ָה ֳֽדֿ ָה ֵַָׁוםד ָה ַֽÊד ַבּ׀ַדם ָÞֱַׁÊם Úבםו Úה ֳָם ֽÝױ Úדׁ ָה ÛÜֿםׁ ָה ַבÞזַ׃ ַבֿדװÞם ¡ ֳהֳָהַ ֳָז ַבםדה ָה ַבֽ׃ה ַבָÛַֿֿם ¡ ֳ־ָׁהַ ֳָז דֽדֿ ׃ָ״ ַב־םַ״ ¡ ֳ־ָׁהַ ַבֳ׃Êַ׀ ֳָז ַבÚׂ דֽדֿ ָה ַבֽ׃םה ָה ָהַֿׁ ַבזַ׃״ם ¡ ֳ־ָׁהַ ַבֵדַד ֳָז ַבÞַ׃ד םז׃Ý ָה ַָֹּׁ ַבו׀בם ¡ ֳ־ָׁהַ ֳָז הױׁ דהױזׁ ָה דֽדֿ ַבÞוהֿׂם ¡ ֳ־ָׁהַ ֳָז ַבֽ׃ה Úבם ָה דֽדֿ ַב־ַָׂם ¡ ֳ־ָׁהַ ֳָז ָßׁ דֽדֿ ָה Úָֿ ַבֽׁדה ָה ַבÝײב ַבּזוׁם ¡ ֳ־ָׁהַ דֽדֿ ָה ֳֽדֿ ָה ַבֽ׃ה ַבֻÞÝם ַבß׃ֶַם ¡ ֳ־ָׁהַ דֽדֿ ָה Úָֿ ַבבו ָה װַßׁ ַבױםׁÝם ¡ ֳ־ָׁהַ ֳָז ַבÚַָ׃ ֳֽדֿ ָה ׃וב ַב״םַה ¡ ֳ־ָׁהַ ֳָז Úדַׁה דז׃ל ָה Úָֿ ַבֽׁדה ַבַָׂׂ ¡ ֳ־ָׁהַ דֽדֿ ָה Úם׃ל ָה ֵַָׁוםד ָה ׁׂםה ַבֳױָוַהם ¡ ֳ־ָׁהַ ׃בםדַה ָה ַֿזֿ ָה Úבם ָה Úָֿ ַבבו ָה Úַָ׃ ַבוַװדם ¡ ֳ־ָׁהַ ֵ׃דַÚםב ָה ּÚÝׁ ָה ֳָם ßֻםׁ ַבדֿהם ¡ ֳ־ָׁהַ ׃בםדַה ָה ד׃בד ַָה ּדַׂ." & vbNewLine
+        sanadan = sanadan & "Þַב ַָה ַבּׁׂם : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם דֽדֿ ָה Úָֿ ַבֽׁדה ַבֽהÝם ¡ זÞֳׁ ָוַ ַבÞַׁה ßבו Úבל דֽדֿ ָה ֳֽדֿ ַבױֶַÛ ¡ זÞֳׁ ָוַ Úבל ֳָם ֵ׃ַֽÞ ָה Ýַׁ׃ ¡ זÞֳׁ ָוַ Úבל ֳָם ַבםדה ¡ זÞֳׁ ָוַ Úבל ׃ָ״ ַב־םַ״ ¡ זÞֳׁ ָוַ Úבל ַבֳ׃Êַ׀ ֳָם ״ַוׁ ֳֽדֿ ָה Úבם ָה Úָםֿ ַבבו ָה ׃זַׁ ¡ זÞֳׁ ָוַ Úבל ֳָם Úבם ַבֽ׃ה ָה ַבÝײב ַבװׁדÞַהם ¡ זÞֳׁ ָוַ Úבל ֳָם ָßׁ דֽדֿ ָה Úָֿ ַבבו ָה ַבדַָׁׂה ַבֳױָוַהם ¡ זÞֳׁ ָוַ Úבל ֳָם Úדׁ דֽדֿ ָה ֳֽדֿ ָה Úדׁ ַב־ׁÞם ¡ זÞֳׁ ָוַ Úבל דֽדֿ ָה ּÚÝׁ ָה דֽדזֿ ַבֳװהַהם ¡ זÞֳׁ ָוַ Úבל דֽדֿ ָה ֳֽדֿ ַבֻÞÝם ַבß׃ֶַם ¡ זÞֳׁ ָוַ Úבל ַָה װַßׁ ¡ זÞֳׁ ָוַ Úבל ַָה ׃וב ַב״םַה ¡ זÞֳׁ ָוַ Úבל ֳָם Úדַׁה ַבַָׂׂ ¡ זÞֳׁ ָוַ Úבל ַָה ׁׂםה ¡ זÞֳׁ ָוַ Úבל ַבוַװדם ¡ זÞֳׁ ָוַ Úבל ַָה ּÚÝׁ ¡ זÞֳׁ ָוַ Úבל ַָה ּדַׂ ¡ זÞֳׁ ַָה ּדַׂ ¡ זַָה זַֿׁה ¡ Úבל ֳָם ּÚÝׁ ." & vbNewLine
+        sanadan = sanadan & "זּׁÜÜַב ֳָם ּÚÝׁ ֻבַֹֻ : דזבַו Úָֿ ַבבו ָה Úםַװ ָה ֳָם ָׁםÚֹ ¡ זֳָז וׁםֹׁ ¡ זַָה Úַָ׃ . זÞֳׁ וִבֱַ ַבֻבַֹֻ Úבל ֳָם ָה ßÚָ ¡ זÞֳׁ ֳָז וׁםֹׁ ¡ זַָה Úַָ׃ ¡ ֳםײַ Úבל ׂםֿ ָה ַָֻÊ . זֳ־׀ ׂםֿ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד -¡ Úה ָּׁםב - Úבםו ַב׃בַד -  ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        
+        ElseIf index = 91 Then
+        'ׁזֽ
+        sanadan = "Þַב ַבֵדַד ֳָז ַב־םׁ דֽדֿ ָה ַבּׁׂם Ýל Êָֽםׁ ַבÊם׃םׁ : " & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ ׁףזֽ : Ýֻֽֿהַ ָוַ ַבװם־ ֳָז ַבÚַָ׃ ֳֽדֿ ָה דֽדֿ ָה ַבֽ׃םה ַבװםַׁׂם ָÞֱַׁÊם Úבםו Úה ַבֵדַד ֳָם ַבֽ׃ה Úבם ָה ֳֽדֿ ַבדÞֿ׃ם ¡ ֳ־ָׁהַ ֳָז ַבםדה ַבßהֿם װÝַוַ ¡ ֳ־ָׁהַ ֳָז דֽדֿ ַבָÛַֿֿם ¡ ֳ־ָׁהַ ֳָז ַבÝײב ַבװׁםÝ ַבדßם ¡ ֳ־ָׁהַ דֽדֿ ָה ַבֽ׃םה ַבÝַׁ׃ם ¡ ֳ־ָׁהַ ֳָז ַבֽ׃ה Úבם ָה דֽדֿ ָה ֵַָׁוםד ָה ־װהַד ַבדַבßם ַבָױׁם ֳ־ָׁהַ ֳָז ַבÚַָ׃ דֽדֿ ָה םÚÞזָ ָה ַבַּּֽ ָה דÚַזםֹ ַבÊםדם ¡ ֳ־ָׁהַ ֳָז ָßׁ דֽדֿ ָה זוָ ָה םֽםל ָה ַבÚבֱַ ַבֻÞÝם ַבÞַׂׂ ¡ ֳ־ָׁהַ ׁזֽ ָה Úָֿ ַבדִדה ַבָױׁם ." & vbNewLine
+        sanadan = sanadan & "Þַב ַָה ַבּׁׂם : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל דֽדֿ ָה ֳֽדֿ ַָבÞַוֹׁ ַבדֽׁז׃ֹ ¡ זֳ־ָׁהם ֳהו Þֳׁ ָוַ ַבÞַׁה ßבו Úבל ַבֵדַד ֳָם Úָֿ ַבבו ַבױֶַÛ ¡ זÞֳׁ ָוַ Úבל ֳָם ֵ׃ַֽÞ ַבֿדװÞם זÞֳׁ ָוַ Úבל ׂםֿ ָה ַבֽ׃ה ¡ זÞֳׁ ָוַ Úבל Úָֿ ַבבו ָה Úבם ¡ זÞֳׁ ָוַ Úבל ַבֳ׃Êַ׀ ֳָם ״ַוׁ ָה ׃זַׁ ¡ זÞֳׁ ָוַ Úבל ֳָם ַבÞַ׃ד ַבד׃ַÝׁ ָה ַב״םָ ָה Úַָֿ ַבָױׁם ¡ זÞֳׁ ָוַ Úבל ַָה ־װהַד ¡ זÞֳׁ ָוַ Úבל ַָה Úַָ ׃ ַבÊםדם ¡ זÞֳׁ ָוַ Úבל ַָה זוָ ¡ זÞֳׁ ָוַ Úבל ׁזֽ ¡ זÞֳׁ ָוַ Úבל םÚÞזָ ." & vbNewLine
+        sanadan = sanadan & "זּׁÜÜַב םÚÞזָ ַב׀םה ׃דַוד ֳָׁÚֹ : ֳָז ַבדה׀ׁ ׃בַד ָה ׃בםדַה ַב״זםב ¡ זװוַָ ָה װׁהÝֹ ¡ זדוֿם ָה דםדזה ¡ זֳָז ַבֳװוָ ּÚÝׁ ָה ֽםַה ַבÚ״ַֿׁם .זÞםב ֵה םÚÞזָ Þֳׁ Úבל ֳָם Úדׁז ָה ַבÚבֱַ זÞֳׁ ׃בַד Úבל Úַױד זֳָם Úדׁז ¡ זÞÜÜÜֳׁ װוַָ ַבּֽֿׁם זÞֳׁ Úַױד Úבל ַבֽ׃ה ַבָױׁם זÚבל ׃בםדַה ָה ÞÊֹ זÞֳׁ ׃בםדַה Úבל ַָÜה Úַָ ׃ זÞֳׁ דוֿם Úבל װÚםָ ָה ַבַָָֽֽ זÞֳׁ Úבל ֳָם ַבÚַבםֹ ַבׁםַֽם זÞֳׁ Úבל ֳָם זׂםֿ זÞֳׁ ֳָז ַבֳװוָ Úבל ֳָם ֱַּׁ Úדַׁה ָה דבַֽה ַבÚ״ַֿׁם זÞֳׁ Úבל ֳָם דז׃ÜÜÜל ַבֳװÚׁם זÞֳׁ Úבל ׁ׃זב ַבבו Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        
+        ElseIf index = 101 Then
+        'ֵֿׁם׃
+        sanadan = "Þַב ַבֵדַד ֳָז ַב־םׁ דֽדֿ ָה ַבּׁׂם Ýל Êָֽםׁ ַבÊם׃םׁ : " & vbNewLine
+        sanadan = sanadan & "זֳדַ ׁזַםֹ ֵֿׁם׃ : Ýֻֽֿהַ ָוַ ֳֽדֿ ָה דֽדֿ ָה ַבֽ׃םה ַבÝַׁ׃ם ָÞֱַׁÊם Úבםו ¡ ֳ־ָׁהַ Úבם ָה ֳֽדֿ Ýםדַ װַÝוהם ָו ¡Úה ׂםֿ ָה ַבֽ׃ה ַבָÛַֿֿם ¡ ֳ־ָׁהַ ֳָז ַבÞַ׃ד ָה ֳֽדֿ ַבֽׁםׁם ¡ ֳ־ָׁהַ ֳָז ָßׁדֽדֿ ָה Úָם ָה דֽדֿ ַב־םַ״ ¡ ֳ־ָׁהַ ֳָז ַבֽ׃ה Úבם ָה דֽדֿ ָה Úָֿ ַבבו ַבֽ׀ֱַ ¡ ֳ־ָׁהַ ֳָז ֵ׃ַֽÞ ֵַָׁוםד ָה ַבֽ׃םה ָה Úָֿ ַבבו ַבה׃ַּ ַבדÚׁזÝ ַָבװ״ם ¡ ֳ־ָׁהַ ֵֿׁם׃ ָה Úָֿ ַבßׁםד ַבַֽֿֿ." & vbNewLine
+        sanadan = sanadan & "Þַב ַָה ַבּׁׂם : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ַבװם־ ֳָם דֽדֿ Úָֿ ַבֽׁדה ָה ֳֽדֿ ַבזַ׃״ם ¡ זֳ־ָׁהם ֳהו Þֳׁ ָוַ Úבל דֽדֿ ָה ֳֽדֿ ָה Úָֿ ַב־ַבÞ ַבדÚֿב ¡ זÞֳׁ ָוַ Úבל ֵַָׁוםד ָה ֳֽדֿ ¡ זÞֳׁ ָוַ Úבל ֳָם ַבםדה ¡ זÞֳׁ ָוַ Úבל ֳָם דֽדֿ ׃ָ״ ַב־םַ״ ¡ Þַב : זÞֳׁÊ ָוַ ַבÞֲׁה דה ֳזבו ֵבל ֲ־ׁו Úבל ַבֵדַדםה ַבװׁםÝ ֳָם ַבÝײב Úָֿ ַבÞַוׁ ָה Úָֿ ַב׃בַד ַבÚַָ׃ם ¡ זֳָם ַבדÚַבם ַָֻÊ ָה ָהַֿׁ ָה ֵַָׁוםד ַבָÞַב ¡ Ýֳדַ ַבװׁםÝ Ýֳ־ָׁהם ֳהו Þֳׁ ָוַ Úבל ַבֵדַד ֳָם Úָֿ ַבבו דֽדֿ ָה ַבֽ׃םה ַבßַׁׂםהם ¡ זֳ־ָׁו ֳהו Þֳׁ ָוַ Úבל ַבֵדַד ֳָם ַבÚַָ׃ ַבֽ׃ה ָה ׃Úםֿ ָה ּÚÝׁ ַבד״זÚם ¡ זֳדַ ֳָז ַבדÚַבם Ýֳ־ָׁהם ֳהו Þֳׁ ָוַ Úבל ַבֵדַד ַבÞַײם ֳָם ַבÚבֱַ דֽדֿ ָה Úבם ָה םÚÞזָ ַבזַ׃״ם ¡ זÞֳׁ ַבזַ׃״ם ָוַ דה ַבßÊַָ Úבל ַבֵדַד ֳָם ָßׁ ֳֽדֿ ָה ּÚÝׁ ָה ֽדַֿה ָה דַבß ַבÞ״םÚם ¡ זÞֳׁ ַבÞ״םÚם זַבד״זÚם ּדםÚַ Úבל ֵֿׁם׃ ¡ זÞֳׁ ֵֿׁם׃ Úבל ־בÝ ¡ זַבבו ַבדזÝÞ . " & vbNewLine
+        sanadan = sanadan & "זַּׁב ־בÝ : זַּׁב ־בÝ ׃בםד ױַָֽ ֽדֹׂ ¡ זםÚÞזָ ָה ־בםÝֹ ַבֳÚװל ױַָֽ ֳָם ָßׁ ¡ זֳָז ׂםֿ ׃Úםֿ ׃Úםֿ ָה ֳז׃ ַבֳהױַׁם ױַָֽ ַבדÝײב ַבײָם זֳַָה ַבÚ״ַׁ ¡ זÞֳׁ ֳָז ָßׁ ¡ זַבדÝײב ¡ זֳַָה Úבל Úַױד . זׁזל ַבÞֱַֹׁ ֳםײַ Úה ַבß׃ֶַם זÚה םֽםל ָה ֲֿד Úה ֳָם ָßׁ ¡ זַבבו ַבדזÝÞ . ÞבÊ : זֳ־׀ Úַױד Úה ֳָם Úָֿ ַבֽׁדה Úָֿ ַבבו ָה ָֽםָ ַב׃בדם ¡ זֳָם דׁםד ׁׂ ָה ָֽםװ ¡ זֳ־Ü׀ ֳָז Úָֿ ַבֽׁדה Úה Úֻדַה ָה ÚÝַה ¡ זÚבם ָה ֳָם ״ַבָ ¡ זֳָם ָה ßÚָ ¡ זׂםֿ ָה ַָֻÊ ¡ זÚָֿ ַבבו ָה ד׃Úזֿ ¡ Úה ַבהָם ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        sanadan = sanadan & "זֳ־׀ ׁׂ ָה ָֽםװ Úה Úֻדַה ָה ÚÜÝÜÜַה ¡ זַָה ד׃Úזֿ ¡ Úה ׁ׃זב ַבבו ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -. זַּׁב ֽדֹׂ : זַּׁב ֽדֹׂ ּדַÚֹ דהוד ֳָז דֽדֿ ׃בםדַה ָה דוַׁה ַבֳÚדװ ¡ זדֽדֿ ָה Úָֿ ַבֽׁדה ָה ֳָם בםבל ַבÞַײם ¡ זֽדַׁה ָה ֳÚםה ¡ זֳָז ֵ׃ַֽÞ ַב׃ָםÚם ¡ זדהױזׁ ַָה ַבדÚÊדׁ ¡ זדÛםֹׁ ָה דÞ׃ד ¡ זּÚÝׁ ָה דֽדֿ ַבױַֿÞ ¡ זÛםׁוד . זֳ־׀ ַבֳÚדװ Úה םֽםל ָה זַָֻ ¡ זֳ־׀ םֽםל Úה ּדַÚֹ דה ֳױַָֽ ַָה ד׃Úזֿ : ÚבÞדֹ ¡ זַבֳ׃זֿ זÚָםֿ ָה הײבֹ ַב־ַׂÚם ¡ זׁׂ ָה ָֽםװ ¡ זֳָם Úָֿ ַבֽׁדה ַב׃בדם ¡ זÛםׁוד ¡ Úה ַָה ד׃Úזֿ Úה ַבהָם Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        
+        ElseIf index = 12 Then
+        'Þַבזה
+        sanadan = "Þַב ֳָז Úדׁז ַבַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+        sanadan = sanadan + "ֳדַ ׁזַםֹ Þַבזה : Ýֻֽֿהַ ָוַ ֳֽדֿ ָה Úדׁ ָה דֽדֿ ַבּםׂם ¡ Þַב: ֻֽֿהַ דֽדֿ ָה ֳֽדֿ ָה דהםׁ ¡ Þַב: ֻֽֿהַ Úָֿ ַבבו ָה Úם׃ל ַבדֿהם ¡ Þַב:ֻֽֿהַ Þַבזה Úה הַÝÚ¡ ז Þַב ֳָÜÜז ÚÜדÜׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל װם־ם ֳָם ַבÝÊֽ Ýַׁ׃ ָה ֳֽדֿ ָה דז׃ל ָה Úדַׁה ¡ ַבדÞׁםֱ ַבײׁםׁ ¡ ז Þַב בם: ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃ה Úָֿ ַבַָÞם ָה ַבֽ׃ה ַבדÞֶׁ ¡ זÞַב: ÞֳׁÊ Úבל ֵַָׁוםד ָה Úדׁ ַבדÞֶׁ ¡ זÞַב: ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃םה ֳֽדֿ ָה Úֻדַה ָה ּÚÝׁ ָה ָזםַה ¡ זÞַב:ÞֳׁÊ Úבל ֳָם ָßׁ ֳֽדֿ ָה דֽדֿ ָה ַבֳװÚֻ זÞַב: ÞֳׁÊ Úבל ֳָם הװם״ דֽדֿ ָה וַׁזה ¡ זÞַב: ÞֳׁÊ Úבל Þַבזה ¡ זÞַב: ÞֳׁÊ Úבל הַÝÚ ." & vbNewLine
+        sanadan = sanadan + "זַּׁב הַÝÚ ַב׀םה ׃דַוד ־ד׃ֹ : ֳָז ּÚÝׁ םׂ םֿ ָה ַבÞÚÞַÚ ַבÞֶַׁ ¡ זֳָז ַֿזֿ Úָֿ ַבֽׁדה ָה וׁדׂ ַבֳÚּׁ ¡ זװםָֹ ָה הױַֽ ַבÞַײם ¡ זֳָז Úָֿ ַבבו ד׃בד ָה ּהָֿ ַבו׀בם ַבÞַױ ¡ זֳָז ׁזֽ םׂםֿ ָה ׁזדַה ¡ זֳ־׀ וִבֱַ ַבÞֱַֹׁ Úה ֳָם וׁםֹׁ ¡ זַָה Úַָ׃ ¡ זÚָֿ ַבבו ָה Úםַװ ָה ֳָם ָׁםÚֹ ¡ Úה ֳָם ָה ßÚָ ¡ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        
+        ElseIf index = 22 Then
+        'ַבָׂל
+        sanadan = "Þַב ֳָÜז Úדׁז ַבÜַֿהם Ýם ַבÊם׃םׁ  " & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ ַבָׂם : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ָה ַבßַÊָ ¡ Þַב:ֻֽֿהַ ֳֽדֿ ָה דז׃ל ¡ Þַב: ֻֽֿהַ דײׁ ָה דֽדֿ ַבײָם ¡ Þַב:ֻֽֿהַ ֳֽדֿ ָה ֳָם ָֹׂ ¡ Þַב: ÞֳׁÊ Úבל Úßׁדֹ ָה ׃בםדַה ָה Úַדׁ ¡ זÞַב: ÞֳׁÊ Úבל ֵ׃דַÚםב ָה Úָֿ ַבבו ַבÞ׃״ ¡ זÞַב : ÞֳׁÊ Úבל ַָה ßֻםׁ הÝ׃ו ¡ Þַב ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם ַבÞַ׃ד Úָֿ ַבÚׂםׂ ָה ּÚÝׁ ָה דֽדֿ ַבדÞׁםֱ ַבÝַׁ׃ם ¡ זÞַב בם: ÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם ָßׁ דֽדֿ ָה ַבֽ׃ה ַבהÞַװ ¡ זÞַב: ÞֳׁÊ ָוַ Úבל ֳָם ָׁםÚֹ דֽדֿ ָה ֵ׃ַֽÞ ַבׁ ָÚם ¡ זÞַב: ÞֳׁÊ Úבל ַבָׂם ." & vbNewLine
+        sanadan = sanadan & " זּׁÜÜַב ַָה ßֻםׁ ַבÜ׀םÜה ׃דַוד ֻבַֹֻ : Úָֿ ַבבו ָה ַב׃ֶַָ ַבד־ׂזדם ױַָֽ ׁ׃זב ַבבו  זדַּוֿ ָה ָּׁ ֳָז ַבַּּֽ דזבל Þם׃ ָה ַב׃ֶַָ ¡ זַָֿׁ׃ דזבל ַָה Úַָ׃ . זֳ־׀ Úָֿ ַבבו Úה ֳָם ָה ßÚָ הÝ׃ו. זֳ־׀ דַּוֿ זַָֿׁ׃¡ Úה ַָה Úַָ׃¡ Úה ֳָם ¡ זׂםֿ ָה ַָֻÊ ¡ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - ¡ Úה ָּׁםב - Úבםו ַב׃בַד -  ¡Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -."
+        
+        ElseIf index = 32 Then
+        'ַבֿזׁל
+        sanadan = "Þַב ֳָז Úדׁז ַבַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ ֳָם Úדׁ ַבֿזׁם : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ָה Úבם ¡ Þַב: ֳ־ָׁהַ ֳָז Úם׃ל דֽדֿ ָה ֳֽדֿ ָה Þ״ה ׃הֹ ֻדַה Úװֹׁ זֻבַֻדֶַֹ¡ Þַב: ֳ־ָׁהַ ֳָז ־בַֿ ׃בםדַה ָה ־בַֿ Þַב:ֻֽֿהַ ַבםׂםֿם Úה ֳָם Úדׁז ¡ Þַב ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו דה ״ׁםÞ ֳָם Úדׁ ַבֿזׁם Úבל װם־הַ Úָֿ ַבÚׂ םׂ ָה ּÚÝׁ ָה דֽדֿ ָה ֵ׃ַֽÞ ַבָÛַֿֿם ַבÝַׁ׃ם ַבדÞׁםֱ ¡ ז Þַב בם : ÞֳׁÊ ָוַ Úבל ֳָם ״ַוׁ Úָֿ ַבזַֽֿ ָה Úדׁ ָה ֳָם וַװד ַבדÞׁםֱ ¡ דַ בַ ֳֽױםו ßֹֻׁ ¡ זÞַב בם : ÞֳׁÊ ָוַ Úבל ֳָם ָßׁ ָה דַּוֿ ¡ זÞַב : ÞֳׁÊ ָוַ Úבל ֳָם ַבׂÚֱַׁ Úָֿ ַבֽׁדה ָה Úָֿז׃ זÞַב :ÞֳׁÊ Úבל ֳָם Úדׁ ¡ זÞַב : ÞֳׁÊ ָוַ Úבל ַבםׂםֿם ¡ זÞַב ÞֳׁÊ ָוַ Úבל : ֳָם Úדׁז. " & vbNewLine
+        sanadan = sanadan & "Þַב ֳָז Úדׁז: זֻֽֿהַ ֳָױזב ַבֵֿÛַד דֽדֿ ָה ֳֽדֿ Úה ַָה דַּוֿ Úה Úָֿ ַבֽׁדה ָה Úָֿז׃ Úה ַבֿזׁם Úה ַבםׂםֿם Úה ֳָל Úדׁז¡ זֻֽֿהַ ָוַ ֳםײַ ֳָז ַבֽ׃ה װם־הַ ¡ Þַב : ֻֽֿהַ Úָֿ ַבבו ָה ַבדַָׁß Úה ּÚÝׁ ָה ׃בםדַה Úה ֳָם װÚםָ Úה ַבםׂםֿם Úה ֳָם Úדׁז . " & vbNewLine
+        sanadan = sanadan & "זַּׁב ֳָם Úדׁז : ּדַÚֹ דה ֳוב ַבַּֽׂ זדה ֳוב ַבָױֹׁ ¡ Ýדה ֳוב דßֹ : דַּוֿ ¡ ז׃Úםֿ ָה ָּםׁ ¡ זÚßׁדֹ ָה ־ַבֿ ¡ זÚ״ֱַ ָה ֳָם ַָֽׁ ¡ זÚָֿ ַבבו ָה ßֻםׁ ¡ זדֽדֿ ָה Úָֿ ַבֽׁדה ָה דֽםױה ¡ זֽדםֿ ָה Þם׃ ַבֳÚּׁ ַבÞֶַׁ ¡ זדה ֳוב ַבדֿםהֹ : םׂםֿ ָה ַבÞÚÞַÚ ַבÞַׁםֱ זםׂםֿ ָה ׁזדַה ¡ זװםָֹ ָה הױַֽ ¡ זדה ֳוב ַבָױֹׁ : ַבֽ׃ה ָה ֳָם ַבֽ׃ה ַבָױׁם ¡ זםֽם ָה םÚדׁ ¡ זÛםׁודַ ¡ זֳ־׀ וִבֱַ ַבÞֱַֹׁ Úדה ÊÞֿד דה ַבױַָֹֽ זÛםׁוד . " & vbNewLine
+        sanadan = sanadan & "ÞבÊ : זֳ־׀ ׃Úםֿ ָה ָּםׁ ¡ זÚßׁדֹ¡ זםֽםל ָה םÚדׁ ¡ Úה ַָה Úַָ׃ זֳ־׀ ַָה Úַָ׃ Úה ֳָם ָה ßÚָ זׂםֿ ָה ַָֻÊ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -."
+        
+        ElseIf index = 42 Then
+        'וװַד
+        sanadan = "Þַב ֳָז Úדׁז ַבַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ וװַד : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ Þַב: ֻֽֿהַ ַָה דַּוֿ ¡ Þַב : ֻֽֿהַ ַבֽ׃םה ָה דוַׁה ַבּדַב ¡ Þַב :ֻֽֿהַ ֳֽדֿ ָה םׂםֿ ַבֽבזַהם ¡ Þַב : ֻֽֿהַ וװַד ָה Úדַׁ ¡ Þַב: ֻֽֿהַ Úַׁß ָה ־ַבֿ ַבדׁם ¡ Þַב :ÞֳׁÊ Úבל םֽםם ָה ַבַֻֽׁ ַב׀דַׁם ¡ זÞַב: ÞֳׁÊ Úבל Úָֿ ַבבו ָה Úַדׁ ¡ Þַב : ֳָז Úדׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם ַבÝÊֽ װם־הַ ¡ זÞַב: ÞֳׁÊ ָוַ Úבל Úָֿ ַבבו ָה ַבֽ׃םה ַבדÞׁםֱ ¡ ז Þַב : ÞֳׁÊ ָוַ Úבל דֽדֿ ָה ֳֽדֿ ָה Úַָֿה ¡ זÞַב : ÞֳׁÊ Úבל ַבֽבזַהם ¡ זÞַב : ÞֳׁÊ Úבל וװַד " & vbNewLine
+        sanadan = sanadan & "זּׁÜÜַב ַָה Úַדׁ ַבÜ׀םÜה ׃ÜÜדַוד : ֳָז ַבֱַֿֿׁ Úזםדׁ ָה Úַדׁ ױַָֽ ׁ׃זב ַבבו ¡ זַבדÛםֹׁ ָה ֳָם װוַָ ַבד־ׂזדם ¡ זֳ־Ü׀ ֳָז ַבֱַֿֿׁ ÚÜÜה ַבהָם . זֳ־׀ ַבדÛםֹׁ Úה Úֻדַה ָה ÚÝַה Úה ַבהָם Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -" & vbNewLine
+        
+        ElseIf index = 52 Then
+        'װÚָֹ
+        sanadan = "Þַב ֳָÜÜז ÚÜדÜׁז ַבÜַֿהÜÜם ÝÜÜÜם ַבÜÊם׃םׁ:" & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ ֳָם ָßׁ װÚָֹ: Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ָה Úבם ַבßַÊָ Þַב: ֻֽֿהַ ָה דַּוֿ Þַב: ֻֽֿהַ ֵַָׁוםד ָה ֳֽדֿ ָה Úדׁ ַבזßםÚם ¡ Þַב:ֻֽֿהַ ֳָם Þַב:ֻֽֿהַ םֽםם ָה ֳֿד ¡ Þַב: ֻֽֿהַ ֳָז ָßׁ Úה Úַױד ¡ Þַב ֳָז Úדׁז: זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל Ýַׁ׃ ָה ֳֽדֿ ַבדÞׁםֱ ¡ ז Þַב בם: ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃ה Úָֿ ַבַָÞם ָה ַבֽ׃ה ַבדÞׁםֱ ¡ זÞַב: ÞֳׁÊ Úבל ֵַָׁוםד ָה Úָֿ ַבֽׁדה ָה ֳֽדֿ ַבדÞׁםֱ ַבָÛַֿֿם זÞַב: ÞֳׁÊ Úבל םז׃Ý ָה םÚÞזָ ַבזַ׃״ם ¡ זÞַב: ÞֳׁÊ Úבל װÚםָ ָה ֳםזָ ַבױׁםÝםהם ¡ זÞַב: ÞֳׁÊ ָוַ Úבל םֽםם ָה ֳֿד Úה ֳָל ָßׁ Úה Úַױד." & vbNewLine
+        sanadan = sanadan & "זַּׁב Úַױד ַבÜ׀םÜה ׃דַוד ַֻהַה : ֳָז Úָֿ ַבֽׁדה Úָֿ ַבבו ָה ָֽםָ ַב׃בדם ¡ זֳָז דׁםד ׁׂ ָה ָֽםװ ¡ זֳ־Ü׀ ֳָז Úָֿ ַבֽׁדה Úה Úֻדַה ָה ÚÝַה ¡ זÚבם ָה ֳָם ״ַבָ  ¡ זֳָם ָה ßÚָ  ¡ זׂםֿ ָה ַָֻÊ  ¡ זÚָֿ ַבבו ָה ד׃Úזֿ ¡ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל - ¡ ֳ־׀ ׁׂ ָה ָֽםװ Úה Úֻדַה ָה ÚÜÝÜÜַה  ¡ זַָה ד׃Úזֿ  ¡ Úה ׁ׃זב ַבבו - ױבל ַבבו Úבםו ז ׃בד - ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        
+        ElseIf index = 62 Then
+        '־בÝ
+        sanadan = "Þַב ֳָÜז Úדׁז ַבÜַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ ־בÝ : Ýֻֽֿהַ ָוַ דֽדֿ ָה ֳֽדֿ ¡ Þַב : ֻֽֿהַ ַָה דַּוֿ ¡ ֻֽֿהַ ֵֿׁם׃ ָה Úָֿ ַבßׁםד ¡ Þַב : ֻֽֿהַ ־בÝ ¡ Þַב: Úה ׃בםד Úה ֽדֹׂ ¡ ז Þַב ֳָÜÜז ÚÜדÜׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם ַבֽ׃ה װם־הַ ¡ ז Þַב בם : ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃ה דֽדֿ ָה םז׃Ý ָה הוַׁ ַבֽׁÊßם ַָבָױֹׁ ¡ זÞַב בם : ÞֳׁÊ ָוַ Úבל ֳָם ַבֽ׃םה ֳֽדֿ ָה Úֻדַה ָה ּÚÝׁ ָה ָזםַה ¡ זÞַב בם :ÞֳׁÊ Úבל ֵֿׁם׃ ָה Úָֿ ַבßׁםד Þָב ֳה םÞׁםֱ ַָ־Êםַׁ ־בÝ ¡ זÞַב בם : ÞֳׁÊ Úבל ־בÝ ¡ זÞַב : ÞֳׁÊ Úבל ׃בםד ¡ ז Þַב : ÞֳׁÊ Úבל ֽדֹׂ ." & vbNewLine
+        sanadan = sanadan & "זַּׁב ֽדֹׂ : זַּׁב ֽדֹׂ ּדַÚֹ דהוד ֳָז דֽדֿ ׃בםדַה ָה דוַׁה ַבֳÚדװ ¡ זדֽדֿ ָה Úָֿ ַבֽׁדה ָה ֳָם בםבל ַבÞַײם ¡ זֽדַׁה ָה ֳÚםה ¡ זֳָז ֵ׃ַֽÞ ַב׃ָםÚם ¡ זדהױזׁ ַָה ַבדÚÊדׁ ¡ זדÛםֹׁ ָה דÞ׃ד ¡ זּÚÝׁ ָה דֽדֿ ַבױַֿÞ ¡ זÛםׁוד ." & vbNewLine
+        sanadan = sanadan & "זֳ־׀ ַבֳÚדװ Úה םֽםל ָה זַָֻ ¡ זֳ־׀ םֽםל Úה ּדַÚֹ דה ֳױַָֽ ַָה ד׃Úזֿ : ÚבÞדֹ ¡ זַבֳ׃זֿ זÚָםֿ ָה הײבֹ ַב־ַׂÚם ¡ זׁׂ ָה ָֽםװ ¡ זֳָם Úָֿ ַבֽׁדה ַב׃בדם ¡ זÛםׁוד ¡ Úה ַָה ד׃Úזֿ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        
+        ElseIf index = 72 Then
+        'ֳָז Úדׁז ַבֿזׁל
+        sanadan = "Þַב ֳָז Úדׁז ַבÜַֿהם Ýם ַבÊם׃םׁ:" & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ ֳָם Úדׁז ַבֿזׁם : Ýֻֽֿהַ ָוַ ֳָז דֽדֿ Úָֿ ַבֽׁדה ָה Úדׁ ָה דֽדֿ ַבדÚֿב ¡ Þַב : ֻֽֿהַ ֳָז Úדׁ Úָֿ ַבבו ָה ֳֽדֿ ָה ֿםׂזםו ַבֿדװÞם ¡ Þַב : ֻֽֿהַ ּÚÝׁ ָה דֽדֿ ָה ֳ׃ֿ ַבהױםָם ¡ Þַב : ֻֽֿהַ ֳָז Úדׁ ַבֿזׁם ¡ Úה ַבß׃ֶַם ¡ ז Þַב ֳָז ÚÜדׁז : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ֳָם ַבÝÊֽ ¡ זÞַב בם : ÞֳׁÊ ָוַ Úבל Úָֿ ַבַָÞם ָה ַבֽ׃ה ¡ זÞַב : ÞֳׁÊ Úבל ֳָם ָßׁ דֽדֿ ָה Úבם ָה ַבּבהֿם ַבדזױבם ¡ ז Þַב :ÞֳׁÊ Úבל ּÚÝׁ ָה דֽדֿ ¡ זÞַב : ÞֳׁÊ Úבל ֳָם Úדׁ ַבֿזׁם ¡ זÞַב : ÞֳׁÊ Úבל ַבß׃ֶַם ." & vbNewLine
+        sanadan = sanadan & "זַּׁב ַבß׃ֶַם : ֽדֹׂ ָה ָֽםָ ַבׂםַÊ ¡ זÚם׃ל ָה Úדׁ ַבוד׀ַהם ¡ זדֽדֿ ָה ֳָם בםבל ַבÞַײם ¡ זÛםׁוד דה דװם־ֹ ַבßזÝםםה Ûםׁ ֳה דַֹֿ ÞֱַׁÊו זַÚÊדַֿו Ýם ַ־Êםַׁו Úה ֽדֹׂ ¡ זÞֿ ׀ßׁהַ ַÊױַב ÞֱַׁÊו ." & vbNewLine
+        sanadan = sanadan & "זַּׁב ֽדֹׂ : זַּׁב ֽדֹׂ ּדַÚֹ דהוד ֳָז דֽדֿ ׃בםדַה ָה דוַׁה ַבֳÚדװ ¡ זדֽדֿ ָה Úָֿ ַבֽׁדה ָה ֳָם בםבל ַבÞַײם ¡ זֽדַׁה ָה ֳÚםה ¡ זֳָז ֵ׃ַֽÞ ַב׃ָםÚם ¡ זדהױזׁ ַָה ַבדÚÊדׁ ¡ זדÛםֹׁ ָה דÞ׃ד ¡ זּÚÝׁ ָה דֽדֿ ַבױַֿÞ ¡ זÛםׁוד ." & vbNewLine
+        sanadan = sanadan & "זֳ־׀ ַבֳÚדװ Úה םֽםל ָה זַָֻ ¡ זֳ־׀ םֽםל Úה ּדַÚֹ דה ֳױַָֽ ַָה ד׃Úזֿ : ÚבÞדֹ ¡ זַבֳ׃זֿ זÚָםֿ ָה הײבֹ ַב־ַׂÚם ¡ זׁׂ ָה ָֽםװ ¡ זֳָם Úָֿ ַבֽׁדה ַב׃בדם ¡ זÛםׁוד ¡ Úה ַָה ד׃Úזֿ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד - Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        
+        ElseIf index = 82 Then
+        'ַָה זַֿׁה
+        sanadan = "Þַב ַבֵדַד ֳָז ַב־םׁ דֽדֿ ָה ַבּׁׂם Ýל Êָֽםׁ ַבÊם׃םׁ : " & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ ַָה זַֿׁה : Ýֻֽֿהַ ָוַ ַבװם־ ֳָז ֽÝױ Úדׁ ָה ַבֽ׃ה ָה דׂםֿ ַבדַׁÛם ָÞֱַׁÊם Úבםו Þַב : ֳ־ָׁהַ ֳָז ַבֽ׃ה Úבם ָה ֳֽדֿ ָה Úָֿ ַבזַֽֿ ַב׃Úֿם דװַÝוֹ Úה ַבֵדַד ֳָם ַבםדה ׂםֿ ָה ַבֽ׃ה ַבבÛזם ¡ Þַב : ֳ־ָׁהַ ֳָז דֽדֿ Úָֿ ַבבו ָה Úבם ַבָÛַֿֿם ֳ־ָׁהַ ַבװׁםÝ ֳָז ַבÝײב Úָֿ ַבÞַוׁ ָה Úָֿ ַב׃בַד ַבÚַָ׃ם ¡ ֳ־ָׁהַ ֳָז Úָֿ ַבבו דֽדֿ ָה ַבֽ׃םה ַבßַׁׂםהם ¡ ֳ־ָׁהַ ֳָז ַבÝּׁ דֽדֿ ָה ֳֽדֿ ָה ֵַָׁוםד ַבװ״זם ¡ ֳ־ָׁהַ ֳָז ָßׁ דֽדֿ ָה ֳֽדֿ ָה וַׁזה ַבַׁׂם ¡ ֳ־ָׁהַ ֳָז ַבÚַָ׃ ַבÝײב ָה װַ׀ַה ָה Úם׃ל ַבַׁׂם ֳ־ָׁהַ ֳָז ַבֽ׃ה ֳֽדֿ ָה םׂםֿ ַבֽבזַהם ¡ֳ־ָׁהַ Úם׃ל ָה דםהַ Þַבזה ¡ ֳ־ָׁהַ Úם׃ל ָה זַֿׁה." & vbNewLine
+        sanadan = sanadan & "Þַב ַָה ַבּׁׂם : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ַבֵדַד ֳָם Úָֿ ַבבו דֽדֿ Úָֿ ַבֽׁדה ָה Úבם ַבהֽזם ¡ זֳ־ָׁהם ֳהו Þֳׁ ָוַ ַבÞֲׁה ßבו Úבל ַבֵדÜÜַד ֳָם Úָֿ דֽדֿ ָה ֳֽדֿ ָה Úָֿ ַב־ַבÞ ַבדױׁם ¡ Þַב : ÞֳׁÊ ָוַ ַבÞֲׁה Úבל ַבßדַב ֵַָׁוםד ָה ֳֽדֿ ָה Ýַׁ׃ ַבÊדםדם Þַב : ÞֳׁÊ ָוַ Úבל ֳָם ַבםדה ַבßהֿם ¡ Þַב : ÞֳׁÊ ָוַ Úבל ַבֵדַד ֳָם דהױזׁ דֽדֿ ָה Úָֿ ַבדבß ָה ַבֽ׃ה ָה ־םׁזה ַבָÛַֿֿם ¡ Þַב : ÞֳׁÊ ָוַ Úבל ֳָם ַבÞַ׃ד Úָֿ ַב׃םֿ ָה ÚÊַָ ַבדÞׁםֱ ¡ Þַב : ÞֳׁÊ ָוַ Úבל ֳָם ״ַוׁ דֽדֿ ָה םַ׃םה ַבֽבָם ¡ Þַב : ÞֳׁÊ ָוַ Úבל ֳָם ַבÝּׁ ַבװ״זם Þַב: ÞֳׁÊ ָוַ Úבל ֳָם ָßׁ ָה וַׁזה ¡ Þַב: ÞֳׁÊ ָוַ Úבל ַבÝײב ָה װַ׀ַה ¡ Þַב : ÞֳׁÊ ָוַ Úבל ַבֽבזַהם ¡ Þַב : ÞֳׁÊ ָוַ Úבל Þַבזה ¡ Þַב : ÞֳׁÊ ָוַ Úבל ַָה זַֿׁה . " & vbNewLine
+        sanadan = sanadan & "זּׁÜÜַב ֳָם ּÚÝׁ ֻבַֹֻ : דזבַו Úָֿ ַבבו ָה Úםַװ ָה ֳָם ָׁםÚֹ ¡ זֳָז וׁםֹׁ ¡ זַָה Úַָ׃ . זÞֳׁ וִבֱַ ַבֻבַֹֻ Úבל ֳָם ָה ßÚָ ¡ זÞֳׁ ֳָז וׁםֹׁ ¡ זַָה Úַָ׃ ¡ ֳםײַ Úבל ׂםֿ ָה ַָֻÊ . זֳ־׀ ׂםֿ Úה ַבהָם - ױבל ַבבו Úבםו ז ׃בד -¡ Úה ָּׁםב - Úבםו ַב׃בַד -  ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        
+        ElseIf index = 92 Then
+        'ׁזם׃
+        sanadan = "Þַב ַבֵדַד ֳָז ַב־םׁ דֽדֿ ָה ַבּׁׂם Ýל Êָֽםׁ ַבÊם׃םׁ : " & vbNewLine
+        sanadan = sanadan & "Ýֳדַ ׁזַםֹ ׁזם׃ : Ýֻֽֿהַ ָוַ ַבװם־ ַבֵדַד ֳָז ַבÚַָ׃ ֳֽדֿ ָה דֽדֿ ָה ַב־ײׁ ַבֽהÝם ָÞֱַׁÊם Úבםו Þַב: ֳ־ָׁהַ : ֳָז ַבÚַָ׃ ֳֽדֿ ָה ֳָם ״ַבָ ָה ֳָם ַבהÚד ַבױַבֽם Þֱַֹׁ Úבםו ¡ ֳ־ָׁהַ ֳָז ״ַבָ Úָֿ ַבב״םÝ ָה דֽדֿ ָה ַבÞָם״ם ¡ Ýם ßÊַָו ֳ־ָׁהַ ָוַ ֳָז ָßׁ ֳֽדֿ ָה ַבדÞָׁ ַבßׁ־ם Þֱַֹׁ Úבםו ¡ ֳ־ָׁהַ ֳָז ״ַוׁ ֳֽדֿ ָה Úבם ַבדÞׁםֱ ַבֳ׃Êַ׀ ֳ־ָׁהַ ֳָז ַבֽ׃ה Úבם ָה דֽדֿ ָה Úבם ַב־םַ״ ¡ ֳ־ָׁהַ ַבֳ׃Êַ׀ ַבֵדַד ֳָז ַבֽ׃ה Úבם ָה ֳֽדֿ ָה Úדׁ ַבֽדַדם ¡ ֳ־ָׁהַ ֳָז ַבÞַ׃ד Úָֿ ַבבו ָה ַבֽ׃ה ָה ׃בםדַה ַבה־ַ׃ ¡ ֳ־ָׁהַ ֳָז ָßׁ דֽדֿ ָה וַׁזה ָה הַÝÚ ַבÊדַׁ ַבָÛַֿֿם ¡ ֳ־ָׁהַ ֳָז Úָֿ ַבבו דֽדֿ ָה ַבדÊזßב ַבדÚׁזÝ ָׁזם׃ ." & vbNewLine
+        sanadan = sanadan & "Þַב ַָה ַבּׁׂם : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ַבֵדַד ֳָם דֽדֿ Úָֿ ַבֽׁדה ָה ֳֽדֿ ָה Úבם ַבָÛַֿֿם ¡ זֳ־ָׁהם ֳהו Þֳׁ ָוַ ַבÞֲׁה ßבו Úבל ַבֵדַד ַבÊÞם דֽדֿ ָה ֳֽדֿ ַבדױׁם ¡ זÞֳׁ ָוַ Úבל ֵַָׁוםד ָה ֳֽדֿ ַבֵ׃ßהֿׁם ¡ זÞֳׁ ָוַ Úבל ׂםֿ ָה ַבֽ׃ה ¡ זÞֳׁ ָוַ Úבל Úָֿ ַבבו ָה Úבם ַבָÛַֿֿם ¡ זÞֳׁ ָוַ Úבל ַבֳ׃Êַ׀ ֳָם ַבÚׂ ַבÞבַה׃ם ¡ זÞֳׁ ָוַ Úבל ֳָם Úבם ַבֽ׃ה ָה ַבÞַ׃ד ַבזַ׃״ם ¡ זÞֳׁ ָוַ Úבל : ַבֽדַדם ¡ זÞֳׁ ָוַ Úבל ַבה־ַ ׃ ¡ זÞֳׁ ָוַ Úבל ַבÊדַׁ ¡ זÞֳׁ Úבל ׁזם׃ ¡ זÞֳׁ ָוַ Úבל םÚÞזָ . " & vbNewLine
+        sanadan = sanadan & "זּׁÜÜַב םÚÞזָ ַב׀םה ׃דַוד ֳָׁÚֹ : ֳָז ַבדה׀ׁ ׃בַד ָה ׃בםדַה ַב״זםב ¡ זװוַָ ָה װׁהÝֹ ¡ זדוֿם ָה דםדזה ¡ זֳָז ַבֳװוָ ּÚÝׁ ָה ֽםַה ַבÚ״ַֿׁם .זÞםב ֵה םÚÞזָ Þֳׁ Úבל ֳָם Úדׁז ָה ַבÚבֱַ זÞֳׁ ׃בַד Úבל Úַױד זֳָם Úדׁז ¡ זÞÜÜÜֳׁ װוַָ ַבּֽֿׁם זÞֳׁ Úַױד Úבל ַבֽ׃ה ַבָױׁם זÚבל ׃בםדַה ָה ÞÊֹ זÞֳׁ ׃בםדַה Úבל ַָÜה Úַָ ׃ זÞֳׁ דוֿם Úבל װÚםָ ָה ַבַָָֽֽ זÞֳׁ Úבל ֳָם ַבÚַבםֹ ַבׁםַֽם זÞֳׁ Úבל ֳָם זׂםֿ זÞֳׁ ֳָז ַבֳװוָ Úבל ֳָם ֱַּׁ Úדַׁה ָה דבַֽה ַבÚ״ַֿׁם זÞֳׁ Úבל ֳָם דז׃ÜÜÜל ַבֳװÚׁם זÞֳׁ Úבל ׁ׃זב ַבבו Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        
+        ElseIf index = 102 Then
+        'ַבזַׁÞ
+        sanadan = "Þַב ַבֵדַד ֳָז ַב־םׁ דֽדֿ ָה ַבּׁׂם Ýל Êָֽםׁ ַבÊם׃םׁ : " & vbNewLine
+        sanadan = sanadan & "ֳדַ ׁזַםֹ ֵֿׁם׃ ַבזַׁÞ : Ýֻֽֿהַ ָוַ ֳָז ֽÝױ Úדׁ ָה ַבֽ׃ה ָÞֱַׁÊם Úבםו Ùַוׁ ֿדװÞ ¡ Úה װם־ו ַבֵדַד ַב־״םָ ֳָם ַבÚַָ׃ ֳֽדֿ ָה ֵַָׁוםד ָה Úדׁ ַבÝַׁזֶם ַבװַÝÚם ¡ Þַב : ֳ־ָׁהַ זַבֿם ¡ Þַב : ֳ־ָׁהַ ֳָז ַב׃ÚַַֿÊ ַבֳ׃Úֿ ָה ׃ב״ַה ַבזַ׃״ם ¡ ֳ־ָׁהַ ֳָז ַבÚׂ דֽדֿ ָה ַבֽ׃םה ַבזַ׃״ם ¡ ֳ־ָׁהַ ֳָז ַבֽ׃םה ֳֽדֿ ָה Úָֿ ַבבו ָה ַב־ײׁ ַב׃ז׃הּֿׁם ¡ ֳ־ָׁהַ ֳָז ַבֽ׃ה דֽדֿ ָה Úָֿ ַבבו ָה דֽדֿ ָה דֹׁ ַב״ז׃ם ַבדÚׁזÝ ַָָה ֳָם Úדׁ ַבהÞַװ ¡ ֳ־ָׁהַ ֳָז םÚÞזָ ֵ׃ַֽÞ ָה ֵַָׁוםד ַבזַׁÞ ." & vbNewLine
+        sanadan = sanadan & "Þַב ַָה ַבּׁׂם : זÞֳׁÊ ָוַ ַבÞֱַׁה ßבו Úבל ßב דה ַבװם־םה ֳָם Úָֿ ַבבו ַבֽהÝם ¡ זֳָם דֽדֿ ַבװַÝÚם ַבדױׁםםה ¡ זÞֳׁ ßב דהודַ Úבל ֳָם Úָֿ ַבבו דֽדֿ ָה ֳֽדֿ ָה Úָֿ ַב־ַבÞ ַבדױׁם ¡ זÞֳׁ ָוַ Úבל ַבßדַב ָה Ýַׁ׃ ¡ זÞֳׁ ָוַ Úבל ׂםֿ ָה ַבֽ׃ה ¡ זÞֳׁ ָוַ Úבל ֳָם ַבÞַ׃ד וָֹ ַבבו ָה ֳֽדֿ ָה ַב״ָׁ ַבָÛַֿֿם ¡ זÞֳׁ ָוַ Úבל ֳָם ָßׁ דֽדֿ ָה Úבם ָה דז׃ל ַב־םַ״ ¡ זÞֳׁ ָוַ Úבל ֳָם ַבֽ׃םה ַב׃ז׃הּֿׁם ¡ זÞֳׁ ָוַ Úבל ַָה ֳָם Úדׁ ַב״ז׃ם ¡ זÞֳׁ ָוַ Úבל ֵ׃ַֽÞ ַבזַׁÞ ¡ זÞֳׁ ָוַ Úבל ־בÝ ." & vbNewLine
+        sanadan = sanadan & "זַּׁב ־בÝ : זַּׁב ־בÝ ׃בםד ױַָֽ ֽדֹׂ ¡ זםÚÞזָ ָה ־בםÝֹ ַבֳÚװל ױַָֽ ֳָם ָßׁ ¡ זֳָז ׂםֿ ׃Úםֿ ׃Úםֿ ָה ֳז׃ ַבֳהױַׁם ױַָֽ ַבדÝײב ַבײָם זֳַָה ַבÚ״ַׁ ¡ זÞֳׁ ֳָז ָßׁ ¡ זַבדÝײב ¡ זֳַָה Úבל Úַױד . זׁזל ַבÞֱַֹׁ ֳםײַ Úה ַבß׃ֶַם זÚה םֽםל ָה ֲֿד Úה ֳָם ָßׁ ¡ זַבבו ַבדזÝÞ . ÞבÊ : זֳ־׀ Úַױד Úה ֳָם Úָֿ ַבֽׁדה Úָֿ ַבבו ָה ָֽםָ ַב׃בדם ¡ זֳָם דׁםד ׁׂ ָה ָֽםװ ¡ זֳ־Ü׀ ֳָז Úָֿ ַבֽׁדה Úה Úֻדַה ָה ÚÝַה ¡ זÚבם ָה ֳָם ״ַבָ ¡ זֳָם ָה ßÚָ ¡ זׂםֿ ָה ַָֻÊ ¡ זÚָֿ ַבבו ָה ד׃Úזֿ ¡ Úה ַבהָם ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        sanadan = sanadan & "זֳ־׀ ׁׂ ָה ָֽםװ Úה Úֻדַה ָה ÚÜÝÜÜַה ¡ זַָה ד׃Úזֿ ¡ Úה ׁ׃זב ַבבו ¡ Úה ָּׁםב - Úבםו ַב׃בַד - ¡ Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -. זַּׁב ֽדֹׂ : זַּׁב ֽדֹׂ ּדַÚֹ דהוד ֳָז דֽדֿ ׃בםדַה ָה דוַׁה ַבֳÚדװ ¡ זדֽדֿ ָה Úָֿ ַבֽׁדה ָה ֳָם בםבל ַבÞַײם ¡ זֽדַׁה ָה ֳÚםה ¡ זֳָז ֵ׃ַֽÞ ַב׃ָםÚם ¡ זדהױזׁ ַָה ַבדÚÊדׁ ¡ זדÛםֹׁ ָה דÞ׃ד ¡ זּÚÝׁ ָה דֽדֿ ַבױַֿÞ ¡ זÛםׁוד . זֳ־׀ ַבֳÚדװ Úה םֽםל ָה זַָֻ ¡ זֳ־׀ םֽםל Úה ּדַÚֹ דה ֳױַָֽ ַָה ד׃Úזֿ : ÚבÞדֹ ¡ זַבֳ׃זֿ זÚָםֿ ָה הײבֹ ַב־ַׂÚם ¡ זׁׂ ָה ָֽםװ ¡ זֳָם Úָֿ ַבֽׁדה ַב׃בדם ¡ זÛםׁוד ¡ Úה ַָה ד׃Úזֿ Úה ַבהָם Úה ָּׁםב - Úבםו ַב׃בַד -  Úה ָׁ ַבÚֹׂ - Êַָׁß ז ÊÚַבל -." & vbNewLine
+        Else
+        sanadan = "sanada"
+    End If
+
+End Function
+Function qeraatn(index As Integer) As String
+
+        'adding sanad
+        If index = -1 Then
+        qeraatn = "ָÞֱַַׁÊ ֳוב ַבÊז׃״ ( ַָה Úַדׁ ז Úַױד ז ַבß׃ֶַל ז ־בÝ )"
+          
+        ElseIf index = -2 Then
+        qeraatn = "ָÞֱַֹׁ ַבָױׁםַה ( ֳָז Úדׁז ז םÚÞזָ ) "
+      
+        ElseIf index = -3 Then
+        qeraatn = "ַָבÞֱַַׁÊ ַבÚװׁ ַבױÛׁל"
+      
+        ElseIf index = -4 Then
+        qeraatn = "ָÞֱַַׁÊ ֳוב ַבױבֹ"
+       
+        ElseIf index = -5 Then
+        qeraatn = "ַָבÞֱַַׁÊ ַב׃ָÚ"
+       
+        ElseIf index = 1 Then
+        qeraatn = "ָÞֱַֹׁ ַבֵדַד הַÝÚ ַָׁזםםו"
+        
+        ElseIf index = 3 Then
+        qeraatn = "ָÞֱַֹׁ ַבֵדַד ֳָז Úדׁז ַבָױׁל ַָׁזםםו"
+        
+        ElseIf index = 4 Then
+        qeraatn = "ָÞֱַֹׁ ַבֵדַד ַָה Úַדׁ ַָׁזםםו"
+        
+        ElseIf index = 5 Then
+        qeraatn = "ָÞֱַֹׁ ַבֵדַד Úַױד ַָׁזםםו"
+        
+        ElseIf index = 6 Then
+        qeraatn = "ָÞֱַֹׁ ַבֵדַד ֽדֹׂ ַָׁזםםו"
+        
+        ElseIf index = 7 Then
+        qeraatn = "ָÞֱַֹׁ ַבֵדַד ַבß׃ֶַל ַָׁזםםו"
+        
+        ElseIf index = 8 Then
+        qeraatn = "ָÞֱַֹׁ ַבֵדַד ֳָז ּÚÝׁ ַָׁזםםו"
+        
+        ElseIf index = 9 Then
+        qeraatn = "ָÞֱַֹׁ ַבֵדַד םÚÞזָ ַָׁזםםו"
+        
+        ElseIf index = 10 Then
+        qeraatn = "ָÞֱַֹׁ ַבֵדַד ־בÝ ַבַָׁׂ ַָׁזםםו"
+        
+        ElseIf index = 11 Then
+        qeraatn = "ָׁזַםֹ זׁװ Úה הַÝÚ"
+        
+        ElseIf index = 21 Then
+        qeraatn = "ָׁזַםֹ Þהָב Úה ַָה ßֻםׁ"
+        
+        ElseIf index = 31 Then
+        qeraatn = "ָׁזַםֹ ַב׃ז׃ל Úה ֳָז Úדׁז ַבָױׁל"
+        
+        ElseIf index = 41 Then
+        qeraatn = "ַָׁזםֹ ַָה ׀ßזַה Úה ַָה Úַדׁ"
+        
+        ElseIf index = 51 Then
+        qeraatn = "ָׁזַםֹ ֽÝױ Úה Úַױד"
+        
+        ElseIf index = 61 Then
+        qeraatn = "ָׁזַםֹ ־בַֿ Úה ֽדֹׂ"
+        
+        ElseIf index = 71 Then
+        qeraatn = "ָׁזַםֹ ֳָל ַבַֻֽׁ Úה ַבß׃ֶַל"
+        
+        ElseIf index = 81 Then
+        qeraatn = "ָׁזַםֹ ַָה ּדַׂ Úה ֳָל ּÚÝׁ"
+        
+        ElseIf index = 91 Then
+        qeraatn = "ָׁזַםֹ ׁזֽ Úה םÚÞזָ"
+        
+        ElseIf index = 101 Then
+        qeraatn = "ָׁזַםֹ ֵֿׁם׃ Úה ־בÝ ַבַָׁׂ"
+        
+        ElseIf index = 12 Then
+        qeraatn = "ָׁזַםֹ Þַבזה Úה הַÝÚ"
+        
+        ElseIf index = 22 Then
+        qeraatn = "ָׁזַםֹ ַבָׂל Úה ַָה ßֻםׁ"
+        
+        ElseIf index = 32 Then
+        qeraatn = "ָׁזַםֹ ַבֿזׁל Úה ֳָז Úדׁז ַבָױׁל"
+        
+        ElseIf index = 42 Then
+        qeraatn = "ָׁזַםֹ וװַד Úה ַָה Úַדׁ"
+        
+        ElseIf index = 52 Then
+        qeraatn = "ָׁזַםֹ װÚָֹ Úה Úַױד"
+        
+        ElseIf index = 62 Then
+        qeraatn = "ָׁזַםֹ ־בÝ Úה ֽדֹׂ"
+        
+        ElseIf index = 72 Then
+        qeraatn = "ָׁזַםֹ ֳָז Úדׁז ַבֿזׁל Úה ַבß׃ֶַל"
+        
+        ElseIf index = 82 Then
+        qeraatn = "ָׁזַםֹ ַָה זַֿׁה Úה ֳָל ּÚÝׁ"
+        
+        ElseIf index = 92 Then
+        qeraatn = "ָׁזַםֹ ׁזם׃ Úה םÚÞזָ"
+        
+        ElseIf index = 102 Then
+        qeraatn = "ָׁזַםֹ ַבזַׁÞ Úה ־בÝ ַבַָׁׂ"
+        Else
+        qeraatn = "egaza_content"
+    End If
+
+End Function
+Public Function rawye(index As Integer) As String
+
+     'adding sanad
+        If index = -1 Then
+        rawye = "׃הֿ ÞֱַַׁÊ / ֳוב ַבÊז׃״"
+        
+        ElseIf index = -2 Then
+        rawye = "׃הֿ ÞֱַַׁÊ / ַבָױׁםַה"
+        
+        ElseIf index = -3 Then
+        rawye = "׃הֿ ַבÞֱַַׁÊ ַבÚװׁ"
+         
+        ElseIf index = -4 Then
+        rawye = "׃הֿ ÞֱַַׁÊ ֳוב ַבױבֹ"
+          
+        ElseIf index = -5 Then
+        rawye = "׃הֿ ַבÞֱַַׁÊ ַב׃ָÚ"
+          
+        ElseIf index = 1 Then
+        rawye = "׃הֿ Þֱַֹׁ ַבֵדַד / הַÝÚ"
+        
+        ElseIf index = 2 Then
+        rawye = "׃הֿ Þֱַֹׁ ַבֵדַד / ַָה ßֻםׁ"
+        
+        ElseIf index = 3 Then
+        rawye = "׃הֿ Þֱַֹׁ ַבֵדַד / ֳָז Úדׁז ַבָױׁל"
+        
+        ElseIf index = 4 Then
+        rawye = "׃הֿ Þֱַֹׁ ַבֵדַד / ַָה Úַדׁ"
+        
+        ElseIf index = 5 Then
+        rawye = "׃הֿ Þֱַֹׁ ַבֵדַד / Úַױד"
+        
+        ElseIf index = 6 Then
+        rawye = "׃הֿ Þֱַֹׁ ַבֵדַד / ֽדֹׂ"
+        
+        ElseIf index = 7 Then
+        rawye = "׃הֿ Þֱַֹׁ ַבֵדַד / ַבß׃ֶַל"
+        
+        ElseIf index = 8 Then
+        rawye = "׃הֿ Þֱַֹׁ ַבֵדַד / ֳָז ּÚÝׁ"
+        
+        ElseIf index = 9 Then
+        rawye = "׃הֿ Þֱַֹׁ ַבֵדַד / םÚÞזָ"
+        
+        ElseIf index = 10 Then
+        rawye = "׃הֿ Þֱַֹׁ ַבֵדַד / ־בÝ ַבַָׁׂ"
+        
+        ElseIf index = 11 Then
+        rawye = "׃הֿ ׁזַםֹ / זׁװ"
+        
+        ElseIf index = 21 Then
+        rawye = "׃הֿ ׁזַםֹ / Þהָב"
+        
+        ElseIf index = 31 Then
+        rawye = "׃הֿ ׁזַםֹ / ַב׃ז׃ל"
+        
+        ElseIf index = 41 Then
+        rawye = "׃הֿ ׁזַםֹ / ַָה ׀ßזַה"
+        
+        ElseIf index = 51 Then
+        rawye = "׃הֿ ׁזַםֹ / ֽÝױ"
+        
+        ElseIf index = 61 Then
+        rawye = "׃הֿ ׁזַםֹ / ־בַֿ"
+        
+        ElseIf index = 71 Then
+        rawye = "׃הֿ ׁזַםֹ / ֳָל ַבַֻֽׁ"
+        
+        ElseIf index = 81 Then
+        rawye = "׃הֿ ׁזַםֹ / ַָה ּדַׂ"
+        
+        ElseIf index = 91 Then
+        rawye = "׃הֿ ׁזַםֹ / ׁזֽ"
+        
+        ElseIf index = 101 Then
+        rawye = "׃הֿ ׁזַםֹ / ֵֿׁם׃"
+        
+        ElseIf index = 12 Then
+        rawye = "׃הֿ ׁזַםֹ / Þַבזה"
+        
+        ElseIf index = 22 Then
+        rawye = "׃הֿ ׁזַםֹ / ַבָׂל"
+        
+        ElseIf index = 32 Then
+        rawye = "׃הֿ ׁזַםֹ / ַבֿזׁל"
+        
+        ElseIf index = 42 Then
+        rawye = "׃הֿ ׁזַםֹ / וװַד"
+        
+        ElseIf index = 52 Then
+        rawye = "׃הֿ ׁזַםֹ / װÚָֹ"
+        
+        ElseIf index = 62 Then
+        rawye = "׃הֿ ׁזַםֹ / ־בÝ"
+        
+        ElseIf index = 72 Then
+        rawye = "׃הֿ ׁזַםֹ / ֳָז Úדׁז"
+        
+        ElseIf index = 82 Then
+        rawye = "׃הֿ ׁזַםֹ / ַָה זַֿׁה"
+        
+        ElseIf index = 92 Then
+        rawye = "׃הֿ ׁזַםֹ / ׁזם׃"
+        
+        ElseIf index = 102 Then
+        rawye = "׃הֿ ׁזַםֹ / ַבזַׁÞ"
+        Else
+        rawye = "rawy"
+    End If
+
+End Function
+Public Function get_obydi() As Integer
+    If OptionButton9.Value = True Then
+        get_obydi = 1
+    ElseIf OptionButton10.Value = True Then
+        get_obydi = 2
+    ElseIf OptionButton11.Value = True Then
+        get_obydi = 3
+    Else
+        get_obydi = 4
+    End If
+End Function
+Public Function get_sheikh_type() As Integer
+    If OptionButton4.Value = True Then
+        ' female
+        get_sheikh_type = 1
+    Else
+        get_sheikh_type = -1
+    End If
+End Function
+Public Function get_student_type() As Integer
+    If OptionButton6.Value = True Then
+        'female
+        get_student_type = 1
+    Else
+        get_student_type = -1
+    End If
+End Function
+Public Function get_status() As String
+ ' set egaza status
+    If CheckBox39.Value = True Then
+        get_status = "ַ־Êַַָׁ"
+    End If
+    
+    If CheckBox40.Value = True Then
+        get_status = "ָÚײ ַבÞַׁה"
+    Else
+        get_status = "־Êדֹ ßַדבֹ"
+    End If
+       
+    If CheckBox41.Value = True Then
+        get_status = get_status + " " + "הÙַׁ דה ַבדױֽÝ"
+    Else
+        get_status = get_status + " " + "Ûםַָ Úה Ùוׁ Þבָ"
+    End If
+   
+End Function
+Public Function get_index() As Integer
+ ' set index
+
+    If CheckBox38.Value = True Then
+        ' ַב׃ָÚ
+        get_index = -5
+    End If
+    
+    If CheckBox6.Value = True Then
+        ' ַוב ַבױבֹ
+        get_index = -4
+    End If
+    
+    If CheckBox37.Value = True Then
+         ' ַבÚװׁ
+         get_index = -3
+    End If
+    
+    If CheckBox42.Value = True Then
+         ' ַבָױׁםַה
+         get_index = -2
+    End If
+    
+    If CheckBox5.Value = True Then
+        ' ַבÊז׃״
+        get_index = -1
+    End If
+    
+    If CheckBox7.Value = True Then
+        'הַÝÚ
+        get_index = 1
+    End If
+    
+    If CheckBox8.Value = True Then
+        'ַָה ßֻםׁ
+        get_index = 2
+    End If
+   
+    If CheckBox9.Value = True Then
+        'ַָז Úדׁז
+        get_index = 3
+    End If
+   
+    If CheckBox10.Value = True Then
+       'ַָה Úַדׁ
+        get_index = 4
+    End If
+     
+    If CheckBox11.Value = True Then
+       'Úַױד
+        get_index = 5
+    End If
+     
+    If CheckBox12.Value = True Then
+       'ֽדֹׂ
+        get_index = 6
+    End If
+     
+    If CheckBox13.Value = True Then
+       'ַבß׃ֶַל
+        get_index = 7
+    End If
+     
+    If CheckBox14.Value = True Then
+        'ַָז ּÚÝׁ
+         get_index = 8
+    End If
+   
+    If CheckBox15.Value = True Then
+       'םÚÞזָ
+        get_index = 9
+    End If
+     
+    If CheckBox16.Value = True Then
+        '־בÝ
+         get_index = 10
+    End If
+   
+    ' set Rowayat
+    If CheckBox17.Value = True Then
+        'זׁװ
+        get_index = 11
+    End If
+   
+    If CheckBox18.Value = True Then
+        'Þַבזה
+        get_index = 12
+    End If
+    
+    If CheckBox19.Value = True Then
+        'Þהָב
+         get_index = 21
+    End If
+     
+    If CheckBox20.Value = True Then
+        'ַבָׂל
+         get_index = 22
+    End If
+     
+    If CheckBox21.Value = True Then
+        'ַב׃ז׃ל
+         get_index = 31
+    End If
+    
+    If CheckBox22.Value = True Then
+       'ַבֿזׁל
+       get_index = 32
+    End If
+     
+    If CheckBox23.Value = True Then
+     'ַָה ׀ßזַה
+     get_index = 41
+    End If
+    
+    If CheckBox24.Value = True Then
+      'וװַד Úה ַָה Úַדׁ
+      get_index = 42
+    End If
+     
+    If CheckBox25.Value = True Then
+     'ֽÝױ
+     get_index = 51
+    End If
+     
+    If CheckBox26.Value = True Then
+    'װÚָֹ
+    get_index = 52
+    End If
+   
+    If CheckBox27.Value = True Then
+     '־בַֿ
+     get_index = 61
+    End If
+     
+    If CheckBox28.Value = True Then
+      '־בÝ
+      get_index = 62
+    End If
+     
+    If CheckBox29.Value = True Then
+       'ַָל ַבַֻֽׁ
+       get_index = 71
+    End If
+     
+    If CheckBox30.Value = True Then
+        'ַבֿזׁל Úה ַהß׃ַלֶ
+        get_index = 72
+    End If
+     
+    If CheckBox31.Value = True Then
+    'ַָה ּדַׂ
+    get_index = 81
+    End If
+     
+    If CheckBox32.Value = True Then
+     'ַָה זַֿׁה
+     get_index = 82
+    End If
+     
+    If CheckBox33.Value = True Then
+      'ׁזֽ
+      get_index = 91
+    End If
+     
+    If CheckBox34.Value = True Then
+       'ׁזם׃
+       get_index = 92
+    End If
+     
+    If CheckBox35.Value = True Then
+       'ַֿׁם׃
+         get_index = 101
+    End If
+     
+    If CheckBox36.Value = True Then
+        'ַבזַׁÞ
+         get_index = 102
+    End If
+
+End Function
+Public Function get_tareq() As String
+    get_tareq = " דה ״ׁםÞ "
+    If CheckBox3.Value = True Then
+     
+        If CheckBox14.Value = True Or CheckBox15.Value = True Or CheckBox16.Value = True Or CheckBox31.Value = True Or CheckBox32.Value = True Or CheckBox33.Value = True Or CheckBox34.Value = True Or CheckBox35.Value = True Or CheckBox36.Value = True Then
+            get_tareq = get_tareq + "ַבֹֿׁ"
+        Else
+            get_tareq = get_tareq + "ַבװַ״ָםֹ"
+        End If
+        
+        If CheckBox37.Value = True Or CheckBox42.Value = True Or CheckBox6.Value = True Or CheckBox5.Value = True Then
+            get_tareq = " דה ״ׁםÞ ַבװַ״ָםֹ ז ַבֹֿׁ"
+        End If
+        
+     End If
+     
+     If CheckBox4.Value = True And CheckBox3.Value = True Then
+         get_tareq = get_tareq + " ז ַב״םָֹ"
+     ElseIf CheckBox4.Value = True Then
+         get_tareq = get_tareq + "ַב״םָֹ"
+     End If
+
+End Function
+Private Sub removeBreakLines()
+
+End Sub
+Private Sub CommandButton1_Click()
+
+    Dim index As Integer
+    Dim obydi As Integer
+    Dim sheikh_type As Integer
+    Dim student_type As Integer
+    
+    Dim sheikh_name As String
+    Dim sheikh_info As String
+    Dim student_name As String
+    Dim student_info As String
+      
+    Dim Rng As Range, iPage As Long
+    Dim status As String
+    Dim qeraat As String
+    Dim tareq As String
+    Dim rawy As String
+    Dim sanada As String
+     
+    sheikh_name = TextBox1.Text
+    student_name = TextBox2.Text
+    sheikh_info = TextBox3.Text
+    student_info = TextBox4.Text
+   
+    obydi = get_obydi()
+    sheikh_type = get_sheikh_type()
+    student_type = get_student_type()
+    status = get_status()
+    index = get_index()
+    
+    ' make numbers arabic
+    Options.ArabicNumeral = wdNumeralHindi
+    select_obydi (obydi)
+    set_sheikh_and_student sheikh_name:=sheikh_name, sheikh_info:=sheikh_info, student_name:=student_name, student_info:=student_info
+    set_types sheikh_type:=sheikh_type, student_type:=student_type
+
+    If index <> 0 Then
+        
+        tareq = get_tareq()
+        sanada = sanadan(index)
+        rawy = rawye(index)
+        qeraat = qeraatn(index)
+        qeraat = qeraat + tareq
+        rawy = rawy + tareq
+        
+        set_qeraat state:=status, qeraat:=qeraat, rawy:=rawy
+        set_snada (sanada)
+        
+        Selection.GoTo What:=wdGoToPage, Which:=wdGoToNext, Name:="1"
+
+    End If
+
+    Dim tempForm As UserForm
+    For Each tempForm In UserForms
+        Unload tempForm
+    Next
+    
+End Sub
+Private Sub moveToBack()
+    If ActiveWindow.View.SplitSpecial <> wdPaneNone Then
+        ActiveWindow.Panes(2).Close
+    End If
+    If ActiveWindow.ActivePane.View.Type = wdNormalView Or ActiveWindow. _
+        ActivePane.View.Type = wdOutlineView Then
+        ActiveWindow.ActivePane.View.Type = wdPrintView
+    End If
+    ActiveWindow.ActivePane.View.SeekView = wdSeekCurrentPageHeader
+    ShowVisualBasicEditor = True
+End Sub
+Private Sub add_image(imgPath)
+ Dim pic As Shape
+ Set pic = ActiveDocument.Shapes.AddPicture(FileName:=imgPath, _
+        LinkToFile:=False, _
+        SaveWithDocument:=True, _
+        Left:=-62, _
+        Top:=-38, _
+        Width:=595, _
+        Height:=842, _
+        Anchor:=Selection.Range)
+        pic.WrapFormat.Type = wdWrapNone
+End Sub
+Private Sub CommandButton2_Click()
+        
+    moveToBack
+    
+    Dim fd As Office.FileDialog
+    Set fd = Application.FileDialog(msoFileDialogFilePicker)
+
+    With fd
+
+      .AllowMultiSelect = False
+
+      ' Set the title of the dialog box.
+      .Title = "Please select the file."
+
+      ' Clear out the current filters, and add our own.
+      .Filters.Clear
+      .Filters.Add "All Files", "*.*"
+
+       If .Show = True Then
+        add_image (.SelectedItems(1))
+      End If
+   End With
+End Sub
+
+Private Sub CommandButton3_Click()
+    
+    Dim temp As Integer
+    Dim index As Integer
+    Dim obydi As Integer
+    Dim sheikh_type As Integer
+    Dim student_type As Integer
+    
+    Dim sheikh_name As String
+    Dim sheikh_info As String
+    Dim student_name As String
+    Dim student_info As String
+      
+    Dim Rng As Range, iPage As Long
+    Dim status As String
+    Dim qeraat As String
+    Dim tareq As String
+    Dim rawy As String
+    Dim sanada As String
+     
+    Dim originalFilePath As String
+    Dim dlgOpen As FileDialog
+    Dim IndexArray(30) As Integer
+    Dim loop_counter As Integer
+    
+    IndexArray(1) = 1
+    IndexArray(2) = 2
+    IndexArray(3) = 3
+    IndexArray(4) = 4
+    IndexArray(5) = 5
+    IndexArray(6) = 6
+    IndexArray(7) = 7
+    IndexArray(8) = 8
+    IndexArray(9) = 9
+    IndexArray(10) = 10
+    IndexArray(11) = 11
+    IndexArray(12) = 21
+    IndexArray(13) = 31
+    IndexArray(14) = 41
+    IndexArray(15) = 51
+    IndexArray(16) = 61
+    IndexArray(17) = 71
+    IndexArray(18) = 81
+    IndexArray(19) = 91
+    IndexArray(20) = 101
+    IndexArray(21) = 12
+    IndexArray(22) = 22
+    IndexArray(23) = 32
+    IndexArray(24) = 42
+    IndexArray(25) = 52
+    IndexArray(26) = 62
+    IndexArray(27) = 72
+    IndexArray(28) = 82
+    IndexArray(29) = 92
+    IndexArray(30) = 102
+    
+    loop_counter = 1
+    
+temp = MsgBox("Start group!", vbQuestion + vbYesNo, "Confirm")
+
+If temp = 6 Then
+   
+    Set dlgOpen = Application.FileDialog(FileDialogType:=msoFileDialogOpen)
+    With dlgOpen
+    .AllowMultiSelect = False
+    .Show
+    End With
+    originalFilePath = dlgOpen.SelectedItems(1)
+          
+    sheikh_name = TextBox1.Text
+    student_name = TextBox2.Text
+    sheikh_info = TextBox3.Text
+    student_info = TextBox4.Text
+     
+    obydi = get_obydi()
+    sheikh_type = get_sheikh_type()
+    student_type = get_student_type()
+    status = get_status()
+    
+    Dim wdApp As Word.Application
+    Set wdApp = GetObject(, "Word.Application")
+                   
+  While loop_counter <= 30
+    
+     index = IndexArray(loop_counter)
+     tareq = get_tareq()
+     sanada = sanadan(index)
+     rawy = rawye(index)
+     qeraat = qeraatn(index)
+     qeraat = qeraat + tareq
+     rawy = rawy + tareq
+ 
+     Documents.Open FileName:=originalFilePath, ReadOnly:=False
+   
+     ActiveDocument.SaveAs2 FileName:=ActiveDocument.Path + Application.PathSeparator + Replace(rawy, "/", "") + ".docx", FileFormat:= _
+     wdFormatXMLDocument, LockComments:=False, Password:="", AddToRecentFiles _
+     :=True, WritePassword:="", ReadOnlyRecommended:=False, EmbedTrueTypeFonts _
+     :=False, SaveNativePictureFormat:=False, SaveFormsData:=False, _
+     SaveAsAOCELetter:=False, CompatibilityMode:=14
+        
+    ' make numbers arabic
+     Options.ArabicNumeral = wdNumeralHindi
+     select_obydi (obydi)
+     set_sheikh_and_student sheikh_name:=sheikh_name, sheikh_info:=sheikh_info, student_name:=student_name, student_info:=student_info
+     set_types sheikh_type:=sheikh_type, student_type:=student_type
+     set_qeraat state:=status, qeraat:=qeraat, rawy:=rawy
+     set_snada (sanada)
+        
+     ActiveDocument.Save
+     wdApp.Documents(ActiveDocument.Path + Application.PathSeparator + Replace(rawy, "/", "") + ".docx").Close
+     
+     loop_counter = loop_counter + 1
+     
+  Wend
+       
+    Dim tempForm As UserForm
+    For Each tempForm In UserForms
+        Unload tempForm
+    Next
+
+End If
+
+End Sub
+
+Private Sub CommandButton4_Click()
+
+    Dim students As String
+    Dim substrings() As String
+    Dim counter As Integer
+    
+    Dim originalFilePath As String
+    Dim dlgOpen As FileDialog
+          
+    Set dlgOpen = Application.FileDialog(FileDialogType:=msoFileDialogOpen)
+    With dlgOpen
+        .AllowMultiSelect = False
+        .Show
+    End With
+    
+    originalFilePath = dlgOpen.SelectedItems(1)
+            
+    Dim wdApp As Word.Application
+    Set wdApp = GetObject(, "Word.Application")
+         
+    students = TextBox5.Text
+    substrings = Strings.Split(students, vbNewLine)
+    counter = Val(substrings(0))
+    
+    For k = 0 To counter - 1
+     
+        Dim index As Integer
+        Dim obydi As Integer
+        Dim sheikh_type As Integer
+        Dim student_type As Integer
+        
+        Dim sheikh_name As String
+        Dim sheikh_info As String
+        Dim student_name As String
+        Dim student_info As String
+          
+        Dim Rng As Range, iPage As Long
+        Dim status As String
+        Dim qeraat As String
+        Dim tareq As String
+        Dim rawy As String
+        Dim sanada As String
+          
+        sheikh_name = TextBox1.Text
+        sheikh_info = TextBox3.Text
+        student_name = (substrings(1 + (k * 4)))
+        student_info = (substrings(2 + (k * 4)))
+        
+        obydi = get_obydi()
+        sheikh_type = get_sheikh_type()
+        status = get_status()
+      
+        If (substrings(3 + (k * 4))) = "״ַבָ" Then
+        student_type = -1
+        Else
+        student_type = 1
+        End If
+        
+        ' make numbers arabic
+        Options.ArabicNumeral = wdNumeralHindi
+          
+        index = Val(substrings(4 + (k * 4)))
+         
+        If index <> 0 Then
+            
+            tareq = get_tareq()
+            sanada = sanadan(index)
+            rawy = rawye(index)
+            qeraat = qeraatn(index)
+            qeraat = qeraat + tareq
+            rawy = rawy + tareq
+                 
+            Documents.Open FileName:=originalFilePath, ReadOnly:=False
+            
+            ActiveDocument.SaveAs2 FileName:=ActiveDocument.Path + Application.PathSeparator + student_name + ".docx", FileFormat:= _
+            wdFormatXMLDocument, LockComments:=False, Password:="", AddToRecentFiles _
+            :=True, WritePassword:="", ReadOnlyRecommended:=False, EmbedTrueTypeFonts _
+            :=False, SaveNativePictureFormat:=False, SaveFormsData:=False, _
+            SaveAsAOCELetter:=False, CompatibilityMode:=14
+      
+            select_obydi (obydi)
+            set_sheikh_and_student sheikh_name:=sheikh_name, sheikh_info:=sheikh_info, student_name:=student_name, student_info:=student_info
+            set_types sheikh_type:=sheikh_type, student_type:=student_type
+            set_qeraat state:=status, qeraat:=qeraat, rawy:=rawy
+            set_snada (sanada)
+            
+            ActiveDocument.Save
+            wdApp.Documents(ActiveDocument.Path + Application.PathSeparator + student_name + ".docx").Close
+
+        End If
+
+    Next k
+End Sub
+
+Private Sub UserForm_Click()
+
+End Sub
